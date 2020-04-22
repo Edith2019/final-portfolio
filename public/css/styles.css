@@ -34,6 +34,9 @@
     justify-content: space-between;
     align-items: center;
     background: none;
+    /* filter: none;
+    transition: none;
+    opacity: 1; */
 }
 
 .header-work {
@@ -42,6 +45,9 @@
     font-size: 30px;
     margin-right: 20px;
     background: none;
+    /* filter: none;
+    transition: none;
+    opacity: 1; */
 }
 
 .header-work:hover {
@@ -50,6 +56,9 @@
 .header-hamburger {
     transition: transform 0.2s;
     background: none;
+    /* filter: none;
+    transition: none;
+    opacity: 1; */
 }
 
 .header-hamburger:hover {
@@ -105,7 +114,7 @@ a.header-a {
 /* /////////////// Description /////////////////*/
 
 .description-container {
-    height: 800px;
+    height: 600px;
     padding-top: 100px;
     padding-left: 5%;
     padding-right: 5%;
@@ -113,7 +122,6 @@ a.header-a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .description-text {
@@ -162,6 +170,108 @@ a.header-a {
     font-size: 60px;
 }
 
+/* /////////////// ProjectOne/////////////////*/
+
+.projectone-container {
+    height: 600px;
+    padding-top: 100px;
+    background-color: yellow;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projectone-img {
+    background-color: yellow;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    opacity: 0.4;
+    transition: 0.8s;
+}
+
+.projectone-img:hover {
+    transition: 0.8s;
+    background-color: none;
+    opacity: 1;
+    filter: none; /* IE6-9 */
+}
+
+.projectone-text {
+    width: 60%;
+    height: 500px;
+    padding-left: 10px;
+}
+
+/* /////////////// Projecttwo/////////////////*/
+
+.projecttwo-container {
+    height: 600px;
+    padding-top: 100px;
+    background-color: orange;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projecttwo-img {
+    background-color: orange;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    opacity: 0.4;
+    transition: 0.8s;
+}
+
+.projecttwo-img:hover {
+    transition: 0.8s;
+    background-color: none;
+    opacity: 1;
+    filter: none; /* IE6-9 */
+}
+
+.projecttwo-text {
+    width: 60%;
+    height: 500px;
+    padding-left: 10px;
+}
+
+/* /////////////// Projectthree/////////////////*/
+
+.projectthree-container {
+    height: 600px;
+    padding-top: 100px;
+    background-color: red;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projectthree-img {
+    background-color: orange;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    opacity: 0.4;
+    transition: 0.8s;
+}
+
+.projectthree-img:hover {
+    transition: 0.8s;
+    background-color: none;
+    opacity: 1;
+    filter: none; /* IE6-9 */
+}
+
+.projectthree-text {
+    width: 60%;
+    height: 500px;
+    padding-left: 10px;
+}
+
 /* /////////////// Footer /////////////////*/
 
 .footer-container {
@@ -181,6 +291,14 @@ a.header-a {
 .footer-contact {
     width: 200px;
     height: 60px;
-
+    border: black solid 2px;
     z-index: 3;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.footer-contact:hover {
+    background: none;
+    font-size: 20px;
+    transition: 0.7s;
 }

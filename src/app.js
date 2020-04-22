@@ -1,10 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './header';
 import Intro from './intro';
 import HeaderModal from './headermodal';
 import Description from './description';
+import ProjectOne from './projectone';
+import ProjectTwo from './projecttwo';
+import ProjectThree from './projectthree';
 import Footer from './footer';
+
+
+
+
 
 export default class App extends React.Component {
     constructor() {
@@ -42,12 +48,11 @@ export default class App extends React.Component {
                         </div>
                     </div >
                     <Intro />
-
-
                     {this.state.menumodalvisible && (<HeaderModal toggleMenuModal={this.toggleMenuModal} />)}
-
                     <Description />
-
+                    <ProjectOne />
+                    <ProjectTwo />
+                    <ProjectThree />
                     <Footer />
 
                 </BrowserRouter>
