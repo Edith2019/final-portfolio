@@ -21,8 +21,11 @@ export default class Intro extends React.Component {
                 <div className="intro-container">
                     <div className="intro-elem">
                         <div className="intro-animation"></div>
-                        <h1 className="intro-title"> Welcome to my portfolio</h1>
-                        {/* <button className="intro-contact"> Contact </button> */}
+                        <div className="intro-title">
+                            <h1 className="intro-title-w">welcome</h1>
+                            <h1 className="intro-title-t">to Edith's</h1>
+                            <h1 className="intro-title-p">portfolio</h1>
+                        </div>
                     </div>
                 </div>
             </React.Fragment>
@@ -31,11 +34,6 @@ export default class Intro extends React.Component {
 
 
     }
-
-
-
-
-
 
 
 }
