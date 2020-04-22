@@ -53,10 +53,17 @@ export default class App extends React.Component {
                     <ProjectOne />
                     <ProjectTwo />
                     <ProjectThree />
+                    <div className="otherproject">
+                        <h1>do you want to see other projects?</h1>
+                        <button className="otherproject-yes">oh yes</button>
+                        <button className="otherproject-no">nahhhh</button>
+                        <button className="otherproject-play">i just wanna play</button>
+
+                    </div>
                     <Footer />
 
                 </BrowserRouter>
-            </React.Fragment>
+            </React.Fragment >
         );
     }
 
