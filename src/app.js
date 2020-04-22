@@ -9,7 +9,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            MenuModalVisible: false,
+            menumodalvisible: false,
         };
         console.log("super");
     }
@@ -18,7 +18,7 @@ export default class App extends React.Component {
         console.log("toggle modal is running");
 
         this.setState({
-            MenuModalVisible: !this.state.MenuModalVisible
+            menumodalvisible: !this.state.menumodalvisible
 
 
         });
