@@ -6,8 +6,8 @@ import HeaderModal from './headermodal';
 import Footer from './footer';
 
 export default class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menumodalvisible: false,
         };
@@ -41,7 +41,11 @@ export default class App extends React.Component {
                             </div>
                         </div>
                     </div >
-                    <HeaderModal />
+
+                    {this.state.menumodalvisible && (<HeaderModal toggleMenuModal={this.toggleMenuModal} />)}
+
+
+
 
                     <Intro />
                     {/* <Footer /> */}
