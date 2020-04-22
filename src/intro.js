@@ -18,8 +18,13 @@ export default class Intro extends React.Component {
         return (
 
             <React.Fragment>
-                <button> Contact </button>
-
+                <div className="intro-container">
+                    <div className="intro-elem">
+                        <div className="intro-animation"></div>
+                        <h1 className="intro-title"> Welcome to my portfolio</h1>
+                        {/* <button className="intro-contact"> Contact </button> */}
+                    </div>
+                </div>
             </React.Fragment>
 
         );

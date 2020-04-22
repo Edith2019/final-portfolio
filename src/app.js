@@ -6,8 +6,8 @@ import HeaderModal from './headermodal';
 import Footer from './footer';
 
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             menumodalvisible: false,
         };
@@ -27,7 +27,6 @@ export default class App extends React.Component {
 
 
 
-
     render() {
         return (
             <React.Fragment>
@@ -41,14 +40,14 @@ export default class App extends React.Component {
                             </div>
                         </div>
                     </div >
+                    <Intro />
+
 
                     {this.state.menumodalvisible && (<HeaderModal toggleMenuModal={this.toggleMenuModal} />)}
 
 
 
 
-                    <Intro />
-                    {/* <Footer /> */}
 
                 </BrowserRouter>
             </React.Fragment>
