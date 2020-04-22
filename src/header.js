@@ -18,11 +18,20 @@ export default class Header extends React.Component {
         return (
 
             <React.Fragment>
-                <img src="/Logo.png" className="logo" alt="logo" width="100px" height="100px" />
-                <h2 className="testing">Work </h2>
-                <h2> Contact </h2>
+                <div className="header">
+                    <div className="header-container">
+                        <img src="/Logo.png" className="header-logo" alt="logo" width="100px" height="100px" />
+                        <div className="header-elem">
+                            <a className="header-work"> Work </a>
+                            <img src="/hamburger.png" className="header-hamburger" alt="hamburger" width="50px" height="50px" />
 
-            </React.Fragment>
+                        </div>
+                    </div>
+                </div >
+                <div className="testing">
+
+                </div>
+            </React.Fragment >
 
         );
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const compression = require('compression');
+app.use(express.static('./public'))
 
 app.use(compression());
 

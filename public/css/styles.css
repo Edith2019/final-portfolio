@@ -1,14 +1,58 @@
 * {
     background-color: aqua;
     font-family: sans-serif;
+    margin: 0px;
 }
 
-h2 {
-    color: aqua;
-    border: solid 4px blue;
+/* /////////////// HEADER /////////////////*/
+.header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    border: solid blue 3px;
 }
 
-.logo {
-    color: aqua;
-    border: solid 4px blue;
+.header-container {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    height: 150px;
+}
+
+.header-elem {
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-work {
+    transition: transform 0.2s;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.header-work:hover {
+    transform: scale(1.5);
+}
+.header-hamburger {
+    transition: transform 0.2s;
+}
+
+.header-hamburger:hover {
+    transform: scale(1.5);
+}
+
+.testing {
+    height: 2000px;
+    background-color: blueviolet;
+    width: 500px;
 }

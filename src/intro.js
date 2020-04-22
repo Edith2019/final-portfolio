@@ -18,7 +18,7 @@ export default class Intro extends React.Component {
         return (
 
             <React.Fragment>
-                <p>testing render </p>
+                <button> Contact </button>
 
             </React.Fragment>
 
