@@ -1,3 +1,14 @@
 * {
     background-color: aqua;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: aqua;
+    border: solid 4px blue;
+}
+
+.logo {
+    color: aqua;
+    border: solid 4px blue;
 }

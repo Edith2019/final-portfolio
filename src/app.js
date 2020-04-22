@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './header';
 import Intro from './intro';
 import Footer from './footer';
 
-export default class App extends React.component {
+export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            uploaderIsVisible: false,
-            name: 'Edith'
+            // uploaderIsVisible: false,
+            // name: 'Edith'
         };
         console.log("super");
     }
@@ -18,8 +19,8 @@ export default class App extends React.component {
         return (
             <React.Fragment>
                 {/* <BrowserRouter> */}
-                <p>testing in app {this.state.name} </p>
 
+                <Header />
                 <Intro />
                 {/* <Footer /> */}
 

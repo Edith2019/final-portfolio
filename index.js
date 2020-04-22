@@ -15,10 +15,10 @@ if (process.env.NODE_ENV != 'production') {
     app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(8080, function() {
+app.listen(8080, function () {
     console.log("I'm listening.");
 });
