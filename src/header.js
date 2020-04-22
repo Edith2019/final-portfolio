@@ -1,47 +1,53 @@
-import React from 'react';
+// import React from 'react';
+// import HeaderModal from './headerModal';
 
-export default class Header extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
-        this.state = {
-            // name: 'Edith in intro',
-        };
+// export default class Header extends React.Component {
+//     constructor() { //props are all the data you want to apss props
+//         super(); // add a property to the instence props
+//         this.state = {
+//             // name: 'Edith in intro',
+//             MenuModalVisible: false,
+//         };
 
-    }
-
-
-
-
-
-    render() {
-
-        return (
-
-            <React.Fragment>
-                <div className="header">
-                    <div className="header-container">
-                        <img src="/Logo.png" className="header-logo" alt="logo" width="100px" height="100px" />
-                        <div className="header-elem">
-                            <a className="header-work"> Work </a>
-                            <img src="/hamburger.png" className="header-hamburger" alt="hamburger" width="50px" height="50px" />
-
-                        </div>
-                    </div>
-                </div >
-                <div className="testing">
-
-                </div>
-            </React.Fragment >
-
-        );
+//     }
 
 
-    }
+//     toggleMenuModal() {
+//         console.log("toggle modal is running");
+
+//         this.setState({
+//             MenuModalVisible: !this.state.MenuModalVisible
+
+
+//         });
+
+//     }
 
 
 
+//     render() {
+
+//         return (
+
+//             <React.Fragment>
+//                >
+
+//                 <div className="headerModal"  > modal test
+//                 </div>
+//                 <div className="testing">
+
+//                 </div>
+//             </React.Fragment >
+
+//         );
+
+
+//     }
 
 
 
 
-}
+
+
+
+// }
