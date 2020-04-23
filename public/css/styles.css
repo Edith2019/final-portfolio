@@ -471,11 +471,42 @@ input {
 
 .contact-thankyou {
     width: 50%;
-    height: 50%;
-    border: black solid 4px;
-    background-color: red;
+    height: 60%;
+    background-color: blue;
     position: absolute;
-    margin-top: -400px;
+    margin-top: -600px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 3%;
+    color: white;
+}
+.contact-thankyou-x-cont {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    justify-content: flex-end;
+}
+
+.contact-thankyou-x {
+    color: white;
+    background: none;
+    cursor: pointer;
+}
+
+.contact-thankyou-ty {
+    background: none;
+}
+
+.contact-thankyou-name {
+    background: none;
+}
+
+.contact-thankyou-msg {
+    background: none;
+}
+
+.contact-thankyou-text {
+    background: none;
 }
 
 /* /////////////// OtherProjects /////////////////*/

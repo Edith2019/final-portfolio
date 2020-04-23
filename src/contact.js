@@ -68,6 +68,15 @@ export default class Contact extends React.Component {
                             thankyouisvisible: !this.state.thankyouisvisible
                         });
 
+                        this.setState({
+                            requiredFields: {
+                                first: '',
+                                last: '',
+                                email: ''
+                            }
+
+                        });
+
                     } else {
                         this.setState({
                             error: true
@@ -129,7 +138,7 @@ export default class Contact extends React.Component {
                         <input className="contact-input-message" name="message" type="text" placeholder="message" onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
-                            <p className="contact-checkbox-t"> I agree with the terms and conditions</p>
+                            <p className="contact-checkbox-t"> i agree with the terms and conditions</p>
                             {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
                         </div>
                         <button className="contact-input-button" onClick={() => this.submit()}>submit</button>
@@ -137,9 +146,19 @@ export default class Contact extends React.Component {
                 </div>
                 {this.state.thankyouisvisible && (
                     <div className="contact-thankyou">
-                        <h2>thank you {this.state.first} for your message!</h2>
-                        <p> i will come back to you as soon as possible...</p>
-                    </div>)}
+                        <div className="contact-thankyou-x-cont">
+                            <h1 className="contact-thankyou-x" onClick={() => this.toggleThankYouModal()}>X</h1>
+                        </div>
+                        <h2 className="contact-thankyou-ty">thank you </h2>
+                        <br />
+                        <h1 className="contact-thankyou-name"> {this.state.first} </h1>
+                        <br />
+                        <h2 className="contact-thankyou-msg"> for your message! </h2>
+                        <br />
+                        <br />
+                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime, enjoy chilling around!</p>
+                    </div>)
+                }
             </React.Fragment >
 
 
