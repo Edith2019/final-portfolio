@@ -65,12 +65,14 @@ app.post('/message', (req, res) => {
     const email = req.body.email;
     const message = req.body.message;
     const checkbox = req.body.checkbox;
-
-
-
     db.addContactsData(first, last, email, message, checkbox).then(result => {
         console.log("results", result);
+        const data = result.rows[0];
+        res.json({ data });
 
+    }).catch(err => {
+        console.log("there was an error in message", err);
+        res.json({ error: true });
     });
 });
 

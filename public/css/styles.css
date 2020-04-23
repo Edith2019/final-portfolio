@@ -287,14 +287,14 @@ a.header-a {
     width: 100px;
     height: 30px;
     margin-top: 20px;
-    border: black solid 1px;
+    border: black solid 2px;
     margin-right: 40px;
     cursor: pointer;
     z-index: 69;
 }
 
 .otherproject-yes:hover {
-    transition: 0.8s;
+    transition: 0.4s;
     background-color: blue;
     opacity: 1;
 }
@@ -303,12 +303,12 @@ a.header-a {
     width: 100px;
     height: 30px;
     margin-top: 20px;
-    border: black solid 1px;
+    border: black solid 2px;
     margin-right: 40px;
 }
 
 .otherproject-no:hover {
-    transition: 0.8s;
+    transition: 0.4s;
     background-color: red;
     opacity: 1;
 }
@@ -316,11 +316,11 @@ a.header-a {
     width: 110px;
     height: 30px;
     margin-top: 20px;
-    border: black solid 1px;
+    border: black solid 2px;
 }
 
 .otherproject-play:hover {
-    transition: 0.8s;
+    transition: 0.4s;
     background-color: greenyellow;
     opacity: 1;
 }
@@ -369,6 +369,12 @@ a.header-a {
     background-color: yellow;
     padding-top: 50px;
     padding-left: 5px;
+}
+.error {
+    font-size: 15px;
+    border: solid black 2px;
+    background-color: black;
+    color: white;
 }
 
 #question {
@@ -461,6 +467,63 @@ input {
     border: solid red 2px;
     transition: 0.4s;
     color: red;
+}
+
+.contact-thankyou {
+    width: 50%;
+    height: 50%;
+    border: black solid 4px;
+    background-color: red;
+    position: absolute;
+    margin-top: -400px;
+}
+
+/* /////////////// OtherProjects /////////////////*/
+
+.op-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.op-btm {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    width: 90%;
+    background-color: yellow;
+    z-index: 50;
+}
+
+.op-back {
+    border: black 2px solid;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.op-back:hover {
+    background-color: yellow;
+    transition: 0.4s;
+}
+
+.op-one-card {
+    border: solid greenyellow 4px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* /////////////// Footer /////////////////*/

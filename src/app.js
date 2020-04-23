@@ -6,7 +6,7 @@ import Description from './description';
 import ProjectOne from './projectone';
 import ProjectTwo from './projecttwo';
 import ProjectThree from './projectthree';
-import Contact from './contact';
+import OtherProjects from './otherprojects';
 import Footer from './footer';
 
 
@@ -56,13 +56,12 @@ export default class App extends React.Component {
                     <ProjectThree />
                     <div className="otherproject">
                         <h1>do you want to see other projects?</h1>
-                        <button className="otherproject-yes">oh yes</button>
-                        <button className="otherproject-no">nahhhh</button>
-                        <button className="otherproject-play">i just wanna play</button>
+                        <a className="otherproject-yes" href="http://localhost:8080/otherprojects">oh yes</a>
+                        <a className="otherproject-no">nahhhh</a>
+                        <a className="otherproject-play">i just wanna play</a>
 
                     </div>
                     <Footer />
-                    <Route exact patch='/contact' />
                 </BrowserRouter>
             </React.Fragment >
         );

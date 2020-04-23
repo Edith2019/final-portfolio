@@ -9,11 +9,15 @@ export default class Contact extends React.Component {
         this.state = {
             error: false,
             gdprisvisible: false,
+            thankyouisvisible: false,
+            first: '',
+            last: '',
+            email: '',
         };
         this.state.requiredFields = {
-            first: "please enter your first name",
-            last: "please enter your last name",
-            email: "please enter your email"
+            first: '',
+            last: '',
+            email: ''
 
         };
 
@@ -24,10 +28,15 @@ export default class Contact extends React.Component {
     submit() {
 
 
-        if (!this.state.first || !this.state.last || !this.state.email || this.state.checkbox != 'on') {
+        if (!this.state.first || !this.state.last || !this.state.email) {
             console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
-                requiredFields: this.state.requiredFields,
+                requiredFields: {
+                    first: !this.state.first ? 'enter your first name' : "",
+                    last: !this.state.last ? 'please enter your last name' : "",
+                    email: !this.state.email ? 'please enter your email' : ""
+                },
+
             });
 
         } else if (this.state.checkbox != 'on') {
@@ -48,8 +57,17 @@ export default class Contact extends React.Component {
 
             }).then(
                 ({ data }) => {
-                    if (data.success) {
-                        location.replace('/');
+                    console.log("data", data);
+                    if (data.data) {
+                        console.log("data", data);
+                        this.setState({
+                            first: data.data.first,
+                            last: data.data.last
+                        });
+                        this.setState({
+                            thankyouisvisible: !this.state.thankyouisvisible
+                        });
+
                     } else {
                         this.setState({
                             error: true
@@ -71,6 +89,16 @@ export default class Contact extends React.Component {
 
     }
 
+    toggleThankYouModal() {
+        console.log("toggle modal is running");
+
+        this.setState({
+            thankyouisvisible: !this.state.thankyouisvisible
+
+
+        });
+
+    }
 
     handleChange({ target }) {
 
@@ -89,22 +117,29 @@ export default class Contact extends React.Component {
                 <div className="contact">
                     <div className="contact-white">
                         <p id="question">do you have questions?</p>
+                        <br />
                         <p id="comments">do you have comments?</p>
+                        <br />
                         <p id="touch">fill out the form and get in touch... </p>
                     </div>
                     <div className="contact-input">
-                        <input id="contact-input-first" className={`{${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''} }`} name="first" type="text" placeholder="first name" onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-last" name="last" type="text" placeholder="last name" onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-email" name="email" type="email" placeholder="email" onChange={e => this.handleChange(e)} />
-                        <input className="contact-input-message" name="message" type="text" r placeholder="message" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''}`} name="first" type="text" placeholder="first name" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? 'error' : ''}`} name="last" type="text" placeholder="last name" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? 'error' : ''}`} name="email" type="email" placeholder="email" onChange={e => this.handleChange(e)} />
+                        <input className="contact-input-message" name="message" type="text" placeholder="message" onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> I agree with the terms and conditions</p>
+                            {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
                         </div>
                         <button className="contact-input-button" onClick={() => this.submit()}>submit</button>
                     </div>
-                    {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
                 </div>
+                {this.state.thankyouisvisible && (
+                    <div className="contact-thankyou">
+                        <h2>thank you {this.state.first} for your message!</h2>
+                        <p> i will come back to you as soon as possible...</p>
+                    </div>)}
             </React.Fragment >
 
 
