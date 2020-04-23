@@ -6,6 +6,7 @@ import Description from './description';
 import ProjectOne from './projectone';
 import ProjectTwo from './projecttwo';
 import ProjectThree from './projectthree';
+import Contact from './contact';
 import Footer from './footer';
 
 
@@ -61,7 +62,7 @@ export default class App extends React.Component {
 
                     </div>
                     <Footer />
-
+                    <Route exact patch='/contact' component={Contact} />
                 </BrowserRouter>
             </React.Fragment >
         );

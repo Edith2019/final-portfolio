@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
 
             <React.Fragment>
                 <div className="footer-container">
-                    <button className="footer-contact"> contact </button>
+                    <a className="footer-contact" href="http://localhost:8080/contact"> contact </a>
                 </div>
             </React.Fragment>
 
