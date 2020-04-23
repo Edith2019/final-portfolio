@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
 import axios from './axios'; //need to put the slash to use the copy
 
 

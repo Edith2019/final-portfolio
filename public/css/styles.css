@@ -2,10 +2,12 @@
     background-color: white;
     font-family: sans-serif;
     margin: 0px;
+    outline: none;
+    text-decoration: none;
 }
 
 img {
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* /////////////// HEADER /////////////////*/
@@ -15,6 +17,7 @@ img {
     position: fixed;
     top: 0px;
     background: none;
+    z-index: 97;
 }
 
 .header-container {
@@ -27,7 +30,7 @@ img {
     padding-left: 5%;
     padding-right: 5%;
     width: 90%;
-    height: 150px;
+    height: 130px;
     background: none;
 }
 
@@ -49,6 +52,7 @@ img {
     font-size: 30px;
     margin-right: 20px;
     background: none;
+
     /* filter: none;
     transition: none;
     opacity: 1; */
@@ -77,9 +81,11 @@ img {
     margin-right: 3%;
     padding: 30px;
     margin-left: 82%;
-    margin-top: -650px;
+    margin-top: -560px;
     z-index: 999;
     position: fixed;
+    border-top: solid red 4px;
+    border-bottom: solid black 4px;
 }
 
 a.header-a {
@@ -98,7 +104,7 @@ a.header-a {
 }
 
 .intro-elem {
-    margin-top: 200px;
+    margin-top: 125px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -193,6 +199,8 @@ a.header-a {
     -webkit-filter: grayscale(100%);
     opacity: 0.4;
     transition: 0.8s;
+
+    padding: 0px;
 }
 
 .projectone-img:hover {
@@ -256,7 +264,7 @@ a.header-a {
 }
 
 .projectthree-img {
-    background-color: orange;
+    background-color: red;
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(100%);
     opacity: 0.4;
@@ -276,25 +284,36 @@ a.header-a {
     padding-left: 10px;
 }
 
-/* /////////////// Otherprojects /////////////////*/
+/* /////////////// Otherproject /////////////////*/
 
 .otherproject {
-    height: 100px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
-    z-index: 68;
-    padding-bottom: 40px;
+
+    padding-bottom: 70px;
+    height: 400px;
 }
 
+.otherproject-app-buttons {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .otherproject-yes {
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
+    width: 150px;
+    height: 40px;
     border: black solid 2px;
     margin-right: 40px;
     cursor: pointer;
-    z-index: 69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
 
 .otherproject-yes:hover {
@@ -304,11 +323,15 @@ a.header-a {
 }
 
 .otherproject-no {
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
+    width: 150px;
+    height: 40px;
     border: black solid 2px;
     margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
 }
 
 .otherproject-no:hover {
@@ -317,16 +340,30 @@ a.header-a {
     opacity: 1;
 }
 .otherproject-play {
-    width: 110px;
-    height: 30px;
-    margin-top: 20px;
+    width: 150px;
+    height: 40px;
     border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
 }
 
 .otherproject-play:hover {
     transition: 0.4s;
     background-color: greenyellow;
     opacity: 1;
+}
+
+.otherporject-windows {
+    width: 100%;
+    height: 150vh;
+    background-color: greenyellow;
+    margin-top: -100px;
+    z-index: 99;
+    background-image: url("/windows.png");
+    position: absolute;
 }
 
 /* /////////////// Contact /////////////////*/
@@ -384,18 +421,44 @@ a.header-a {
 #question {
     background: none;
     font-size: 2em;
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+#question:hover {
+    transform: scale(1.5);
+    transition: 0.4s;
+    margin-left: 50px;
 }
 
 #comments {
     background: none;
     font-size: 3em;
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+#comments:hover {
+    background: none;
+    font-size: 3em;
+    transform: scale(1.5);
+    transition: 0.4s;
 }
 
 #touch {
     background: none;
     font-size: 4.5em;
+    transform: scale(1);
+    transition: 0.4s;
 }
 
+#touch:hover {
+    transform: scale(1.8);
+    transition: 0.4s;
+    margin-left: 95px;
+    padding-right: 0px;
+    overflow: visible;
+}
 .contact-input {
     width: 350px;
     height: 500px;
@@ -563,7 +626,9 @@ input {
     transform: scale(1);
     transition: 0.4s;
 }
-
+.op-one-img {
+    border-bottom: solid black 2px;
+}
 .op-one-text {
     background: none;
 }
@@ -584,7 +649,9 @@ input {
     transform: scale(1);
     transition: 0.4s;
 }
-
+.op-two-img {
+    border-bottom: solid black 2px;
+}
 .op-two-text {
     background: none;
 }
@@ -605,6 +672,10 @@ input {
     transform: scale(1);
     transition: 0.4s;
     background: none;
+}
+
+.op-three-img {
+    border-bottom: solid black 2px;
 }
 .op-three-text {
     background: none;
@@ -659,11 +730,15 @@ input {
     border: black solid 2px;
     z-index: 3;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
 
 .footer-contact:hover {
     background: none;
     font-size: 20px;
-    transition: 0.7s;
+    transition: 0.4s;
 }

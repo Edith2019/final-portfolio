@@ -20,7 +20,7 @@ export default class ProjectThree extends React.Component {
 
             <React.Fragment>
                 <div className="projectthree-container">
-                    <img src="/Logo.png" className="projectthree-img" alt="logo" width="500px" height="500px" />
+                    <img src="/socialnetwork.png" className="projectthree-img" alt="logo" width="500px" height="500px" />
                     <div className="projectthree-text">
                         <h1>project 3 : petition</h1>
                         <br></br>

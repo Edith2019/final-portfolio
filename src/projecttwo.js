@@ -21,7 +21,7 @@ export default class ProjectTwo extends React.Component {
             <React.Fragment>
                 <div className="projecttwo-container">
                     <div className="projecttwo-text">
-                        <h1>project 2 : petition</h1>
+                        <h1>project 2 : image-board</h1>
                         <br></br>
                         <p>technologies utilisées</p>
                         <br></br>
@@ -37,7 +37,7 @@ export default class ProjectTwo extends React.Component {
                         <br></br>
                         <a>Github</a>
                     </div>
-                    <img src="/Logo.png" className="projecttwo-img" alt="logo" width="500px" height="500px" />
+                    <img src="/imageboard.png" className="projecttwo-img" alt="logo" width="500px" height="500px" />
 
                 </div>
             </React.Fragment>

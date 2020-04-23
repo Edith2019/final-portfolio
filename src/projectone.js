@@ -20,7 +20,7 @@ export default class ProjectOne extends React.Component {
 
             <React.Fragment>
                 <div className="projectone-container">
-                    <img src="/Logo.png" className="projectone-img" alt="logo" width="500px" height="500px" />
+                    <img src="/petition.png" className="projectone-img" alt="logo" width="500px" height="500px" />
                     <div className="projectone-text">
                         <h1>project 1 : petition</h1>
                         <br></br>
