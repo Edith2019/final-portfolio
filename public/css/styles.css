@@ -325,6 +325,144 @@ a.header-a {
     opacity: 1;
 }
 
+/* /////////////// Contact /////////////////*/
+
+.contact-btm {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    width: 90%;
+    background-color: greenyellow;
+    z-index: 50;
+}
+
+.contact-back {
+    border: black 2px solid;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-back:hover {
+    background-color: greenyellow;
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact-white {
+    width: 50%;
+    height: 500px;
+    background-color: yellow;
+    padding-top: 50px;
+    padding-left: 5px;
+}
+
+#question {
+    background: none;
+    font-size: 2em;
+}
+
+#comments {
+    background: none;
+    font-size: 3em;
+}
+
+#touch {
+    background: none;
+    font-size: 4.5em;
+}
+
+.contact-input {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-bottom: black solid 2px;
+    font-size: 15px;
+}
+
+#contact-input-first:hover {
+    background-color: greenyellow;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+#contact-input-last:hover {
+    background-color: blue;
+    opacity: 1;
+    transition: 0.4s;
+    color: white;
+}
+
+#contact-input-email:hover {
+    background-color: yellow;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.contact-input-message:hover {
+    background-color: orange;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.contact-checkbox-container {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: none;
+}
+.contact-input-checkbox {
+    margin: none;
+    padding: none;
+    width: 30px;
+    border: solid black 1px;
+}
+
+.contact-checkbox-t {
+    font-size: 15px;
+    margin: none;
+}
+
+.contact-input-button {
+    width: 130px;
+    height: 40px;
+    border: solid black 2px;
+    cursor: pointer;
+}
+
+.contact-input-button:hover {
+    border: solid red 2px;
+    transition: 0.4s;
+    color: red;
+}
+
 /* /////////////// Footer /////////////////*/
 
 .footer-container {

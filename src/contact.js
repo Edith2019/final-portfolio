@@ -24,7 +24,7 @@ export default class Contact extends React.Component {
     submit() {
 
 
-        if (!this.state.first || !this.state.last || !this.state.email) {
+        if (!this.state.first || !this.state.last || !this.state.email || this.state.checkbox != 'on') {
             console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
                 requiredFields: this.state.requiredFields,
@@ -83,17 +83,23 @@ export default class Contact extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <div className="contact-btm">
+                    <a className="contact-back" href="http://localhost:8080/"> back to main </a>
+                </div>
                 <div className="contact">
-                    <p> Testing in contact </p>
+                    <div className="contact-white">
+                        <p id="question">do you have questions?</p>
+                        <p id="comments">do you have comments?</p>
+                        <p id="touch">fill out the form and get in touch... </p>
+                    </div>
                     <div className="contact-input">
-
-                        <input className={`{${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''} }`} name="first" type="text" placeholder="first name" onChange={e => this.handleChange(e)} />
-                        <input className="contact-input-last" name="last" type="text" placeholder="last name" onChange={e => this.handleChange(e)} />
-                        <input className="contact-input-email" name="email" type="email" placeholder="email" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-first" className={`{${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''} }`} name="first" type="text" placeholder="first name" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-last" name="last" type="text" placeholder="last name" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-email" name="email" type="email" placeholder="email" onChange={e => this.handleChange(e)} />
                         <input className="contact-input-message" name="message" type="text" r placeholder="message" onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
+                            <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> I agree with the terms and conditions</p>
-                            <input className="contact-input-checkbox" name="checkbox" type="checkbox" required="required" onChange={e => this.handleChange(e)} />
                         </div>
                         <button className="contact-input-button" onClick={() => this.submit()}>submit</button>
                     </div>

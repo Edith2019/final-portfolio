@@ -62,7 +62,7 @@ export default class App extends React.Component {
 
                     </div>
                     <Footer />
-                    <Route exact patch='/contact' component={Contact} />
+                    <Route exact patch='/contact' />
                 </BrowserRouter>
             </React.Fragment >
         );
