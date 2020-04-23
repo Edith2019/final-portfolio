@@ -57,11 +57,21 @@ if (process.env.NODE_ENV != 'production') {
 ////route to post data from contact /////
 
 app.post('/message', (req, res) => {
-
+    console.log("made it to msg route");
     console.log("req.session", req.session);
     console.log("req.body", req.body);
-    console.log("req.params", req.params);
+    const first = req.body.first;
+    const last = req.body.last;
+    const email = req.body.email;
+    const message = req.body.message;
+    const checkbox = req.body.checkbox;
 
+
+
+    db.addContactsData(first, last, email, message, checkbox).then(result => {
+        console.log("results", result);
+
+    });
 });
 
 
