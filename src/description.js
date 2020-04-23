@@ -25,15 +25,16 @@ export default class Description extends React.Component {
                     </div>
 
                     <div className="description-links">
-                        <div className="description-links-l">
-                            <a className="description-links-l-l">linkedin</a>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <a className="description-links-l-g">github</a>
-                        </div>
                         <h1 className="description-links-t">find more</h1>
+                        <div className="description-links-l">
+                            <a className="description-links-l-l" href="https://www.linkedin.com/in/edith-chevallier/">linkedin</a>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <a className="description-links-l-g" href="https://github.com/Edith2019">github</a>
+                        </div>
+
                     </div>
                 </div >
             </React.Fragment >

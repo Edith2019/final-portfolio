@@ -65,7 +65,7 @@ export default class App extends React.Component {
                     <ProjectTwo />
                     <ProjectThree />
                     <div className="otherproject">
-                        <h1>do you want to see other projects?</h1>
+                        <h1>do you want to see more...?</h1>
                         <div className="otherproject-app-buttons">
                             <a className="otherproject-yes" href="http://localhost:8080/otherprojects"  >oh yes</a>
                             <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>nahhhh</a>

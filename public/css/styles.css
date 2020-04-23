@@ -168,12 +168,17 @@ a.header-a {
 }
 
 .description-links-l-l {
-    /*  */
+    color: black;
 }
 
+.description-links-l-l:hover {
+    color: greenyellow;
+}
 .description-links-l-g {
-    /* padding-left: 100px;
-    margin-bottom: 50px; */
+    color: black;
+}
+.description-links-l-g:hover {
+    color: greenyellow;
 }
 
 .description-links-t {
@@ -216,6 +221,14 @@ a.header-a {
     padding-left: 10px;
 }
 
+.projectone-text-a {
+    color: black;
+}
+
+.projectone-text-a:hover {
+    color: yellow;
+}
+
 /* /////////////// Projecttwo/////////////////*/
 
 .projecttwo-container {
@@ -248,6 +261,14 @@ a.header-a {
     width: 60%;
     height: 500px;
     padding-left: 10px;
+}
+
+.projecttwo-text-a {
+    color: black;
+}
+
+.projecttwo-text-a:hover {
+    color: orange;
 }
 
 /* /////////////// Projectthree/////////////////*/
@@ -284,6 +305,13 @@ a.header-a {
     padding-left: 10px;
 }
 
+.projectthree-text-a {
+    color: black;
+}
+
+.projectthree-text-a:hover {
+    color: red;
+}
 /* /////////////// Otherproject /////////////////*/
 
 .otherproject {

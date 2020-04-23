@@ -36,7 +36,7 @@ export default class ProjectOne extends React.Component {
                         <a>Demo</a>
                         <br></br>
                         <br></br>
-                        <a>Github</a>
+                        <a className="projectone-text-a" href="https://github.com/spicedacademy/vegeta-petition/tree/Edith">Github</a>
                     </div>
                 </div>
             </React.Fragment>

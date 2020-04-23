@@ -35,7 +35,7 @@ export default class ProjectTwo extends React.Component {
                         <a>Demo</a>
                         <br></br>
                         <br></br>
-                        <a>Github</a>
+                        <a className="projecttwo-text-a" href="https://github.com/spicedacademy/vegeta-imageboard/tree/Edith">Github</a>
                     </div>
                     <img src="/imageboard.png" className="projecttwo-img" alt="logo" width="500px" height="500px" />
 

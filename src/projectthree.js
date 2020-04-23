@@ -36,7 +36,7 @@ export default class ProjectThree extends React.Component {
                         <a>Demo</a>
                         <br></br>
                         <br></br>
-                        <a>Github</a>
+                        <a className="projectthree-text-a" href="https://github.com/spicedacademy/vegeta-socialnetwork/tree/Edith">Github</a>
                     </div>
                 </div>
             </React.Fragment>
