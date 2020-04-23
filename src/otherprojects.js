@@ -23,61 +23,58 @@ export default class OtherProjects extends React.Component {
                     <div className="op-one-card">
                         <img src="/Logo.png" className="op-one-img" alt="logo" width="150px" height="150px" />
                         <div className="op-one-text">
-                            <h1>connect four</h1>
+                            <h1 className="op-title">connect four</h1>
                             <br></br>
-                            <p>technologies utilisées</p>
+                            <p className="op-tech">technologies utilisées</p>
                             <br></br>
-                            <p>description du project</p>
-                            <br></br>
-                            <br></br>
-                            <p>focus</p>
-                            <br></br>
-                            <p>ressenti</p>
-                            <br></br>
-                            <a>Demo</a>
+                            <p className="op-description">description du project</p>
                             <br></br>
                             <br></br>
-                            <a>Github</a>
+                            <p className="op-focus">focus</p>
+                            <br></br>
+                            <br></br>
+                            <a className="op-demo">Demo</a>
+                            <br></br>
+                            <br></br>
+                            <a className="op-github">Github</a>
                         </div>
                     </div>
                     <div className="op-two-card">
                         <img src="/Logo.png" className="op-two-img" alt="logo" width="150px" height="150px" />
                         <div className="op-two-text">
-                            <h1>spotify API</h1>
+                            <h1 className="op-title" >spotify API</h1>
                             <br></br>
-                            <p>technologies utilisées</p>
+                            <p className="op-tech">technologies utilisées</p>
                             <br></br>
-                            <p>description du project</p>
-                            <br></br>
-                            <br></br>
-                            <p>focus</p>
-                            <br></br>
-                            <p>ressenti</p>
-                            <br></br>
-                            <a>Demo</a>
+                            <p className="op-description">description du project</p>
                             <br></br>
                             <br></br>
-                            <a>Github</a>
+                            <p className="op-focus">focus</p>
+                            <br></br>
+                            <br></br>
+                            <a className="op-demo">Demo</a>
+                            <br></br>
+                            <br></br>
+                            <a className="op-github">Github</a>
                         </div>
                     </div>
                     <div className="op-three-card">
                         <img src="/Logo.png" className="op-three-img" alt="logo" width="150px" height="150px" />
                         <div className="op-three-text">
-                            <h1>thicker</h1>
+                            <h1 className="op-title">thicker</h1>
                             <br></br>
-                            <p>technologies utilisées</p>
+                            <p className="op-tech">technologies utilisées</p>
                             <br></br>
-                            <p>description du project</p>
-                            <br></br>
-                            <br></br>
-                            <p>focus</p>
-                            <br></br>
-                            <p>ressenti</p>
-                            <br></br>
-                            <a>Demo</a>
+                            <p className="op-description">description du project</p>
                             <br></br>
                             <br></br>
-                            <a>Github</a>
+                            <p className="op-focus">focus</p>
+                            <br></br>
+                            <br></br>
+                            <a className="op-demo">Demo</a>
+                            <br></br>
+                            <br></br>
+                            <a className="op-github">Github</a>
                         </div>
                     </div>
                 </div>
