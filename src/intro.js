@@ -1,4 +1,5 @@
 import React from 'react';
+import Cube from './cube';
 
 export default class Intro extends React.Component {
     constructor() { //props are all the data you want to apss props
@@ -20,7 +21,9 @@ export default class Intro extends React.Component {
             <React.Fragment>
                 <div className="intro-container">
                     <div className="intro-elem">
-                        <div className="intro-animation"></div>
+                        <div className="intro-animation">
+                            <Cube />
+                        </div>
                         <div className="intro-title">
                             <h1 className="intro-title-w">welcome</h1>
                             <h1 className="intro-title-t">to Edith`s</h1>

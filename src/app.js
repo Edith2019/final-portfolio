@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Intro from './intro';
+import Cube from './cube';
 import HeaderModal from './headermodal';
 import Description from './description';
 import ProjectOne from './projectone';
@@ -60,6 +61,7 @@ export default class App extends React.Component {
                     </div >
                     <Intro />
                     {this.state.menumodalvisible && (<HeaderModal toggleMenuModal={this.toggleMenuModal} />)}
+                    {/* <Cube /> */}
                     <Description />
                     <ProjectOne />
                     <ProjectTwo />
@@ -70,7 +72,7 @@ export default class App extends React.Component {
                             <a className="otherproject-yes" href="http://localhost:8080/otherprojects"  >oh yes</a>
                             <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>nahhhh</a>
                             {this.state.windowsmodalvisible && (<div className="otherporject-windows" onClick={() => this.toggleWindowsModal()}></div>)}
-                            <a a className="otherproject-play">i just wanna play</a>
+                            <a className="otherproject-play">i just wanna play</a>
                         </div>
                     </div>
 
