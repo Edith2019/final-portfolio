@@ -21,7 +21,7 @@ export default class ProjectTwo extends React.Component {
             <React.Fragment>
                 <div className="projecttwo-container">
                     <div className="projecttwo-text">
-                        <h1>project 2 : image-board</h1>
+                        <h1>work 2 : image-board</h1>
                         <br></br>
                         <p>technologies utilisées</p>
                         <br></br>

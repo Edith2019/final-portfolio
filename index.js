@@ -11,24 +11,38 @@ app.use(express.static('./public'));
 
 app.use(compression());
 
-let secrets;
-if (process.env.SESSION_SECRET) {
-    secrets = {
-        cookieSession: {
-            secret: process.env.SESSION_SECRET
-        }
-    };
-} else {
-    secrets = require('./utils/secrets');
+// let secrets;
+// if (process.env.SESSION_SECRET) {
+//     secrets = {
+//         cookieSession: {
+//             secret: process.env.SESSION_SECRET
+//         }
+//     };
+// } else {
+//     secrets = require('./utils/secrets');
 
-}
+// }
 
 //////set up the cookie///////
 
-app.use(cookieSession({
-    secret: secrets.cookieSession.secret,
-    maxAge: 1000 * 60 * 60 * 24 * 14
-}));
+// app.use(cookieSession({
+//     secret: secrets.cookieSession.secret,
+//     maxAge: 1000 * 60 * 60 * 24 * 14
+// }));
+
+let secrets;
+process.env.NODE_ENV === "production"
+    ? (secrets = process.env)
+    : (secrets = require("./utils/secrets"));
+app.use(
+    cookieSession({
+        secret: `${secrets.cookieSession.secret}`,
+        maxAge: 1000 * 60 * 60 * 24 * 14
+    })
+);
+
+
+
 
 //////Csurf //////////
 
@@ -86,6 +100,10 @@ app.get('*', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(8080, function () {
-    console.log("I'm listening.");
-});
+// app.listen(8080, function () {
+//     console.log("I'm listening.");
+// });
+
+if (require.main == module) {
+    app.listen(process.env.PORT || 8080, () => console.log("Server Listening"));
+}

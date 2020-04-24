@@ -81,7 +81,7 @@ img {
     margin-right: 3%;
     padding: 30px;
     margin-left: 82%;
-    margin-top: -560px;
+    margin-top: -650px;
     z-index: 999;
     position: fixed;
     border-top: solid red 4px;
@@ -136,9 +136,6 @@ a.header-a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.description-text {
 }
 
 .description-text-t {
@@ -320,7 +317,6 @@ a.header-a {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
-
     padding-bottom: 70px;
     height: 400px;
 }

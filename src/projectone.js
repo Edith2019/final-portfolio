@@ -22,7 +22,7 @@ export default class ProjectOne extends React.Component {
                 <div className="projectone-container">
                     <img src="/petition.png" className="projectone-img" alt="logo" width="500px" height="500px" />
                     <div className="projectone-text">
-                        <h1>project 1 : petition</h1>
+                        <h1>work 1 : petition</h1>
                         <br></br>
                         <p>technologies utilisées</p>
                         <br></br>

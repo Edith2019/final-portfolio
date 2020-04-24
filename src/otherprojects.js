@@ -36,7 +36,7 @@ export default class OtherProjects extends React.Component {
                             <a className="op-demo">Demo</a>
                             <br></br>
                             <br></br>
-                            <a className="op-github">Github</a>
+                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final">Github</a>
                         </div>
                     </div>
                     <div className="op-two-card">
@@ -55,7 +55,7 @@ export default class OtherProjects extends React.Component {
                             <a className="op-demo">Demo</a>
                             <br></br>
                             <br></br>
-                            <a className="op-github">Github</a>
+                            <a className="op-github" href=" https://github.com/spicedacademy/vegeta-code/tree/Edith/week4/D1/Exercice1" >Github</a>
                         </div>
                     </div>
                     <div className="op-three-card">
@@ -74,7 +74,7 @@ export default class OtherProjects extends React.Component {
                             <a className="op-demo">Demo</a>
                             <br></br>
                             <br></br>
-                            <a className="op-github">Github</a>
+                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week6/D3/TickerTwitter">Github</a>
                         </div>
                     </div>
                 </div>

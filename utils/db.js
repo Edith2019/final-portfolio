@@ -1,13 +1,21 @@
 const spicedPg = require("spiced-pg");
-const db = spicedPg("postgres:postgres:password@localhost:5432/contacts");
-const bcrypt = require('bcryptjs');
-let { genSalt, hash, compare } = bcrypt; //those function are asynchronus
-const { promisify } = require('util');
-genSalt = promisify(genSalt);
-hash = promisify(hash);
-compare = promisify(compare);
 
+// const bcrypt = require('bcryptjs');
+// let { genSalt, hash, compare } = bcrypt; //those function are asynchronus
+// const { promisify } = require('util');
+// genSalt = promisify(genSalt);
+// hash = promisify(hash);
+// compare = promisify(compare);
 
+let db;
+let secrets;
+if (process.env.DATABASE_URL) {
+    db = spicedPg(process.env.DATABASE_URL);
+} else {
+    secrets = require('./secrets');
+    db = spicedPg(`postgres:${secrets.users.user}:${secrets.users.pwreg}@localhost:5432/contacts`);
+
+}
 
 module.exports.addContactsData = (first, last, email, message, checkbox) => {
 

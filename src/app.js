@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Intro from './intro';
-import Cube from './cube';
 import HeaderModal from './headermodal';
 import Description from './description';
 import ProjectOne from './projectone';
@@ -54,7 +53,7 @@ export default class App extends React.Component {
                         <div className="header-container">
                             <img src="/Logo.png" className="header-logo" alt="logo" width="100px" height="100px" />
                             <div className="header-elem">
-                                <a className="header-work"> work </a>
+                                <a className="header-work" onClick={ProjectOne}> work </a>
                                 <img src="/hamburger.png" className="header-hamburger" alt="hamburger" width="50px" height="50px" onClick={() => this.toggleMenuModal()} />
                             </div>
                         </div>
