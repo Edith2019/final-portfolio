@@ -33,7 +33,7 @@ app.use(compression());
 let secrets;
 process.env.NODE_ENV === "production"
     ? (secrets = process.env)
-    : (secrets = require("./utils/secrets"));
+    : (secrets = require("./secrets"));
 app.use(
     cookieSession({
         secret: `${secrets.cookieSession.secret}`,
