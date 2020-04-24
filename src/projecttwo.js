@@ -32,7 +32,7 @@ export default class ProjectTwo extends React.Component {
                         <br></br>
                         <p>ressenti</p>
                         <br></br>
-                        <a>Demo</a>
+                        <a className="projecttwo-text-a" >Demo</a>
                         <br></br>
                         <br></br>
                         <a className="projecttwo-text-a" href="https://github.com/spicedacademy/vegeta-imageboard/tree/Edith">Github</a>

@@ -33,7 +33,7 @@ export default class OtherProjects extends React.Component {
                             <p className="op-focus">focus</p>
                             <br></br>
                             <br></br>
-                            <a className="op-demo">Demo</a>
+                            <a className="op-demo" href="file:///Users/edith/Desktop/vegeta-code/week3/D5/Exercice1Final/index.html">Demo</a>
                             <br></br>
                             <br></br>
                             <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final">Github</a>
