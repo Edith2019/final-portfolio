@@ -18,7 +18,7 @@ export default class Description extends React.Component {
         return (
 
             <React.Fragment>
-                <div className="description-container">
+                <div className="description-container" id="about">
                     <div className="description-text">
                         <h1 className="description-text-t">who am i?</h1>
                         <p className="description-text-p">blblblblblblblblblblblblblblblghghghghghghblbblblblblblblblblbllblblb</p>

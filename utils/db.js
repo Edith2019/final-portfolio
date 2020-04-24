@@ -8,11 +8,12 @@ const spicedPg = require("spiced-pg");
 // compare = promisify(compare);
 
 // let db;
-// let secrets;
+
 // if (process.env.DATABASE_URL) {
 //     db = spicedPg(process.env.DATABASE_URL);
 // } else {
-//     secrets = require('./secrets');
+// let secrets;
+//     let secrets = require('./secrets');
 //     db = spicedPg(`postgres:${secrets.users.user}:${secrets.users.pwreg}@localhost:5432/contacts`);
 
 // }

@@ -136,12 +136,12 @@ a.header-a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 
 .description-text-t {
     font-size: 70px;
     padding-top: 30px;
-    padding-bottom: 70px;
     padding-left: 10px;
 }
 
@@ -155,7 +155,6 @@ a.header-a {
 
 .description-links {
     width: 30%;
-    height: 500px;
 }
 
 .description-links-l {

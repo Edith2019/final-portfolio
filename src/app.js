@@ -6,6 +6,7 @@ import Description from './description';
 import ProjectOne from './projectone';
 import ProjectTwo from './projecttwo';
 import ProjectThree from './projectthree';
+// import Last from './last';
 import Footer from './footer';
 
 
@@ -53,7 +54,7 @@ export default class App extends React.Component {
                         <div className="header-container">
                             <img src="/Logo.png" className="header-logo" alt="logo" width="100px" height="100px" />
                             <div className="header-elem">
-                                <a className="header-work" onClick={ProjectOne}> work </a>
+                                <a className="header-work" href="#project-one"> work </a>
                                 <img src="/hamburger.png" className="header-hamburger" alt="hamburger" width="50px" height="50px" onClick={() => this.toggleMenuModal()} />
                             </div>
                         </div>
@@ -74,7 +75,7 @@ export default class App extends React.Component {
                             <a className="otherproject-play">i just wanna play</a>
                         </div>
                     </div>
-
+                    {/* <Last /> */}
                     <Footer />
                 </BrowserRouter>
             </React.Fragment >

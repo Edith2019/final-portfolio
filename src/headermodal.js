@@ -17,8 +17,8 @@ export default class HeaderModal extends React.Component {
             <React.Fragment>
                 {/* <div className="header-modal" > */}
                 <div className="header-links">
-                    <a className="header-a"> about</a>
-                    <a className="header-a" href="http://localhost:8080/otherprojects" > project</a>
+                    <a className="header-a" href="#about"> about</a>
+                    <a className="header-a" href="http://localhost:8080/otherprojects" > projects</a>
                     <a className="header-a" href="http://localhost:8080/contact"> contact</a>
                     {/* </div> */}
                 </div>
