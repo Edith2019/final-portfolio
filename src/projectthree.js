@@ -31,11 +31,11 @@ export default class ProjectThree extends React.Component {
                         <p>creation of a social-network for users to come together around a common interest while interacting in private or general chat and personalizing their profiles.</p>
                         <br></br>
                         <h3>features: </h3>
-                        <p>register/ login/ reset password</p>
-                        <p>upload image/ biography</p>
-                        <p>add/ pending/ remove friends</p>
-                        <p>who is online?</p>
-                        <p>search people</p>
+                        <p>- register/ login/ reset password</p>
+                        <p>- upload image/ biography</p>
+                        <p>- add/ pending/ remove friends</p>
+                        <p>- who is online?</p>
+                        <p>- search people</p>
                         <br></br>
                         <h3>highlights</h3>
                         <p> my favorit and moste complete project so far. it was a thrill to explore the infinite possibilities of redux.</p>

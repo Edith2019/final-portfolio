@@ -800,3 +800,15 @@ input {
     font-size: 20px;
     transition: 0.4s;
 }
+
+/* ///scroll bar ///// */
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    opacity: 0.5;
+    outline: 6px solid black;
+}

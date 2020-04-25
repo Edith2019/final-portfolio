@@ -19,15 +19,17 @@ export default class Intro extends React.Component {
         return (
 
             <React.Fragment>
-                <div className="intro-container" id="intro">
-                    <div className="intro-elem">
-                        <div className="intro-animation">
-                            <Cube />
-                        </div>
-                        <div className="intro-title">
-                            <h1 className="intro-title-w">welcome</h1>
-                            <h1 className="intro-title-t">to Edith`s</h1>
-                            <h1 className="intro-title-p">portfolio</h1>
+                <div classNAme="scrollable-element">
+                    <div className="intro-container" id="intro">
+                        <div className="intro-elem">
+                            <div className="intro-animation">
+                                <Cube />
+                            </div>
+                            <div className="intro-title">
+                                <h1 className="intro-title-w">welcome</h1>
+                                <h1 className="intro-title-t">to Edith's</h1>
+                                <h1 className="intro-title-p">portfolio</h1>
+                            </div>
                         </div>
                     </div>
                 </div>

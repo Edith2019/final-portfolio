@@ -69,10 +69,10 @@ export default class App extends React.Component {
                     <ProjectTwo />
                     <ProjectThree />
                     <div className="otherproject">
-                        <h1>do you want to see more...?</h1>
+                        <h1>curious to see more?</h1>
                         <div className="otherproject-app-buttons">
-                            <a className="otherproject-yes" href="https://edith-portfolio.herokuapp.com/otherprojects"  >oh yes</a>
-                            <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>nahhhh</a>
+                            <a className="otherproject-yes" href="https://edith-portfolio.herokuapp.com/otherprojects">bring it on</a>
+                            <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>absolutely not</a>
                             {this.state.windowsmodalvisible && (<div className="otherporject-windows" onClick={() => this.toggleWindowsModal()}></div>)}
                             <a className="otherproject-play" href="https://connect4.gamesolver.org/">i just wanna play</a>
                         </div>
