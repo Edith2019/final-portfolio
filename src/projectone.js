@@ -20,23 +20,29 @@ export default class ProjectOne extends React.Component {
 
             <React.Fragment>
                 <div className="projectone-container" id="project-one">
-                    <img src="/petition.png" className="projectone-img" alt="logo" width="500px" height="500px" />
+                    <img src="/petition.png" className="projectone-img" alt="logo" height="500px" />
                     <div className="projectone-text">
-                        <h1>work 1 : petition</h1>
+                        <h1>work 1: petition</h1>
                         <br></br>
-                        <p>technologies utilisées</p>
+                        <h3>technologies:</h3>
+                        <p>express// node.js// express-handlebars// postgres// javascript// jquery// css</p>
                         <br></br>
-                        <p>description du project</p>
+                        <h3>project's description:</h3>
+                        <p>the idea behind this project is to create an online petition that visitors can sign to make their voice heard on an issue of your choosing.</p>
+                        <br></br>
+                        <h3>features:</h3>
+                        <p>- register/ login</p>
+                        <p>- canvas' signature</p>
+                        <p>- list of total signers and list per city signers</p>
+                        <p>- profile page that can be modified</p>
+                        <br></br>
+                        <h3>highlights:</h3>
+                        <p>it was a great pleasure to play around with handlebars while figuring out the best user experiences in routing the pages.</p>
+                        <br></br>
+                        <a className="projectone-text-a" href=" https://petitiontempelhof.herokuapp.com/">demo</a>
                         <br></br>
                         <br></br>
-                        <p>focus</p>
-                        <br></br>
-                        <p>ressenti</p>
-                        <br></br>
-                        <a className="projectone-text-a" href=" https://petitiontempelhof.herokuapp.com/">Demo</a>
-                        <br></br>
-                        <br></br>
-                        <a className="projectone-text-a" href="https://github.com/spicedacademy/vegeta-petition/tree/Edith">Github</a>
+                        <a className="projectone-text-a" href="https://github.com/spicedacademy/vegeta-petition/tree/Edith">github</a>
                     </div>
                 </div>
             </React.Fragment>

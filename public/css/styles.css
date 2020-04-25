@@ -204,6 +204,7 @@ a.header-a {
     transition: 0.8s;
 
     padding: 0px;
+    width: 40%;
 }
 
 .projectone-img:hover {
@@ -221,10 +222,13 @@ a.header-a {
 
 .projectone-text-a {
     color: black;
+    transition: 0.4s;
+    font-size: 20px;
 }
 
 .projectone-text-a:hover {
     color: yellow;
+    font-size: 25px;
 }
 
 /* /////////////// Projecttwo/////////////////*/
@@ -246,6 +250,7 @@ a.header-a {
     -webkit-filter: grayscale(100%);
     opacity: 0.4;
     transition: 0.8s;
+    width: 40%;
 }
 
 .projecttwo-img:hover {
@@ -259,14 +264,18 @@ a.header-a {
     width: 60%;
     height: 500px;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .projecttwo-text-a {
     color: black;
+    transition: 0.4s;
+    font-size: 20px;
 }
 
 .projecttwo-text-a:hover {
     color: orange;
+    font-size: 25px;
 }
 
 /* /////////////// Projectthree/////////////////*/
@@ -288,6 +297,7 @@ a.header-a {
     -webkit-filter: grayscale(100%);
     opacity: 0.4;
     transition: 0.8s;
+    width: 40%;
 }
 
 .projectthree-img:hover {
@@ -305,10 +315,13 @@ a.header-a {
 
 .projectthree-text-a {
     color: black;
+    transition: 0.4s;
+    font-size: 20px;
 }
 
 .projectthree-text-a:hover {
     color: red;
+    font-size: 25px;
 }
 /* /////////////// Otherproject /////////////////*/
 
@@ -640,7 +653,14 @@ input {
     background-color: yellow;
     transition: 0.4s;
 }
+.op-tech-text {
+    background: none;
+}
 
+.op-description-text {
+    background: none;
+    padding: 5px;
+}
 .op-one-card {
     width: 250px;
     border: solid greenyellow 4px;
@@ -679,6 +699,7 @@ input {
 }
 .op-two-text {
     background: none;
+    padding: 5px;
 }
 .op-two-card:hover {
     transform: scale(1.2);
@@ -704,6 +725,7 @@ input {
 }
 .op-three-text {
     background: none;
+    padding: 5px;
 }
 .op-three-card:hover {
     transform: scale(1.2);
@@ -712,6 +734,7 @@ input {
 }
 .op-title {
     background: none;
+    padding-left: 10px;
 }
 
 .op-tech {
