@@ -20,6 +20,14 @@ img {
     z-index: 97;
 }
 
+.header-logo {
+    background: none;
+}
+
+.header-logo-click {
+    background: none;
+}
+
 .header-container {
     position: fixed;
     top: 0px;
@@ -92,6 +100,7 @@ a.header-a {
     margin-right: 80px;
     margin-top: 40px;
     font-size: 25px;
+    color: black;
 }
 /* /////////////// INTRO /////////////////*/
 
@@ -410,7 +419,7 @@ a.header-a {
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -498,7 +507,7 @@ a.header-a {
     overflow: visible;
 }
 .contact-input {
-    width: 350px;
+    width: 50%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -630,7 +639,7 @@ input {
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;

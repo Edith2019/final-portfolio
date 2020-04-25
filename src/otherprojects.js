@@ -17,6 +17,7 @@ export default class OtherProjects extends React.Component {
         return (
             <React.Fragment>
                 <div className="op-btm">
+                    <img src="/raccoon.png" className="header-logo" alt="logo" width="45px" height="45px" background="none" />
                     <a className="op-back " href="http://localhost:8080/"> back to main </a>
                 </div>
                 <div className="op-container">

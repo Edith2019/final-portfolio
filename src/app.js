@@ -52,8 +52,10 @@ export default class App extends React.Component {
                 <BrowserRouter>
                     <div className="header">
                         <div className="header-container">
-                            <img src="/Logo.png" className="header-logo" alt="logo" width="100px" height="100px" />
-                            <div className="header-elem">
+                            <a className="header-logo-click" href="#intro" >
+                                <img src="/raccoon.png" className="header-logo" alt="logo" width="70px" height="70px" background="none" />
+                            </a>
+                            <div className="header-elem" id="intro">
                                 <a className="header-work" href="#project-one"> work </a>
                                 <img src="/hamburger.png" className="header-hamburger" alt="hamburger" width="50px" height="50px" onClick={() => this.toggleMenuModal()} />
                             </div>
@@ -69,10 +71,10 @@ export default class App extends React.Component {
                     <div className="otherproject">
                         <h1>do you want to see more...?</h1>
                         <div className="otherproject-app-buttons">
-                            <a className="otherproject-yes" href="http://localhost:8080/otherprojects"  >oh yes</a>
+                            <a className="otherproject-yes" href="https://edith-portfolio.herokuapp.com/otherprojects"  >oh yes</a>
                             <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>nahhhh</a>
                             {this.state.windowsmodalvisible && (<div className="otherporject-windows" onClick={() => this.toggleWindowsModal()}></div>)}
-                            <a className="otherproject-play">i just wanna play</a>
+                            <a className="otherproject-play" href="https://connect4.gamesolver.org/">i just wanna play</a>
                         </div>
                     </div>
                     {/* <Last /> */}

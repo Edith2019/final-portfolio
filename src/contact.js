@@ -120,7 +120,8 @@ export default class Contact extends React.Component {
         return (
             <React.Fragment>
                 <div className="contact-btm">
-                    <a className="contact-back" href="http://localhost:8080/"> back to main </a>
+                    <img src="/raccoon.png" className="header-logo" alt="logo" width="45px" height="45px" background="none" />
+                    <a className="contact-back" href="https://edith-portfolio.herokuapp.com/"> back to main </a>
                 </div>
                 <div className="contact">
                     <div className="contact-white">

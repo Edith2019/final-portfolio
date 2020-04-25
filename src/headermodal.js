@@ -18,8 +18,8 @@ export default class HeaderModal extends React.Component {
                 {/* <div className="header-modal" > */}
                 <div className="header-links">
                     <a className="header-a" href="#about"> about</a>
-                    <a className="header-a" href="http://localhost:8080/otherprojects" > projects</a>
-                    <a className="header-a" href="http://localhost:8080/contact"> contact</a>
+                    <a className="header-a" href="https://edith-portfolio.herokuapp.com/otherprojects"> projects</a>
+                    <a className="header-a" href="https://edith-portfolio.herokuapp.com/contact"> contact</a>
                     {/* </div> */}
                 </div>
 
