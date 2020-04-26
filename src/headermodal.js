@@ -20,6 +20,7 @@ export default class HeaderModal extends React.Component {
                     <a className="header-a" href="#about"> about</a>
                     <a className="header-a" href="https://edith-portfolio.herokuapp.com/otherprojects"> projects</a>
                     <a className="header-a" href="https://edith-portfolio.herokuapp.com/contact"> contact</a>
+                    <a className="header-a" href="http://localhost:8080/tandc" > tandc</a>
                     {/* </div> */}
                 </div>
 

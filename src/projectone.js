@@ -28,7 +28,7 @@ export default class ProjectOne extends React.Component {
                         <p>express// node.js// express-handlebars// postgres// javascript// jquery// css</p>
                         <br></br>
                         <h3>project's description:</h3>
-                        <p>the idea behind this project is to create an online petition that visitors can sign to make their voice heard on an issue of your choosing.</p>
+                        <p>the idea behind this project is to create an online petition that visitors can sign to make their voice heard on an issue that they identify with.</p>
                         <br></br>
                         <h3>features:</h3>
                         <p>- register/ login</p>

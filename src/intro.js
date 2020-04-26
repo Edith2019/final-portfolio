@@ -19,7 +19,7 @@ export default class Intro extends React.Component {
         return (
 
             <React.Fragment>
-                <div classNAme="scrollable-element">
+                <div className="scrollable-element">
                     <div className="intro-container" id="intro">
                         <div className="intro-elem">
                             <div className="intro-animation">

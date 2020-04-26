@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Intro from './intro';
 import HeaderModal from './headermodal';
 import Description from './description';
 import ProjectOne from './projectone';
 import ProjectTwo from './projecttwo';
 import ProjectThree from './projectthree';
+import TAndC from './tandc';
 // import Last from './last';
 import Footer from './footer';
 
@@ -78,6 +79,7 @@ export default class App extends React.Component {
                         </div>
                     </div>
                     {/* <Last /> */}
+                    {/* <Route path='http://localhost:8080/tandc' component={TAndC} /> */}
                     <Footer />
                 </BrowserRouter>
             </React.Fragment >
