@@ -10,6 +10,10 @@ img {
     object-fit: cover;
 }
 
+body {
+    overflow: overlay;
+}
+
 /* /////////////// HEADER /////////////////*/
 .header {
     width: 100%;
@@ -36,7 +40,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     width: 90%;
     height: 130px;
     background: none;
@@ -107,7 +111,7 @@ a.header-a {
 .intro-container {
     height: auto;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     background-color: blue;
     padding-bottom: 50px;
 }
@@ -140,7 +144,7 @@ a.header-a {
     height: 600px;
     padding-top: 100px;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     background-color: chartreuse;
     display: flex;
     flex-direction: row;
@@ -199,7 +203,7 @@ a.header-a {
     padding-top: 50px;
     background-color: yellow;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -247,7 +251,7 @@ a.header-a {
     padding-top: 100px;
     background-color: orange;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -294,7 +298,7 @@ a.header-a {
     padding-top: 100px;
     background-color: red;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -344,7 +348,7 @@ a.header-a {
 
 .otherproject-app-buttons {
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     margin-top: 70px;
     display: flex;
     flex-direction: row;
@@ -422,7 +426,7 @@ a.header-a {
     justify-content: space-between;
     align-items: center;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     position: fixed;
     width: 90%;
     background-color: greenyellow;
@@ -446,7 +450,7 @@ a.header-a {
     padding-top: 100px;
     padding-bottom: 50px;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -627,7 +631,7 @@ input {
 
 .op-container {
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     padding-top: 100px;
     display: flex;
     flex-direction: row;
@@ -642,7 +646,7 @@ input {
     justify-content: space-between;
     align-items: center;
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 6%;
     position: fixed;
     width: 90%;
     background-color: yellow;
@@ -774,7 +778,7 @@ input {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 5%;
+    padding-right: 6%;
     padding-left: 5%;
     bottom: 20px;
     position: fixed;
@@ -805,10 +809,11 @@ input {
 
 body::-webkit-scrollbar {
     width: 1em;
+    background: none;
+    opacity: 0;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: blue;
+    background: white;
     opacity: 0.5;
-    outline: 6px solid black;
 }
