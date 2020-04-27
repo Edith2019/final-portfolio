@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
 
             <React.Fragment>
                 <div className="footer-container">
-                    <a className="footer-contact" href="http://localhost:8080/contact"> contact </a>
+                    <a className="footer-contact" href="https://edith-portfolio.herokuapp.com//contact" rel="noopener noreferrer" target='_blank'> contact </a>
                 </div>
             </React.Fragment>
 

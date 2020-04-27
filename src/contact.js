@@ -121,7 +121,7 @@ export default class Contact extends React.Component {
             <React.Fragment>
                 <div className="contact-btm">
                     <img src="/raccoon.png" className="header-logo" alt="logo" width="45px" height="45px" background="none" />
-                    <a className="contact-back" href="https://edith-portfolio.herokuapp.com/"> back to main </a>
+                    <a className="contact-back" href="https://edith-portfolio.herokuapp.com/" rel="noopener noreferrer" target='_blank'> back to main </a>
                 </div>
                 <div className="contact">
                     <div className="contact-white">
@@ -139,8 +139,9 @@ export default class Contact extends React.Component {
                         <div className="contact-checkbox-container">
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> i agree with the terms and conditions</p>
-                            {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
                         </div>
+                        {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
+
                         <button className="contact-input-button" onClick={() => this.submit()}>submit</button>
                     </div>
                 </div>
@@ -151,14 +152,15 @@ export default class Contact extends React.Component {
                         </div>
                         <h2 className="contact-thankyou-ty">thank you </h2>
                         <br />
-                        <h1 className="contact-thankyou-name"> {this.state.first} </h1>
+                        <h1 className="contact-thankyou-name"> {this.state.first} {this.state.last}</h1>
                         <br />
                         <h2 className="contact-thankyou-msg"> for your message! </h2>
                         <br />
                         <br />
-                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime, enjoy chilling around!</p>
+                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p><a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target='_blank'> enjoy the ride!</a>
                     </div>)
                 }
+                <p className="copyright">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
 
 

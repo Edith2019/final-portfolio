@@ -15,7 +15,7 @@ export default class TAndC extends React.Component {
 
             <React.Fragment>
                 <div className="tc">Testing tandc</div>
-
+                <p className="copyright">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment>
         );
     }

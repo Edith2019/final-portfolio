@@ -18,7 +18,7 @@ export default class OtherProjects extends React.Component {
             <React.Fragment>
                 <div className="op-btm">
                     <img src="/raccoon.png" className="header-logo" alt="logo" width="45px" height="45px" background="none" />
-                    <a className="op-back " href="https://edith-portfolio.herokuapp.com/"> back to main </a>
+                    <a className="op-back " href="https://edith-portfolio.herokuapp.com/" rel="noopener noreferrer" target='_blank'> back to main </a>
                 </div>
                 <div className="op-container">
                     <div className="op-one-card">
@@ -32,9 +32,9 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> sweet 2D connect four!</p>
                             <br></br>
-                            <a className="op-demo" href="file:///Users/edith/Desktop/vegeta-code/week3/D5/Exercice1Final/index.html">Demo</a>
+                            <a className="op-demo" href="file:///Users/edith/Desktop/vegeta-code/week3/D5/Exercice1Final/index.html" rel="noopener noreferrer" target='_blank'>Demo</a>
                             <br></br>
-                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final">Github</a>
+                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                     <div className="op-two-card">
@@ -48,7 +48,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> search and find the artists you love!</p>
                             <br></br>
-                            <a className="op-github" href=" https://github.com/spicedacademy/vegeta-code/tree/Edith/week4/D1/Exercice1" >Github</a>
+                            <a className="op-github" href=" https://github.com/spicedacademy/vegeta-code/tree/Edith/week4/D1/Exercice1" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                     <div className="op-three-card">
@@ -62,10 +62,11 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> keep track of the hottest news via ticker displaying twitter tweets!</p>
                             <br></br>
-                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week6/D3/TickerTwitter">Github</a>
+                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week6/D3/TickerTwitter" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                 </div>
+                <p className="copyright">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
 
 

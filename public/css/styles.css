@@ -208,13 +208,15 @@ a.header-a {
 }
 
 .description-links-icones {
-    /* border: solid black 2px; */
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .description-tol {
-    margin-left: 100px;
     margin-top: 50px;
+}
+
+.description-links-icones {
+    padding-left: 50px;
 }
 
 /* /////////////// ProjectOne/////////////////*/
@@ -498,9 +500,8 @@ a.header-a {
 }
 
 #question:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: 0.4s;
-    margin-left: 50px;
 }
 
 #comments {
@@ -513,7 +514,7 @@ a.header-a {
 #comments:hover {
     background: none;
     font-size: 3em;
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: 0.4s;
 }
 
@@ -525,9 +526,8 @@ a.header-a {
 }
 
 #touch:hover {
-    transform: scale(1.8);
+    transform: scale(1.2);
     transition: 0.4s;
-    margin-left: 95px;
     padding-right: 0px;
     overflow: visible;
 }
@@ -646,6 +646,20 @@ input {
 
 .contact-thankyou-text {
     background: none;
+}
+
+.contact-thankyou-ride {
+    margin-top: 20px;
+    background: none;
+    font-size: 20px;
+    color: white;
+    transition: 0.4s;
+}
+
+.contact-thankyou-ride:hover {
+    text-decoration: underline;
+    color: white;
+    transition: 0.4s;
 }
 
 /* /////////////// OtherProjects /////////////////*/
@@ -845,4 +859,9 @@ body::-webkit-scrollbar-thumb {
     width: 100px;
     height: 300px;
     border: solid black 1px;
+}
+
+/* /// copyright ///// */
+.copyright {
+    padding: 10px;
 }
