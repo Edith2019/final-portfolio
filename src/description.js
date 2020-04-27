@@ -37,14 +37,15 @@ export default class Description extends React.Component {
 
                     <div className="description-links">
                         <p className="description-links-t">other than work</p>
-                        <ul>
-                            <li>life</li>
-                            <li>learning</li>
-                            <li>traveling</li>
-                            <li>gardening</li>
-                            <li>drawing</li>
-                        </ul>
-
+                        <div className="description-links-icones">
+                            <img className="description-tol" src="/smile.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/flowers.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/planet-earth.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/laptop.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/speech-bubbles.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/play.png" width="50px" height="50px" />
+                            <img className="description-tol" src="/dots.png" width="50px" height="50px" />
+                        </div>
                     </div>
                 </div >
             </React.Fragment >

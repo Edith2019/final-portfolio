@@ -207,6 +207,16 @@ a.header-a {
     font-size: 60px;
 }
 
+.description-links-icones {
+    /* border: solid black 2px; */
+    margin-top: 10%;
+}
+
+.description-tol {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
 /* /////////////// ProjectOne/////////////////*/
 
 .projectone-container {

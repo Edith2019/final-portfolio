@@ -4,7 +4,7 @@ const compression = require('compression');
 const cookieSession = require('cookie-session');
 const csurf = require('csurf');
 const db = require('./utils/db');
-
+const ses = require('./ses');
 app.use(express.json());
 
 app.use(express.static('./public'));
@@ -81,9 +81,18 @@ app.post('/message', (req, res) => {
     const checkbox = req.body.checkbox;
     db.addContactsData(first, last, email, message, checkbox).then(result => {
         console.log("results", result);
+        if (result.rows[0].message) {
+            const sender = JSON.stringify(result.rows[0]);
+            ses.sendEmail('edith.chevallier3000@gmail.com', 'Email from  portfolio', sender)
+                .then(() => {
+                    res.json({
+                        success: true
+                    });
+                    console.log("it works weell");
+                });
+        }
         const data = result.rows[0];
         res.json({ data });
-
     }).catch(err => {
         console.log("there was an error in message", err);
         res.json({ error: true });
