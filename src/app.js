@@ -78,8 +78,6 @@ export default class App extends React.Component {
                             <a className="otherproject-play" href="https://connect4.gamesolver.org/" rel="noopener noreferrer" target='_blank'>i just wanna play</a>
                         </div>
                     </div>
-                    {/* <Last /> */}
-                    {/* <Route path='http://localhost:8080/tandc' component={TAndC} /> */}
                     <p className="copyright">Copyright © 2020 Edith-portfolio</p>
                     <Footer />
                 </BrowserRouter>

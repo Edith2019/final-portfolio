@@ -20,7 +20,7 @@ export default class HeaderModal extends React.Component {
                     <a className="header-a" href="#about"> about</a>
                     <a className="header-a" href="https://edith-portfolio.herokuapp.com/otherprojects" rel="noopener noreferrer" target='_blank'> projects</a>
                     <a className="header-a" href="https://edith-portfolio.herokuapp.com/contact" rel="noopener noreferrer" target='_blank'> contact</a>
-                    <a className="header-a" href="http://localhost:8080/tandc" rel="noopener noreferrer" target='_blank' > tandc</a>
+                    <a className="header-a" href="https://edith-portfolio.herokuapp.com/tandc" rel="noopener noreferrer" target='_blank' > tandc</a>
                     {/* </div> */}
                 </div>
 
