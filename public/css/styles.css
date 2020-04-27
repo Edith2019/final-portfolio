@@ -909,3 +909,8 @@ body::-webkit-scrollbar-thumb {
 .copyright {
     padding: 10px;
 }
+
+.copyright-project {
+    padding: 10px;
+    padding-top: 70px;
+}

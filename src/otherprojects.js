@@ -66,7 +66,7 @@ export default class OtherProjects extends React.Component {
                         </div>
                     </div>
                 </div>
-                <p className="copyright">Copyright © 2020 Edith-portfolio</p>
+                <p className="copyright-project">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
 
 
