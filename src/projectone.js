@@ -37,7 +37,7 @@ export default class ProjectOne extends React.Component {
                         <p>- profile page that can be modified</p>
                         <br></br>
                         <h3>highlights:</h3>
-                        <p>it was a great pleasure to play around with handlebars while figuring out the best user experiences in routing the pages.</p>
+                        <p>it was a great pleasure to play around with handlebars while figuring out the best user experience in routing the pages.</p>
                         <br></br>
                         <a className="projectone-text-a" href=" https://petitiontempelhof.herokuapp.com/" rel="noopener noreferrer" target='_blank'>demo</a>
                         <br></br>
