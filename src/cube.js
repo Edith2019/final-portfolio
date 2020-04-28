@@ -48,3 +48,4 @@ export default class Cube extends React.Component {
     }
 }
 
+// 0xFFFFFF

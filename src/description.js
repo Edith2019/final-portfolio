@@ -59,7 +59,7 @@ export default class Description extends React.Component {
                             </div>
                             <div className="description-card-img-title">
                                 <img src="/play.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
-                                <a className="description-card-img-a" href="https://www.youtube.com/watch?v=bCM3clq-_c0" rel="noopener noreferrer" target='_blank'><p>check it out</p></a>
+                                <a href="https://www.youtube.com/watch?v=bCM3clq-_c0" rel="noopener noreferrer" target='_blank'><p className="description-card-img-a">check it out</p></a>
                             </div>
 
 
