@@ -53,8 +53,8 @@ export default class App extends React.Component {
                 <BrowserRouter>
                     <div className="header">
                         <div className="header-container">
-                            <a className="header-logo-click" >
-                                <img src="/raccoon.png" className="header-logo" alt="logo" width="70px" height="70px" background="none" href="https://en.wikipedia.org/wiki/Raccoon#Intelligence" rel="noopener noreferrer" target='_blank' />
+                            <a className="header-logo-click" href="https://en.wikipedia.org/wiki/Raccoon#Intelligence" rel="noopener noreferrer" target='_blank' >
+                                <img src="/raccoon.png" className="header-logo" alt="logo" width="70px" height="70px" background="none" />
                             </a>
                             <div className="header-elem" id="intro">
                                 <a className="header-work" href="#project-one"> work </a>
