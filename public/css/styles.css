@@ -208,7 +208,24 @@ a.header-a {
 }
 
 .description-links-icones {
-    margin-top: 20%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.description-card-img-title {
+    width: 25%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 15px;
+}
+
+.description-card-img-a {
+    margin-top: 10px;
 }
 
 .description-tol {

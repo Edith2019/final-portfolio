@@ -20,7 +20,7 @@ export default class Description extends React.Component {
                 <div className="description-container" id="about">
                     <div className="description-text">
                         <h1 className="description-text-t">about</h1>
-                        <p className="description-text-p">Hi! I’m Edith. A fresh fullstack developer just out of Spiced Academy programming bootcamp. Based in Berlin, but available worldwide. i speak javascript, html, css, vue.js, react.js, english, french and sufficient german `(ein bier bitte)`.
+                        <p className="description-text-p">Hi! I’m Edith. A fresh fullstack developer just out of Spiced Academy programming bootcamp. Based in Berlin, but available worldwide. i speak javascript, html, css, vue.js, react.js, english, french and sufficient german (ein bier bitte).
 
                         I’m a quick learner eager to master the tangle of Javascript in a silk css wrap. Currently exploring in-depth frameworks like vue.js and with a huge crush on React.js.
 
@@ -37,11 +37,32 @@ export default class Description extends React.Component {
                     <div className="description-links">
                         <p className="description-links-t">other than work...</p>
                         <div className="description-links-icones">
-                            <p>life</p>
-                            <p>traveling</p>
-                            <p>learning</p>
-                            <p>gerdening</p>
-                            <p>listening and talking</p>
+                            <div className="description-card-img-title">
+                                <img src="/smile.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <p>life</p>
+                            </div>
+                            <div className="description-card-img-title">
+                                <img src="/flowers.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <p>gardening</p>
+                            </div>
+                            <div className="description-card-img-title">
+                                <img src="/planet-earth.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <p>traveling</p>
+                            </div>
+                            <div className="description-card-img-title">
+                                <img src="/laptop.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <p>learning</p>
+                            </div>
+                            <div className="description-card-img-title">
+                                <img src="/speech-bubbles.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <p>listening and talking</p>
+                            </div>
+                            <div className="description-card-img-title">
+                                <img src="/play.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
+                                <a className="description-card-img-a" href="https://www.youtube.com/watch?v=bCM3clq-_c0" rel="noopener noreferrer" target='_blank'><p>check it out</p></a>
+                            </div>
+
+
                         </div>
                     </div>
 

@@ -18,7 +18,7 @@ export default class OtherProjects extends React.Component {
             <React.Fragment>
                 <div className="op-btm">
                     <img src="/raccoon.png" className="header-logo" alt="logo" width="45px" height="45px" background="none" />
-                    <a className="op-back " href="https://edith-portfolio.herokuapp.com/" rel="noopener noreferrer" target='_blank'> back to main </a>
+                    <a className="op-back " href="https://edith-portfolio.herokuapp.com/" > back to main </a>
                 </div>
                 <div className="op-container">
                     <div className="op-one-card">

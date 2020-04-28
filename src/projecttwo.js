@@ -27,7 +27,7 @@ export default class ProjectTwo extends React.Component {
                         <p>vue.js// node.js// postgres// s3// axios// css</p>
                         <br></br>
                         <h3>project's description:</h3>
-                        <p>this work consist of a single page application where anybody can go and post an image with titles and description. other features like comment and navigation give the user a way to interact with each other and get a community feeling. </p>
+                        <p>this work consists of a single page application where anybody can go and post an image with title and description. other features like comments and navigation give users a way to interact with each other and get a community feeling. </p>
                         <br></br>
                         <h3>features:</h3>
                         <p>- upload image/ title/ description</p>
