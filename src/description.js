@@ -24,7 +24,7 @@ export default class Description extends React.Component {
 
                         I’m a quick learner eager to master the tangle of Javascript in a silk css wrap. Currently exploring in-depth frameworks like vue.js and with a huge crush on React.js.
 
-                        My future team will for sure appreciate my curious mindset, great communication skills and my excellent use of gifs. There’s always <a className="description-text-rm" href="https://media.giphy.com/media/3oKIPfp2txB8jGDSrm/giphy.gif" rel="noopener noreferrer" target='_blank'> one for the right moment.
+                        My future team will for sure appreciate my curious mindset, great communication skills and my excellent use of gifs. There’s always <a className="description-text-rm" href="https://media1.giphy.com/media/Hc8PMCBjo9BXa/giphy.gif?cid=ecf05e47283247b350d37b41087897244be4ae1f455d4b5f&rid=giphy.gif" rel="noopener noreferrer" target='_blank'> one for the right moment.
 </a>
                         </p>
                         <div className="description-links-l">
