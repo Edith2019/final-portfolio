@@ -12,7 +12,10 @@ export default class Contact extends React.Component {
             first: '',
             last: '',
             email: '',
-            message: ''
+            message: '',
+            inputfirst: 'hello',
+            userFirst: '',
+            userLast: ''
         };
         this.state.requiredFields = {
             first: '',
@@ -22,11 +25,12 @@ export default class Contact extends React.Component {
         };
 
 
+
     }
 
 
     submit() {
-
+        // console.log("e.target.value", e.target.value);
 
         if (!this.state.first || !this.state.last || !this.state.email) {
             console.log("this.state.requiredfield", this.state.requiredFields);
@@ -57,24 +61,20 @@ export default class Contact extends React.Component {
 
             }).then(
                 ({ data }) => {
+                    console.log("this.state", this.state);
                     console.log("data", data);
                     if (data.data) {
                         console.log("data", data);
                         this.setState({
-                            first: data.data.first,
-                            last: data.data.last
-                        });
-                        this.setState({
+                            userFirst: data.data.first,
+                            userLast: data.data.last,
+                            first: '',
+                            last: '',
+                            email: '',
+                            message: '',
                             thankyouisvisible: !this.state.thankyouisvisible
                         });
 
-                        this.setState({
-
-                            first: '',
-                            last: '',
-                            email: ''
-
-                        });
 
 
                     } else {
@@ -140,10 +140,11 @@ export default class Contact extends React.Component {
                         <p id="touch">fill out the form and get in touch... </p>
                     </div>
                     <div className="contact-input">
-                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''}`} name="first" type="text" placeholder="first name" onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? 'error' : ''}`} name="last" type="text" placeholder="last name" onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? 'error' : ''}`} name="email" type="email" placeholder="email" onChange={e => this.handleChange(e)} />
-                        <input className="contact-input-message" name="message" type="text" placeholder="message" onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''}`} name="first" type="text" placeholder="first name"
+                            value={this.state.first} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? 'error' : ''}`} name="last" type="text" placeholder="last name" value={this.state.last} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? 'error' : ''}`} name="email" type="email" placeholder="email" value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <input className="contact-input-message" name="message" type="text" placeholder="message" value={this.state.message} onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> i agree with the terms and conditions</p>
@@ -160,7 +161,7 @@ export default class Contact extends React.Component {
                         </div>
                         <h2 className="contact-thankyou-ty">thank you </h2>
                         <br />
-                        <h1 className="contact-thankyou-name"> {this.state.first} {this.state.last}</h1>
+                        <h1 className="contact-thankyou-name"> {this.state.userFirst} {this.state.userLast}</h1>
                         <br />
                         <h2 className="contact-thankyou-msg"> for your message! </h2>
                         <br />
