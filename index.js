@@ -97,6 +97,7 @@ app.post('/message', (req, res) => {
         console.log("there was an error in message", err);
         res.json({ error: true });
     });
+    req.session = null;
 });
 
 

@@ -190,6 +190,7 @@ a.header-a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background: none;
 }
 
 .description-links-l-l {
@@ -514,6 +515,10 @@ a.header-a {
     border: solid black 2px;
     background-color: black;
     color: white;
+}
+
+.contact-input-first {
+    content: "please enter your first name";
 }
 
 #question {

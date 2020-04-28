@@ -12,6 +12,7 @@ export default class Contact extends React.Component {
             first: '',
             last: '',
             email: '',
+            message: ''
         };
         this.state.requiredFields = {
             first: '',
@@ -31,7 +32,7 @@ export default class Contact extends React.Component {
             console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
                 requiredFields: {
-                    first: !this.state.first ? 'enter your first name' : "",
+                    first: !this.state.first ? 'please enter your first name' : "",
                     last: !this.state.last ? 'please enter your last name' : "",
                     email: !this.state.email ? 'please enter your email' : ""
                 },
@@ -68,13 +69,13 @@ export default class Contact extends React.Component {
                         });
 
                         this.setState({
-                            requiredFields: {
-                                first: '',
-                                last: '',
-                                email: ''
-                            }
+
+                            first: '',
+                            last: '',
+                            email: ''
 
                         });
+
 
                     } else {
                         this.setState({
@@ -85,7 +86,10 @@ export default class Contact extends React.Component {
 
             );
         }
+
     }
+
+
     togglegdprModal() {
         console.log("toggle modal is running");
 
@@ -107,6 +111,10 @@ export default class Contact extends React.Component {
         });
 
     }
+
+
+
+
 
     handleChange({ target }) {
 
@@ -148,7 +156,7 @@ export default class Contact extends React.Component {
                 {this.state.thankyouisvisible && (
                     <div className="contact-thankyou">
                         <div className="contact-thankyou-x-cont">
-                            <h1 className="contact-thankyou-x" onClick={() => this.toggleThankYouModal()}>X</h1>
+                            <h1 className="contact-thankyou-x" onClick={() => this.toggleThankYouModal()} >X</h1>
                         </div>
                         <h2 className="contact-thankyou-ty">thank you </h2>
                         <br />
