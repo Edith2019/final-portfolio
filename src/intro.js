@@ -2,22 +2,14 @@ import React from 'react';
 import Cube from './cube';
 
 export default class Intro extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
-
     }
 
-
-
-
-
     render() {
-
         return (
-
             <React.Fragment>
                 <div className="scrollable-element">
                     <div className="intro-container" id="intro">
@@ -34,11 +26,6 @@ export default class Intro extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-
         );
-
-
     }
-
-
 }

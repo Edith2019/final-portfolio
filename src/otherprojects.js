@@ -1,17 +1,11 @@
 import React from 'react';
 
 export default class OtherProjects extends React.Component {
-    constructor(props) { //props are all the data you want to apss props
-        super(props); // add a property to the instence props
+    constructor(props) {
+        super(props);
         this.state = {
-
         };
-
-
-
     }
-
-
 
     render() {
         return (
@@ -68,10 +62,6 @@ export default class OtherProjects extends React.Component {
                 </div>
                 <p className="copyright-project">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
-
-
-
         );
     }
-
 }

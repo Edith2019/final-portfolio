@@ -3,8 +3,8 @@ import axios from './axios'; //need to put the slash to use the copy
 
 
 export default class Contact extends React.Component {
-    constructor(props) { //props are all the data you want to apss props
-        super(props); // add a property to the instence props
+    constructor(props) {
+        super(props);
         this.state = {
             error: false,
             gdprisvisible: false,
@@ -23,42 +23,29 @@ export default class Contact extends React.Component {
             email: ''
 
         };
-
-
-
     }
 
-
     submit() {
-        // console.log("e.target.value", e.target.value);
-
         if (!this.state.first || !this.state.last || !this.state.email) {
-            console.log("this.state.requiredfield", this.state.requiredFields);
+            // console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
                 requiredFields: {
                     first: !this.state.first ? 'please enter your first name' : "",
                     last: !this.state.last ? 'please enter your last name' : "",
                     email: !this.state.email ? 'please enter your email' : ""
                 },
-
             });
-
         } else if (this.state.checkbox != 'on') {
             this.setState({
                 gdprisvisible: !this.state.gdprisvisible
             });
-
         } else {
-            console.log("this.state", this.state);
-            console.log("first", this.state.first);
-            console.log("checkbox", this.state.checkbox);
             axios.post('/message', {
                 first: this.state.first,
                 last: this.state.last,
                 email: this.state.email,
                 message: this.state.message,
                 checkbox: this.state.checkbox
-
             }).then(
                 ({ data }) => {
                     console.log("this.state", this.state);
@@ -74,9 +61,6 @@ export default class Contact extends React.Component {
                             message: '',
                             thankyouisvisible: !this.state.thankyouisvisible
                         });
-
-
-
                     } else {
                         this.setState({
                             error: true
@@ -89,36 +73,19 @@ export default class Contact extends React.Component {
 
     }
 
-
     togglegdprModal() {
-        console.log("toggle modal is running");
-
         this.setState({
             gdprisvisible: !this.state.gdprisvisible
-
-
         });
-
     }
 
     toggleThankYouModal() {
-        console.log("toggle modal is running");
-
         this.setState({
             thankyouisvisible: !this.state.thankyouisvisible
-
-
         });
-
     }
 
-
-
-
-
     handleChange({ target }) {
-
-        // this[target.name] = target.value;
         this.setState({
             [target.name]: target.value
         });
@@ -171,9 +138,6 @@ export default class Contact extends React.Component {
                 }
                 <p className="copyright">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
-
-
-
         );
     }
 

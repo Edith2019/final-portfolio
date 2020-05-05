@@ -9,25 +9,15 @@ let elem = <img src="/Logo.png" className="logo" alt="logo" width="100px" height
 if (location.pathname == '/contact') {
     elem = <Contact />;
 
-
-
 } else if (location.pathname == '/otherprojects') {
-
     elem = <OtherProjects />;
 
-
 } else if (location.pathname == '/tandc') {
-
     elem = <TAndC />;
 
-
-}
-
-else {
-
+} else {
     elem = <App />;
 }
-
 
 ReactDOM.render(
     elem,

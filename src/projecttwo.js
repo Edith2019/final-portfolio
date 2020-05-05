@@ -1,23 +1,14 @@
 import React from 'react';
 
-
 export default class ProjectTwo extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
-
     }
 
-
-
-
-
     render() {
-
         return (
-
             <React.Fragment>
                 <div className="projecttwo-container">
                     <div className="projecttwo-text">
@@ -42,14 +33,8 @@ export default class ProjectTwo extends React.Component {
                         <a className="projecttwo-text-a" href="https://github.com/spicedacademy/vegeta-imageboard/tree/Edith" rel="noopener noreferrer" target='_blank'>github</a>
                     </div>
                     <img src="/imageboard.png" className="projecttwo-img" alt="logo" height="500px" />
-
                 </div>
             </React.Fragment>
-
         );
-
-
     }
-
-
 }

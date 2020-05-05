@@ -2,22 +2,14 @@ import React from 'react';
 
 
 export default class ProjectOne extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
-
     }
 
-
-
-
-
     render() {
-
         return (
-
             <React.Fragment>
                 <div className="projectone-container" id="project-one">
                     <img src="/petition.png" className="projectone-img" alt="logo" height="500px" />
@@ -46,11 +38,6 @@ export default class ProjectOne extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-
         );
-
-
     }
-
-
 }

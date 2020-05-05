@@ -1,12 +1,10 @@
 import React from 'react';
 
-
 export default class TAndC extends React.Component {
 
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
     }
 
@@ -20,7 +18,6 @@ export default class TAndC extends React.Component {
                 </div>
                 <div className="tandc-container">
                     <div className="tandc-text">
-
                         <p>Like most similar websites, this site uses cookies. On this page we explain more about cookies and how we use them. By using this website and agreeing to this policy, you consent to our use of cookies in accordance with the terms of this policy. </p>
                         <br />
                         <h2>About cookies</h2>
@@ -38,9 +35,4 @@ export default class TAndC extends React.Component {
             </React.Fragment>
         );
     }
-
-
-
-
-
 }

@@ -1,23 +1,14 @@
 import React from 'react';
 
-
 export default class ProjectThree extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
-
     }
 
-
-
-
-
     render() {
-
         return (
-
             <React.Fragment>
                 <div className="projectthree-container">
                     <img src="/socialnetwork.png" className="projectthree-img" alt="logo" width="500px" height="500px" />
@@ -47,11 +38,6 @@ export default class ProjectThree extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-
         );
-
-
     }
-
-
 }

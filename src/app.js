@@ -6,13 +6,7 @@ import Description from './description';
 import ProjectOne from './projectone';
 import ProjectTwo from './projecttwo';
 import ProjectThree from './projectthree';
-import TAndC from './tandc';
-// import Last from './last';
 import Footer from './footer';
-
-
-
-
 
 export default class App extends React.Component {
     constructor() {
@@ -21,31 +15,19 @@ export default class App extends React.Component {
             menumodalvisible: false,
             windowsmodalvisible: false
         };
-        console.log("super");
     }
 
     toggleMenuModal() {
-        console.log("toggle modal is running");
-
         this.setState({
             menumodalvisible: !this.state.menumodalvisible
-
-
         });
-
     }
 
     toggleWindowsModal() {
-        console.log("toggle modal is running");
-
         this.setState({
             windowsmodalvisible: !this.state.windowsmodalvisible
-
-
         });
-
     }
-
 
     render() {
         return (
@@ -64,7 +46,6 @@ export default class App extends React.Component {
                     </div >
                     <Intro />
                     {this.state.menumodalvisible && (<HeaderModal toggleMenuModal={this.toggleMenuModal} />)}
-                    {/* <Cube /> */}
                     <Description />
                     <ProjectOne />
                     <ProjectTwo />
@@ -84,9 +65,4 @@ export default class App extends React.Component {
             </React.Fragment >
         );
     }
-
-
-
-
-
 }

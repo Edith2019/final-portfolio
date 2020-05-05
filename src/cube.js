@@ -1,15 +1,11 @@
 import React from 'react';
 import * as THREE from './three';
 
-
-
 export default class Cube extends React.Component {
-    constructor() { //props are all the data you want to apss props
-        super(); // add a property to the instence props
+    constructor() {
+        super();
         this.state = {
-            // name: 'Edith in intro',
         };
-
     }
 
     componentDidMount() {
@@ -42,10 +38,6 @@ export default class Cube extends React.Component {
     }
     render() {
         return (<div className="cube" ref={ref => (this.mount = ref)} />
-
-
         );
     }
 }
-
-// 0xFFFFFF
