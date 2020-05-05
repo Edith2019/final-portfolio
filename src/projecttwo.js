@@ -30,7 +30,7 @@ export default class ProjectTwo extends React.Component {
                         <a className="projecttwo-text-a" href="https://img-board.herokuapp.com/" rel="noopener noreferrer" target='_blank'>demo</a>
                         <br></br>
                         <br></br>
-                        <a className="projecttwo-text-a" href="https://github.com/spicedacademy/vegeta-imageboard/tree/Edith" rel="noopener noreferrer" target='_blank'>github</a>
+                        <a className="projecttwo-text-a" href="https://github.com/Edith2019/imageboard" rel="noopener noreferrer" target='_blank'>github</a>
                     </div>
                     <img src="/imageboard.png" className="projecttwo-img" alt="logo" height="500px" />
                 </div>
