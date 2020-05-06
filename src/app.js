@@ -56,7 +56,7 @@ export default class App extends React.Component {
                             <a className="otherproject-yes" href="https://edith-portfolio.herokuapp.com/otherprojects" rel="noopener noreferrer" target='_blank'>bring it on</a>
                             <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>absolutely not</a>
                             {this.state.windowsmodalvisible && (<div className="otherporject-windows" onClick={() => this.toggleWindowsModal()}></div>)}
-                            <a className="otherproject-play" href="https://connect4.gamesolver.org/" rel="noopener noreferrer" target='_blank'>i just wanna play</a>
+                            <a className="otherproject-play" href="https://edith2019.github.io/connect-four/" rel="noopener noreferrer" target='_blank'>i just wanna play</a>
                         </div>
                     </div>
                     <p className="copyright">Copyright © 2020 Edith-portfolio</p>

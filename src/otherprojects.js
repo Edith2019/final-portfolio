@@ -26,7 +26,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> sweet 2D connect four!</p>
                             <br></br>
-                            <a className="op-demo" href="file:///Users/edith/Desktop/vegeta-code/week3/D5/Exercice1Final/index.html" rel="noopener noreferrer" target='_blank'>Demo</a>
+                            <a className="op-demo" href="https://edith2019.github.io/connect-four/" rel="noopener noreferrer" target='_blank'>Demo</a>
                             <br></br>
                             <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
