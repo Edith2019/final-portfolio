@@ -28,7 +28,7 @@ export default class OtherProjects extends React.Component {
                             <br></br>
                             <a className="op-demo" href="https://edith2019.github.io/connect-four/" rel="noopener noreferrer" target='_blank'>Demo</a>
                             <br></br>
-                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week3/D5/Exercice1Final" rel="noopener noreferrer" target='_blank'>Github</a>
+                            <a className="op-github" href="https://github.com/Edith2019/connect-four" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                     <div className="op-two-card">
@@ -42,7 +42,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> search and find the artists you love!</p>
                             <br></br>
-                            <a className="op-github" href=" https://github.com/spicedacademy/vegeta-code/tree/Edith/week4/D1/Exercice1" rel="noopener noreferrer" target='_blank'>Github</a>
+                            <a className="op-github" href=" https://github.com/Edith2019/spotify-API" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                     <div className="op-three-card">
@@ -56,7 +56,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> keep track of the hottest news via ticker displaying twitter tweets!</p>
                             <br></br>
-                            <a className="op-github" href="https://github.com/spicedacademy/vegeta-code/tree/Edith/week6/D3/TickerTwitter" rel="noopener noreferrer" target='_blank'>Github</a>
+                            <a className="op-github" href="https://github.com/Edith2019/Twicker" rel="noopener noreferrer" target='_blank'>Github</a>
                         </div>
                     </div>
                 </div>

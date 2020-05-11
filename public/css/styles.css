@@ -936,3 +936,187 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ////////mobile /////////// */
+
+@media only screen and (max-device-width: 600px) {
+    /* ///// mobile Intro ///// */
+
+    /* ///////mobile modal///// */
+
+    .header-links {
+        width: 300px;
+        margin-left: 65%;
+    }
+    a.header-a {
+        margin-bottom: 30px;
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    /* ///////description mobile////// */
+    .description-container {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding-left: 8%;
+    }
+
+    #about.description-container {
+        padding-right: 0%;
+        margin-right: 0px;
+    }
+
+    .description-text {
+        width: 90%;
+        height: auto;
+        margin-right: none;
+        padding-right: 0%;
+    }
+
+    .description-links {
+        width: 90%;
+        height: auto;
+        margin-right: none;
+        border-left: none;
+        border-top: black solid 2px;
+    }
+
+    /* /////// project one////// */
+
+    #project-one.projectone-container {
+        flex-direction: column-reverse;
+        height: auto;
+        justify-content: flex-end;
+        padding-right: 0px;
+        padding-left: 8%;
+        padding-bottom: 50px;
+    }
+
+    .projectone-text {
+        width: 89%;
+    }
+
+    .projectone-img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* /////// project two////// */
+    .projecttwo-container {
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-end;
+        padding-right: 0px;
+        padding-left: 8%;
+        padding-bottom: 50px;
+    }
+
+    .projecttwo-text {
+        width: 89%;
+    }
+
+    .projecttwo-img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* /////// project three////// */
+
+    .projectthree-container {
+        flex-direction: column-reverse;
+        height: auto;
+        justify-content: flex-end;
+        padding-right: 0px;
+        padding-left: 8%;
+        padding-bottom: 50px;
+    }
+
+    .projectthree-text {
+        width: 89%;
+    }
+
+    .projectthree-img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* ///////contact //////// */
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        padding-right: none;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .contact-white {
+        width: 100%;
+    }
+
+    .contact-input {
+        margin-top: 50px;
+        width: 100%;
+        align-items: center;
+        height: auto;
+    }
+
+    input {
+        width: 500px;
+        height: 150px;
+        font-size: 30px;
+    }
+
+    .contact-checkbox-container {
+        height: 100px;
+    }
+
+    .contact-input-button {
+        margin-top: 50px;
+    }
+
+    /* ///////Other projects ////// */
+    .op-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .op-one-card {
+        width: 400px;
+        height: 600px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        font-size: 20px;
+    }
+
+    .op-two-card {
+        width: 400px;
+        height: 600px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        font-size: 20px;
+    }
+
+    .op-three-card {
+        width: 400px;
+        height: 600px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        font-size: 20px;
+        padding-left: 40px;
+    }
+
+    .op-title {
+        margin-top: 50px;
+    }
+
+    /* ///// mobile tandC ///// */
+
+    .tandc-container {
+        height: auto;
+        font-size: 25px;
+    }
+
+    .copyright {
+        position: fixed;
+        margin-top: 70%;
+    }
+}
