@@ -939,6 +939,16 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (max-device-width: 600px) {
     /* ///// mobile Intro ///// */
+    .header-elem {
+        width: 250px;
+    }
+    .header-work {
+        font-size: 40px;
+    }
+    .header-hamburger {
+        width: 80px;
+        height: 80px;
+    }
 
     /* ///////mobile modal///// */
 
@@ -957,23 +967,19 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         justify-content: center;
         height: auto;
-        padding-left: 8%;
-    }
-
-    #about.description-container {
-        padding-right: 0%;
-        margin-right: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
     }
 
     .description-text {
-        width: 90%;
+        width: 100%;
         height: auto;
-        margin-right: none;
         padding-right: 0%;
     }
 
     .description-links {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin-right: none;
         border-left: none;
@@ -985,18 +991,24 @@ body::-webkit-scrollbar-thumb {
     #project-one.projectone-container {
         flex-direction: column-reverse;
         height: auto;
-        justify-content: flex-end;
-        padding-right: 0px;
-        padding-left: 8%;
+        align-items: center;
+        height: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
         padding-bottom: 50px;
     }
 
     .projectone-text {
-        width: 89%;
+        width: 100%;
+        height: auto;
+        padding-right: 0%;
+        padding-bottom: 20px;
+        border-bottom: solid black 5px;
     }
 
     .projectone-img {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
@@ -1004,18 +1016,24 @@ body::-webkit-scrollbar-thumb {
     .projecttwo-container {
         flex-direction: column;
         height: auto;
-        justify-content: flex-end;
-        padding-right: 0px;
-        padding-left: 8%;
+        align-items: center;
+        height: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
         padding-bottom: 50px;
     }
 
     .projecttwo-text {
-        width: 89%;
+        width: 100%;
+        height: auto;
+        padding-right: 0%;
+        padding-bottom: 20px;
+        border-bottom: solid black 5px;
     }
 
     .projecttwo-img {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
@@ -1024,19 +1042,31 @@ body::-webkit-scrollbar-thumb {
     .projectthree-container {
         flex-direction: column-reverse;
         height: auto;
-        justify-content: flex-end;
-        padding-right: 0px;
-        padding-left: 8%;
+        align-items: center;
+        height: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
         padding-bottom: 50px;
     }
 
     .projectthree-text {
-        width: 89%;
+        width: 100%;
+        height: auto;
+        padding-right: 0%;
+        padding-bottom: 20px;
+        border-bottom: solid black 5px;
     }
 
     .projectthree-img {
-        width: 90%;
+        width: 100%;
         height: auto;
+    }
+
+    .copyright {
+        position: absolute;
+        margin-bottom: 30px;
+        z-index: 78;
     }
 
     /* ///////contact //////// */
@@ -1074,9 +1104,14 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* ///////Other projects ////// */
+
+    .op-btm {
+        height: 100px;
+    }
     .op-container {
         flex-direction: column;
         align-items: center;
+        padding-top: 150px;
     }
 
     .op-one-card {
@@ -1101,6 +1136,9 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 50px;
         padding-top: 50px;
         font-size: 20px;
+    }
+
+    .op-three-text {
         padding-left: 40px;
     }
 
@@ -1115,8 +1153,18 @@ body::-webkit-scrollbar-thumb {
         font-size: 25px;
     }
 
-    .copyright {
-        position: fixed;
-        margin-top: 70%;
+    /* ////mobile contact button//// */
+    .footer-container {
+        height: 5em;
+    }
+
+    a.footer-contact {
+        width: 300px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+
+    .otherproject {
+        height: 300px;
     }
 }
