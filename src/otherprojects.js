@@ -16,12 +16,12 @@ export default class OtherProjects extends React.Component {
                 </div>
                 <div className="op-container">
                     <div className="op-one-card">
-                        <img src="/connectfour.png" className="op-one-img" alt="logo" width="150px" height="150px" />
+                        <img src="/connectfourDemo.gif" className="op-one-img" alt="logo" width="250px" height="150px" />
                         <div className="op-one-text">
                             <h1 className="op-title">connect 4</h1>
                             <br></br>
                             <h3 className="op-tech">technologies:</h3>
-                            <p className="op-tech-text">javascript// css </p>
+                            <p className="op-tech-text">Javascript // HTML// CSS// JSON </p>
                             <br></br>
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> sweet 2D connect four!</p>
@@ -32,12 +32,12 @@ export default class OtherProjects extends React.Component {
                         </div>
                     </div>
                     <div className="op-two-card">
-                        <img src="/spotifysearch.jpeg" className="op-two-img" alt="logo" width="150px" height="150px" />
+                        <img src="/spotifyAPI.gif" className="op-two-img" alt="logo" width="250px" height="150px" />
                         <div className="op-two-text">
                             <h1 className="op-title" >spotify API</h1>
                             <br></br>
                             <h3 className="op-tech">technologies:</h3>
-                            <p className="op-tech-text">javascript// css// spotify API </p>
+                            <p className="op-tech-text">Javascript // HTML// CSS// JSON// Spotify API// proxy </p>
                             <br></br>
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> search and find the artists you love!</p>
@@ -46,12 +46,12 @@ export default class OtherProjects extends React.Component {
                         </div>
                     </div>
                     <div className="op-three-card">
-                        <img src="/ticker.png" className="op-three-img" alt="logo" width="150px" height="150px" />
+                        <img src="/TwickerDemo.gif" className="op-three-img" alt="logo" width="250px" height="150px" />
                         <div className="op-three-text">
                             <h1 className="op-title">twitter API</h1>
                             <br></br>
                             <h3 className="op-tech">technologies:</h3>
-                            <p className="op-tech-text">javascript// css// twitter API </p>
+                            <p className="op-tech-text">Javascript // HTML// CSS// JSON// Twitter API</p>
                             <br></br>
                             <h3 className="op-description">project's description:</h3>
                             <p className="op-description-text"> keep track of the hottest news via ticker displaying twitter tweets!</p>
