@@ -27,7 +27,7 @@ export default class ProjectTwo extends React.Component {
                         <h3>highlights:</h3>
                         <p>vue.js is a great framework to explore and offer a powerful tool to create an app.</p>
                         <br></br>
-                        <a className="projecttwo-text-a" href="https://img-board.herokuapp.com/" rel="noopener noreferrer" target='_blank'>demo</a>
+                        <a className="projecttwo-text-a" href="https://img-board.herokuapp.com/" rel="noopener noreferrer" target='_blank'>heroku</a>
                         <br></br>
                         <br></br>
                         <a className="projecttwo-text-a" href="https://github.com/Edith2019/imageboard" rel="noopener noreferrer" target='_blank'>github</a>

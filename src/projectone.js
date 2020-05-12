@@ -31,7 +31,7 @@ export default class ProjectOne extends React.Component {
                         <h3>highlights:</h3>
                         <p>it was a great pleasure to play around with handlebars while figuring out the best user experience in routing the pages.</p>
                         <br></br>
-                        <a className="projectone-text-a" href=" https://petitiontempelhof.herokuapp.com/" rel="noopener noreferrer" target='_blank'>demo</a>
+                        <a className="projectone-text-a" href=" https://petitiontempelhof.herokuapp.com/" rel="noopener noreferrer" target='_blank'>heroku</a>
                         <br></br>
                         <br></br>
                         <a className="projectone-text-a" href="https://github.com/Edith2019/petition" rel="noopener noreferrer" target='_blank'>github</a>

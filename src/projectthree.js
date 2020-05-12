@@ -31,7 +31,7 @@ export default class ProjectThree extends React.Component {
                         <h3>highlights</h3>
                         <p> my favorit and moste complete project so far. it was a thrill to explore the infinite possibilities of redux.</p>
                         <br></br>
-                        <a className="projectthree-text-a" href="https://swork-berlin.herokuapp.com/welcome#/" rel="noopener noreferrer" target='_blank'>demo</a>
+                        <a className="projectthree-text-a" href="https://swork-berlin.herokuapp.com/welcome#/" rel="noopener noreferrer" target='_blank'>heroku</a>
                         <br></br>
                         <br></br>
                         <a className="projectthree-text-a" href="https://github.com/Edith2019/social-network" rel="noopener noreferrer" target='_blank'>github</a>
