@@ -16,7 +16,7 @@ export default class ProjectThree extends React.Component {
                         <h1>work 3 : social-network</h1>
                         <br></br>
                         <h3>technologies:</h3>
-                        <p>react.js// postgres// axios// socket.io// s3// ses // css</p>
+                        <p>JavaScript// react.js// Redux// postgreSQL// axios// socket.io// AWS S3// ses // HTML// CSS</p>
                         <br></br>
                         <h3>project's description:</h3>
                         <p>creation of a social-network for users to come together around a common interest while interacting in private or general chat and personalizing their profiles.</p>
@@ -27,6 +27,7 @@ export default class ProjectThree extends React.Component {
                         <p>- add/ pending/ remove friends</p>
                         <p>- who is online?</p>
                         <p>- search people</p>
+                        <p>- group and private chat</p>
                         <br></br>
                         <h3>highlights</h3>
                         <p> my favorit and moste complete project so far. it was a thrill to explore the infinite possibilities of redux.</p>

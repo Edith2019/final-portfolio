@@ -15,7 +15,7 @@ export default class ProjectTwo extends React.Component {
                         <h1>work 2 : image-board</h1>
                         <br></br>
                         <h3>technologies:</h3>
-                        <p>vue.js// node.js// postgres// s3// axios// css</p>
+                        <p>vue.js// node.js// postgreSQL// AWS S3// axios// HTML// CSS</p>
                         <br></br>
                         <h3>project's description:</h3>
                         <p>this work consists of a single page application where anybody can go and post an image with title and description. other features like comments and navigation give users a way to interact with each other and get a community feeling. </p>
@@ -23,6 +23,11 @@ export default class ProjectTwo extends React.Component {
                         <h3>features:</h3>
                         <p>- upload image/ title/ description</p>
                         <p>- add comments on images</p>
+                        <p>- clicking on image display modal</p>
+                        <p>- image stored in AWS S3</p>
+                        <p>- client-side routing to navigate prev or next image</p>
+                        <p>- vue component</p>
+
                         <br></br>
                         <h3>highlights:</h3>
                         <p>vue.js is a great framework to explore and offer a powerful tool to create an app.</p>
