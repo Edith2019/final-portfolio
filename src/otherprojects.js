@@ -23,7 +23,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-tech">technologies:</h3>
                             <p className="op-tech-text">Javascript // HTML// CSS// JSON </p>
                             <br></br>
-                            <h3 className="op-description">project`&apos;`s description:</h3>
+                            <h3 className="op-description">project&apos;s description:</h3>
                             <p className="op-description-text"> sweet 2D connect four!</p>
                             <br></br>
                             <a className="op-demo" href="https://edith2019.github.io/connect-four/" rel="noopener noreferrer" target="_blank">Demo</a>
@@ -39,7 +39,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-tech">technologies:</h3>
                             <p className="op-tech-text">Javascript // HTML// CSS// JSON// Spotify API// proxy </p>
                             <br></br>
-                            <h3 className="op-description">project`&apos;`s description:</h3>
+                            <h3 className="op-description">project&apos;s description:</h3>
                             <p className="op-description-text"> search and find the artists you love!</p>
                             <br></br>
                             <a className="op-github" href=" https://github.com/Edith2019/spotify-API" rel="noopener noreferrer" target="_blank">Github</a>
@@ -53,7 +53,7 @@ export default class OtherProjects extends React.Component {
                             <h3 className="op-tech">technologies:</h3>
                             <p className="op-tech-text">Javascript // HTML// CSS// JSON// Twitter API</p>
                             <br></br>
-                            <h3 className="op-description">project`&apos;`s description:</h3>
+                            <h3 className="op-description">project&apos;s description:</h3>
                             <p className="op-description-text"> keep track of the hottest news via ticker displaying twitter tweets!</p>
                             <br></br>
                             <a className="op-github" href="https://github.com/Edith2019/Twicker" rel="noopener noreferrer" target="_blank">Github</a>

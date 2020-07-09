@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
 });
 
 // server stuff //
-if (process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV !== "production") {
     app.use(
         "/bundle.js",
         require("http-proxy-middleware")({
@@ -44,12 +44,7 @@ if (process.env.NODE_ENV != "production") {
 
 // route to post data from contact //
 app.post("/message", (req, res) => {
-    // console.log("made it to msg route");
-    const first = req.body.first;
-    const last = req.body.last;
-    const email = req.body.email;
-    const message = req.body.message;
-    const checkbox = req.body.checkbox;
+    const { first, last, email, message, checkbox } = req.body;
     db.addContactsData(first, last, email, message, checkbox).then(result => {
         if (result.rows[0].message) {
             const sender = JSON.stringify(result.rows[0]);
@@ -58,16 +53,13 @@ app.post("/message", (req, res) => {
                     res.json({
                         success: true
                     });
-                    console.log("it works weell");
                 });
         }
         const data = result.rows[0];
         res.json({ data });
     }).catch(err => {
-        console.log("there was an error in message", err);
         res.json({ error: true });
     });
-    // req.session = null;
 });
 
 // needs to be the last route //

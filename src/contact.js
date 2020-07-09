@@ -20,21 +20,19 @@ export default class Contact extends React.Component {
             first: "",
             last: "",
             email: ""
-
         };
     }
 
     submit() {
         if (!this.state.first || !this.state.last || !this.state.email) {
-            // console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
                 requiredFields: {
-                    first: !this.state.first ? "please enter your first name" : "",
-                    last: !this.state.last ? "please enter your last name" : "",
-                    email: !this.state.email ? "please enter your email" : ""
+                    first: this.state.first ? "" : "please enter your first name",
+                    last: this.state.last ? "" : "please enter your last name",
+                    email: this.state.email ? "" : "please enter your email"
                 }
             });
-        } else if (this.state.checkbox != "on") {
+        } else if (this.state.checkbox !== "on") {
             this.setState({
                 gdprisvisible: !this.state.gdprisvisible
             });
@@ -47,10 +45,7 @@ export default class Contact extends React.Component {
                 checkbox: this.state.checkbox
             }).then(
                 ({ data }) => {
-                    console.log("this.state", this.state);
-                    console.log("data", data);
                     if (data.data) {
-                        console.log("data", data);
                         this.setState({
                             userFirst: data.data.first,
                             userLast: data.data.last,
@@ -61,15 +56,11 @@ export default class Contact extends React.Component {
                             thankyouisvisible: !this.state.thankyouisvisible
                         });
                     } else {
-                        this.setState({
-                            error: true
-                        });
+                        this.setState({ error: true });
                     }
                 }
-
             );
         }
-
     }
 
     togglegdprModal() {
@@ -100,9 +91,7 @@ export default class Contact extends React.Component {
                 <div className="contact">
                     <div className="contact-white">
                         <p id="question">do you have questions?</p>
-                        <br />
                         <p id="comments">do you have comments?</p>
-                        <br />
                         <p id="touch">fill out the form and get in touch... </p>
                     </div>
                     <div className="contact-input">
@@ -115,29 +104,23 @@ export default class Contact extends React.Component {
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> i agree with the terms and conditions</p>
                         </div>
-                        {this.state.gdprisvisible && (<p> please agree with the terms and conditions</p>)}
-
+                        {this.state.gdprisvisible && <p> please agree with the terms and conditions</p>}
                         <button className="contact-input-button" onClick={() => this.submit()}>submit</button>
                     </div>
                 </div>
-                {this.state.thankyouisvisible && (
-                    <div className="contact-thankyou">
-                        <div className="contact-thankyou-x-cont">
-                            <h1 className="contact-thankyou-x" onClick={() => this.toggleThankYouModal()} >X</h1>
-                        </div>
-                        <h2 className="contact-thankyou-ty">thank you </h2>
-                        <br />
-                        <h1 className="contact-thankyou-name"> {this.state.userFirst} {this.state.userLast}</h1>
-                        <br />
-                        <h2 className="contact-thankyou-msg"> for your message! </h2>
-                        <br />
-                        <br />
-                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p><a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target="_blank"> enjoy the ride!</a>
-                    </div>)
+                {this.state.thankyouisvisible && <div className="contact-thankyou">
+                    <div className="contact-thankyou-x-cont">
+                        <h1 className="contact-thankyou-x" onClick={() => this.toggleThankYouModal()} >X</h1>
+                    </div>
+                    <h2 className="contact-thankyou-ty">thank you </h2>
+                    <h1 className="contact-thankyou-name"> {this.state.userFirst} {this.state.userLast}</h1>
+                    <h2 className="contact-thankyou-msg"> for your message! </h2>
+                    <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p>
+                    <a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target="_blank"> enjoy the ride!</a>
+                </div>
                 }
                 <p className="copyright">Copyright © 2020 Edith-portfolio</p>
             </React.Fragment >
         );
     }
-
 }

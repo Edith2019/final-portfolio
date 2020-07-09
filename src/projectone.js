@@ -18,14 +18,14 @@ export default class ProjectOne extends React.Component {
                         <h3>technologies:</h3>
                         <p>express// node.js// express-handlebars// postgreSQL// JavaScript// jQuery// HTML// CSS</p>
                         <br></br>
-                        <h3>project`&apos;`s description:</h3>
+                        <h3>project&apos;s description:</h3>
                         <p>the idea behind this project is to create an online petition that visitors can sign to make their voice heard on an issue that they identify with.</p>
                         <br></br>
                         <h3>features:</h3>
                         <p>- register/ login</p>
                         <p>- cookie session for authorization</p>
                         <p>- user info and hashed pw stored in database</p>
-                        <p>- canvas`&apos;` signature after registration only</p>
+                        <p>- canvas&apos; signature after registration only</p>
                         <p>- list of total signers and list per city signers</p>
                         <p>- update profile page</p>
                         <br></br>
