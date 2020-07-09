@@ -58,6 +58,7 @@ app.post("/message", (req, res) => {
         const data = result.rows[0];
         res.json({ data });
     }).catch(err => {
+        console.error(err);
         res.json({ error: true });
     });
 });
