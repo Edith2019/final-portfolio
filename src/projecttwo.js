@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default class ProjectTwo extends React.Component {
     constructor() {
@@ -17,7 +17,7 @@ export default class ProjectTwo extends React.Component {
                         <h3>technologies:</h3>
                         <p>vue.js// node.js// postgreSQL// AWS S3// axios// HTML// CSS</p>
                         <br></br>
-                        <h3>project's description:</h3>
+                        <h3>project`&apos;`s description:</h3>
                         <p>this work consists of a single page application where anybody can go and post an image with title and description. other features like comments and navigation give users a way to interact with each other and get a community feeling. </p>
                         <br></br>
                         <h3>features:</h3>
@@ -32,10 +32,10 @@ export default class ProjectTwo extends React.Component {
                         <h3>highlights:</h3>
                         <p>vue.js is a great framework to explore and offer a powerful tool to create an app.</p>
                         <br></br>
-                        <a className="projecttwo-text-a" href="https://img-board.herokuapp.com/" rel="noopener noreferrer" target='_blank'>heroku</a>
+                        <a className="projecttwo-text-a" href="https://img-board.herokuapp.com/" rel="noopener noreferrer" target="_blank">heroku</a>
                         <br></br>
                         <br></br>
-                        <a className="projecttwo-text-a" href="https://github.com/Edith2019/imageboard" rel="noopener noreferrer" target='_blank'>github</a>
+                        <a className="projecttwo-text-a" href="https://github.com/Edith2019/imageboard" rel="noopener noreferrer" target="_blank">github</a>
                     </div>
                     <img src="/imageboard.png" className="projecttwo-img" alt="logo" height="500px" />
                 </div>

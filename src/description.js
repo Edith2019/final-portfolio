@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default class Description extends React.Component {
     constructor() {
@@ -18,12 +18,12 @@ export default class Description extends React.Component {
 
                         I’m a quick learner eager to master the tangle of Javascript in a silk CSS wrap. Currently exploring in-depth frameworks like vue.js and with a huge crush on React.js.
 
-                        My future team will for sure appreciate my curious mindset, great communication skills and my excellent use of gifs. There’s always <a className="description-text-rm" href="https://media1.giphy.com/media/Hc8PMCBjo9BXa/giphy.gif?cid=ecf05e47283247b350d37b41087897244be4ae1f455d4b5f&rid=giphy.gif" rel="noopener noreferrer" target='_blank'> one for the right moment.
+                        My future team will for sure appreciate my curious mindset, great communication skills and my excellent use of gifs. There’s always <a className="description-text-rm" href="https://media1.giphy.com/media/Hc8PMCBjo9BXa/giphy.gif?cid=ecf05e47283247b350d37b41087897244be4ae1f455d4b5f&rid=giphy.gif" rel="noopener noreferrer" target="_blank"> one for the right moment.
                         </a>
                         </p>
                         <div className="description-links-l">
-                            <a className="description-links-l-l" href="https://www.linkedin.com/in/edith-chevallier/" rel="noopener noreferrer" target='_blank'>linkedin</a>
-                            <a className="description-links-l-g" href="https://github.com/Edith2019" rel="noopener noreferrer" target='_blank'>github</a>
+                            <a className="description-links-l-l" href="https://www.linkedin.com/in/edith-chevallier/" rel="noopener noreferrer" target="_blank">linkedin</a>
+                            <a className="description-links-l-g" href="https://github.com/Edith2019" rel="noopener noreferrer" target="_blank">github</a>
                         </div>
                     </div>
                     <div className="description-links">
@@ -51,7 +51,7 @@ export default class Description extends React.Component {
                             </div>
                             <div className="description-card-img-title">
                                 <img src="/play.png" className="header-logo" alt="logo" width="50px" height="50px" background="none" />
-                                <a href="https://www.youtube.com/watch?v=bCM3clq-_c0" rel="noopener noreferrer" target='_blank'><p className="description-card-img-a">check it out</p></a>
+                                <a href="https://www.youtube.com/watch?v=bCM3clq-_c0" rel="noopener noreferrer" target="_blank"><p className="description-card-img-a">check it out</p></a>
                             </div>
                         </div>
                     </div>

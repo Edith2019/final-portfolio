@@ -1,6 +1,5 @@
-import React from 'react';
-import axios from './axios'; //need to put the slash to use the copy
-
+import React from "react";
+import axios from "./axios"; // need to put the slash to use the copy
 
 export default class Contact extends React.Component {
     constructor(props) {
@@ -9,18 +8,18 @@ export default class Contact extends React.Component {
             error: false,
             gdprisvisible: false,
             thankyouisvisible: false,
-            first: '',
-            last: '',
-            email: '',
-            message: '',
-            inputfirst: 'hello',
-            userFirst: '',
-            userLast: ''
+            first: "",
+            last: "",
+            email: "",
+            message: "",
+            inputfirst: "hello",
+            userFirst: "",
+            userLast: ""
         };
         this.state.requiredFields = {
-            first: '',
-            last: '',
-            email: ''
+            first: "",
+            last: "",
+            email: ""
 
         };
     }
@@ -30,17 +29,17 @@ export default class Contact extends React.Component {
             // console.log("this.state.requiredfield", this.state.requiredFields);
             this.setState({
                 requiredFields: {
-                    first: !this.state.first ? 'please enter your first name' : "",
-                    last: !this.state.last ? 'please enter your last name' : "",
-                    email: !this.state.email ? 'please enter your email' : ""
-                },
+                    first: !this.state.first ? "please enter your first name" : "",
+                    last: !this.state.last ? "please enter your last name" : "",
+                    email: !this.state.email ? "please enter your email" : ""
+                }
             });
-        } else if (this.state.checkbox != 'on') {
+        } else if (this.state.checkbox != "on") {
             this.setState({
                 gdprisvisible: !this.state.gdprisvisible
             });
         } else {
-            axios.post('/message', {
+            axios.post("/message", {
                 first: this.state.first,
                 last: this.state.last,
                 email: this.state.email,
@@ -55,10 +54,10 @@ export default class Contact extends React.Component {
                         this.setState({
                             userFirst: data.data.first,
                             userLast: data.data.last,
-                            first: '',
-                            last: '',
-                            email: '',
-                            message: '',
+                            first: "",
+                            last: "",
+                            email: "",
+                            message: "",
                             thankyouisvisible: !this.state.thankyouisvisible
                         });
                     } else {
@@ -107,10 +106,10 @@ export default class Contact extends React.Component {
                         <p id="touch">fill out the form and get in touch... </p>
                     </div>
                     <div className="contact-input">
-                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? 'error' : ''}`} name="first" type="text" placeholder="first name"
+                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? "error" : ""}`} name="first" type="text" placeholder="first name"
                             value={this.state.first} onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? 'error' : ''}`} name="last" type="text" placeholder="last name" value={this.state.last} onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? 'error' : ''}`} name="email" type="email" placeholder="email" value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? "error" : ""}`} name="last" type="text" placeholder="last name" value={this.state.last} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? "error" : ""}`} name="email" type="email" placeholder="email" value={this.state.email} onChange={e => this.handleChange(e)} />
                         <input className="contact-input-message" name="message" type="text" placeholder="message" value={this.state.message} onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
                             <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
@@ -133,7 +132,7 @@ export default class Contact extends React.Component {
                         <h2 className="contact-thankyou-msg"> for your message! </h2>
                         <br />
                         <br />
-                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p><a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target='_blank'> enjoy the ride!</a>
+                        <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p><a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target="_blank"> enjoy the ride!</a>
                     </div>)
                 }
                 <p className="copyright">Copyright © 2020 Edith-portfolio</p>

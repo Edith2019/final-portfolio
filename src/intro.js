@@ -1,5 +1,5 @@
-import React from 'react';
-import Cube from './cube';
+import React from "react";
+import Cube from "./cube";
 
 export default class Intro extends React.Component {
     constructor() {
@@ -19,7 +19,7 @@ export default class Intro extends React.Component {
                             </div>
                             <div className="intro-title">
                                 <h1 className="intro-title-w">welcome</h1>
-                                <h1 className="intro-title-t">to Edith's</h1>
+                                <h1 className="intro-title-t">to Edith`&apos;`aposs</h1>
                                 <h1 className="intro-title-p">portfolio</h1>
                             </div>
                         </div>
