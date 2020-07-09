@@ -95,13 +95,23 @@ export default class Contact extends React.Component {
                         <p id="touch">fill out the form and get in touch... </p>
                     </div>
                     <div className="contact-input">
-                        <input id="contact-input-first" className={`${this.state.requiredFields && this.state.requiredFields.first ? "error" : ""}`} name="first" type="text" placeholder="first name"
+                        <input id="contact-input-first"
+                            className={`${this.state.requiredFields && this.state.requiredFields.first ? "error" : ""}`}
+                            name="first" type="text" placeholder="first name"
                             value={this.state.first} onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-last" className={`${this.state.requiredFields && this.state.requiredFields.last ? "error" : ""}`} name="last" type="text" placeholder="last name" value={this.state.last} onChange={e => this.handleChange(e)} />
-                        <input id="contact-input-email" className={`${this.state.requiredFields && this.state.requiredFields.email ? "error" : ""}`} name="email" type="email" placeholder="email" value={this.state.email} onChange={e => this.handleChange(e)} />
-                        <input className="contact-input-message" name="message" type="text" placeholder="message" value={this.state.message} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-last"
+                            className={`${this.state.requiredFields && this.state.requiredFields.last ? "error" : ""}`}
+                            name="last" type="text" placeholder="last name"
+                            value={this.state.last} onChange={e => this.handleChange(e)} />
+                        <input id="contact-input-email"
+                            className={`${this.state.requiredFields && this.state.requiredFields.email ? "error" : ""}`}
+                            name="email" type="email" placeholder="email"
+                            value={this.state.email} onChange={e => this.handleChange(e)} />
+                        <input className="contact-input-message" name="message" type="text" placeholder="message"
+                            value={this.state.message} onChange={e => this.handleChange(e)} />
                         <div className="contact-checkbox-container">
-                            <input className="contact-input-checkbox" name="checkbox" type="checkbox" onChange={e => this.handleChange(e)} />
+                            <input className="contact-input-checkbox" name="checkbox" type="checkbox"
+                                onChange={e => this.handleChange(e)} />
                             <p className="contact-checkbox-t"> i agree with the terms and conditions</p>
                         </div>
                         {this.state.gdprisvisible && <p> please agree with the terms and conditions</p>}
@@ -116,7 +126,8 @@ export default class Contact extends React.Component {
                     <h1 className="contact-thankyou-name"> {this.state.userFirst} {this.state.userLast}</h1>
                     <h2 className="contact-thankyou-msg"> for your message! </h2>
                     <p className="contact-thankyou-text"> i will come back to you as soon as possible... in the meantime,</p>
-                    <a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE" rel="noopener noreferrer" target="_blank"> enjoy the ride!</a>
+                    <a className="contact-thankyou-ride" href="https://www.youtube.com/watch?v=YUPA0C60YDE"
+                        rel="noopener noreferrer" target="_blank"> enjoy the ride!</a>
                 </div>
                 }
                 <p className="copyright">Copyright © 2020 Edith-portfolio</p>

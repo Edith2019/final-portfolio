@@ -26,7 +26,7 @@ const createCube = () => {
     cube.scale.y = 2.5;
     cube.scale.z = 2.5;
     return cube;
-}
+};
 
 export default class Cube extends React.Component {
     constructor() {
@@ -52,6 +52,5 @@ export default class Cube extends React.Component {
     }
     render() {
         return <div className="cube" ref={ref => this.mount = ref} />;
-
     }
 }

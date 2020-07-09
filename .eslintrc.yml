@@ -33,40 +33,40 @@ plugins:
     - html
 
 rules:
-    # whitespace: 9
-    indent: [error, 4]
-    no-multi-spaces: error
-    no-multiple-empty-lines: [error, { max: 1, maxEOF: 1, maxBOF: 0 }]
-    no-trailing-spaces: error
-    space-in-parens: error
-    array-bracket-spacing: [error, never]
-    object-curly-spacing: [error, always]
-    block-spacing: error
-    comma-spacing: [error, { before: false, after: true }]
-    key-spacing: error
-    keyword-spacing: error
-    space-before-blocks: [error, always]
-    space-infix-ops: error
-    spaced-comment: [error, always, { exceptions: ["-", "="] }]
-    no-spaced-func: error
-    space-before-function-paren:
-        [error, { named: never, anonymous: always, asyncArrow: always }]
-    arrow-spacing: [error, { before: true, after: true }]
-    react/jsx-tag-spacing: error
-    react/jsx-curly-spacing: [error, { when: never, children: true }]
+    # # whitespace: 9
+    # indent: [error, 4]
+    # no-multi-spaces: error
+    # no-multiple-empty-lines: [error, { max: 1, maxEOF: 1, maxBOF: 0 }]
+    # no-trailing-spaces: error
+    # space-in-parens: error
+    # array-bracket-spacing: [error, never]
+    # object-curly-spacing: [error, always]
+    # block-spacing: error
+    # comma-spacing: [error, { before: false, after: true }]
+    # key-spacing: error
+    # keyword-spacing: error
+    # space-before-blocks: [error, always]
+    # space-infix-ops: error
+    # spaced-comment: [error, always, { exceptions: ["-", "="] }]
+    # no-spaced-func: error
+    # space-before-function-paren:
+    #     [error, { named: never, anonymous: always, asyncArrow: always }]
+    # arrow-spacing: [error, { before: true, after: true }]
+    # react/jsx-tag-spacing: error
+    # react/jsx-curly-spacing: [error, { when: never, children: true }]
 
-    # punctuation: 131
-    semi: [error, always]
-    quotes: [error, double]
-    comma-dangle: [error, never]
-    no-template-curly-in-string: error
-    no-extra-parens: error
-    jsx-quotes: [error, prefer-double]
+    # # punctuation: 131
+    # semi: [error, always]
+    # quotes: [error, double]
+    # comma-dangle: [error, never]
+    # no-template-curly-in-string: error
+    # no-extra-parens: error
+    # jsx-quotes: [error, prefer-double]
 
-    # possible errors: 9
-    require-atomic-updates: error
-    react/no-unescaped-entities: error
-    no-unused-vars: error
+    # # possible errors: 9
+    # require-atomic-updates: error
+    # react/no-unescaped-entities: error
+    # no-unused-vars: error
 
     # best practices: 16
     # no-console: [error, { allow: [warn, error] }]
@@ -93,8 +93,8 @@ rules:
 
     # complexity: 53
     # max-lines: [error, 100]
-    max-lines-per-function: [error, 20]
-    # max-len: [error, { code: 130, tabWidth: 2 }] # 49
+    # max-lines-per-function: [error, 20]
+    max-len: [error, { code: 130, tabWidth: 2 }] # 49
     # max-statements: [error, 10]
     # max-statements-per-line: [error, { max: 2 }]
     # max-params: [error, 3]
