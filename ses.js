@@ -34,6 +34,5 @@ const createEmail = (to, subject, message) => ({
 exports.sendEmail = function (to, subject, message) {
     return ses
         .sendEmail(createEmail(to, subject, message)).promise()
-        .then(() => console.log("it worked!"))
-        .catch(err => console.log(err));
+        .catch(err => console.error(err));
 };
