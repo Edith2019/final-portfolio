@@ -62,7 +62,7 @@ export default class App extends React.Component {
                         <h1>curious to see more?</h1>
                         <div className="otherproject-app-buttons">
                             <a className="otherproject-yes"
-                                href="http://www.edithchevallier.com/otherprojects"
+                                href="http://localhost:8080/otherprojects"
                                 rel="noopener noreferrer"
                                 target="_blank">bring it on</a>
                             <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>absolutely not</a>

@@ -729,7 +729,7 @@ input {
     background: none;
     padding: 5px;
 }
-.op-one-card {
+.op-card {
     width: 250px;
     border: solid greenyellow 4px;
     padding: 5px;
@@ -739,20 +739,20 @@ input {
     transform: scale(1);
     transition: 0.4s;
 }
-.op-one-img {
+.op-img {
     border-bottom: solid black 2px;
 }
-.op-one-text {
+.op-text {
     background: none;
 }
 
-.op-one-card:hover {
+.op-card:hover {
     transform: scale(1.2);
     transition: 0.4s;
     background-color: greenyellow;
 }
 
-.op-two-card {
+.op-card {
     width: 250px;
     border: solid blue 4px;
     padding: 5px;
@@ -762,43 +762,11 @@ input {
     transform: scale(1);
     transition: 0.4s;
 }
-.op-two-img {
-    border-bottom: solid black 2px;
-}
-.op-two-text {
-    background: none;
-    padding: 5px;
-}
-.op-two-card:hover {
-    transform: scale(1.2);
-    transition: 0.4s;
-    background-color: blue;
-    color: white;
-}
 
-.op-three-card {
-    width: 250px;
-    border: solid orange 4px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(1);
-    transition: 0.4s;
-    background: none;
-}
+#two {
+    border: solid greenyellow 4px !important;
 
-.op-three-img {
-    border-bottom: solid black 2px;
-}
-.op-three-text {
-    background: none;
-    padding: 5px;
-}
-.op-three-card:hover {
-    transform: scale(1.2);
-    transition: 0.4s;
-    background: orange;
+
 }
 .op-title {
     background: none;
