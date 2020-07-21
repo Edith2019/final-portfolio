@@ -731,7 +731,8 @@ input {
 }
 .op-card {
     width: 250px;
-    border: solid greenyellow 4px;
+    border-top: solid black 4px;
+    border-bottom : solid black 4px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -752,22 +753,6 @@ input {
     background-color: greenyellow;
 }
 
-.op-card {
-    width: 250px;
-    border: solid blue 4px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(1);
-    transition: 0.4s;
-}
-
-#two {
-    border: solid greenyellow 4px !important;
-
-
-}
 .op-title {
     background: none;
     padding-left: 10px;

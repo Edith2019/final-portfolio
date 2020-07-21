@@ -1,21 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Project = ({ title, imageUrl, technologies, description, links }) => (
+const Project = ({ title, imageUrl, technologies, description, links}) => (
     <div className="op-card">
-        <img src={imageUrl} className="op-img" alt="logo" width="250px" height="150px" />
+        <img key= {imageUrl} src={imageUrl} className="op-img" alt="logo" width="250px" height="150px" />
         <div className="op-text">
-            <h1 className="op-title">{title}</h1>
+            <h1 className="op-title" key={title} >{title}</h1>
             <br />
             <h3 className="op-tech">technologies:</h3>
-            <p className="op-tech-text">{technologies.join(" // ")}</p>
+            <p className="op-tech-text" key= {technologies}>{technologies.join(" // ")}</p>
             <br />
             <h3 className="op-description">project's description:</h3>
-            <p className="op-description-text">{description}</p>
+            <p className="op-description-text" key={description}>{description}</p>
             {links.map(link => (
                 <>
                     <br />
-                    <a className="op-demo" href={link.url} rel="noopener noreferrer" target='_blank'>{link.title}</a>
+                    <a className="op-demo" key ={link} href={link.url} rel="noopener noreferrer" target='_blank'>{link.title}</a>
                 </>
             ))}
         </div>
