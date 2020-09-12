@@ -1,38 +1,50 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Intro from "./intro";
-import HeaderModal from "./headermodal";
-import Description from "./description";
-import ProjectOne from "./projectone";
-import ProjectTwo from "./projecttwo";
-import ProjectThree from "./projectthree";
-import Footer from "./footer";
+// import { BrowserRouter } from "react-router-dom";
+// import Intro from "./intro";
+// import HeaderModal from "./headermodal";
+// import Description from "./description";
+// import ProjectOne from "./projectone";
+// import ProjectTwo from "./projecttwo";
+// import ProjectThree from "./projectthree";
+// import Footer from "./footer";
+import Header from "./navbar";
+import Home from "./home";
+import About from "./about";
+import Projects from "./projects.js"
+import Volunteer from "./volunteering.js"
+import ContactN from "./contactN.js"
+import FooterN from "./footerN.js"
+import FadeIn from "./hooks/fadeIn.js"
+
 
 export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
             menumodalvisible: false,
-            windowsmodalvisible: false
+            windowsmodalvisible: false,
+            shouldHide: false,
         };
     }
 
-    toggleMenuModal() {
-        this.setState({
-            menumodalvisible: !this.state.menumodalvisible
-        });
-    }
+    // toggleMenuModal() {
+    //     this.setState({
+    //         menumodalvisible: !this.state.menumodalvisible
+    //     });
+    // }
 
-    toggleWindowsModal() {
-        this.setState({
-            windowsmodalvisible: !this.state.windowsmodalvisible
-        });
-    }
+    // toggleWindowsModal() {
+    //     this.setState({
+    //         windowsmodalvisible: !this.state.windowsmodalvisible
+    //     });
+    // }
+
+
 
     render() {
         return (
             <React.Fragment>
-                <BrowserRouter>
+                {/* <BrowserRouter>
                     <div className="header">
                         <div className="header-container">
                             <a className="header-logo-click"
@@ -75,7 +87,24 @@ export default class App extends React.Component {
                     </div>
                     <p className="copyright">Copyright © 2020 Edith-portfolio</p>
                     <Footer />
-                </BrowserRouter>
+                </BrowserRouter> */}
+<Header/>
+<Home />
+<FadeIn>
+<About/>
+</FadeIn>
+<FadeIn>
+<Projects/>
+                </FadeIn>
+                <FadeIn>
+<Volunteer/>
+                </FadeIn>
+                <FadeIn>
+<ContactN/>
+                </FadeIn>   
+            
+                <FooterN/>
+               
             </React.Fragment >
         );
     }
