@@ -20,24 +20,8 @@ const conf = {
                 loader: "babel-loader",
                 query: {
                     presets: ["@babel/preset-react", "@babel/preset-env"]
-                },
-            
-            },
-            // {
-            //     test: /\.(png|svg|jpg|gif|pdf)$/,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 name: '[Resume].[pdf]'
-            //             }
-            //         }
-            //     ]
-            // },
-
-         
-
-            
+                }
+            }
         ]
     }
 };

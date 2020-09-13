@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 
 const Project = ({ title, imageUrl, technologies, description, links}) => (
     <div className="op-card">
@@ -22,15 +22,15 @@ const Project = ({ title, imageUrl, technologies, description, links}) => (
     </div>
 )
 
-Project.propTypes = {
-    title: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description: PropTypes.string.isRequired,
-    links: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-    })).isRequired,
-}
+// Project.propTypes = {
+//     title: PropTypes.string.isRequired,
+//     imageUrl: PropTypes.string.isRequired,
+//     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+//     description: PropTypes.string.isRequired,
+//     links: PropTypes.arrayOf(PropTypes.shape({
+//         title: PropTypes.string.isRequired,
+//         url: PropTypes.string.isRequired,
+//     })).isRequired,
+// }
 
 export default Project

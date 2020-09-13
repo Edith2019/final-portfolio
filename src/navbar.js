@@ -2,6 +2,7 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-scroll";
+// import PropTypes from 'prop-types';
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -11,10 +12,13 @@ class Header extends React.Component {
 constructor(props) {
 
 super(props);
-    this.handleScroll = this.handleScroll.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    // this.handleLeave = this.handleLeave.bind(this)
     this.state = {
        
-        visible: true,
+        visible: false,
+        // over: false,
     };
 
     
@@ -25,38 +29,58 @@ super(props);
     componentDidMount() {
         var hide = this;
         window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('mouseenter', this.handleHover);
+        // window.addEventListener('mouseleave', this.handleLeave);
         hide.handleScroll();
+        // hide.handleHover();
+        // hide.handleLeave();
+
     };
 
 
     handleScroll(){
 
-        if(window.pageYOffset >= 15) {
-            console.log("something")
+        if(window.pageYOffset <= 15) {
             this.setState ({
-                 visible: false
+                 visible: true
             })
 
         } else {
             this.setState({
-                visible: true
+                visible: false
             })
         }
+    };
 
-    }
+handleHover(){
+    console.log("something mouse")
 
+    this.setState({
+        visible: true
+    })
+}
 
+// handleLeave(){
 
+//     this.setState({
+//         visible: false
+//     })
+
+    // 
+
+   
 render () {
     const visible = this.state.visible;
+    // const over = this.state.over;
+    console.log("this.state.visible", this.state.visible)
     return(
 
         <React.Fragment>
             {/* <div> */}
             {visible && (
-            <div className="NavBar" onScroll={() => this.handleScroll()}>
-            <Navbar collapseOnSelect expand="lg"  bg="white" color="black" fixed="top" className="mb-5 pb-5 navbar" >
-                <Navbar.Brand href="#home">Edith</Navbar.Brand>
+                <div id="aboutcont" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} >
+                    <Navbar collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
+                <Navbar.Brand href="#home" >Edith</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto pt-1" >
@@ -104,8 +128,8 @@ render () {
                             <Nav className="justify-content-end" as="ul">
                     <Navbar.Text>
                         
-                        <il>EN </il>
-                        <il>/ FR</il>
+                        <li>EN </li>
+                        <li>/ FR</li>
                        
                     </Navbar.Text>
                 </Nav>
@@ -120,4 +144,11 @@ render () {
 
 }
 
+
+// Header.ContextTypes = {
+
+
+
+
+// }
 export default Header;

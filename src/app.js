@@ -15,16 +15,22 @@ import Volunteer from "./volunteering.js"
 import ContactN from "./contactN.js"
 import FooterN from "./footerN.js"
 import FadeIn from "./hooks/fadeIn.js"
+// import MouseHover from "./hooks/mouseHover.js"
+import cardProjects from './js/projectsData.js'
 
 
 export default class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menumodalvisible: false,
             windowsmodalvisible: false,
             shouldHide: false,
+            // cardProjects: this.cardProjects
+
         };
+        // console.log("props for data", this.cardProjects)
+        // console.log("this.props in app", this.props)
     }
 
     // toggleMenuModal() {
@@ -44,67 +50,22 @@ export default class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {/* <BrowserRouter>
-                    <div className="header">
-                        <div className="header-container">
-                            <a className="header-logo-click"
-                                href="https://en.wikipedia.org/wiki/Raccoon#Intelligence"
-                                rel="noopener noreferrer"
-                                target="_blank" >
-                                <img src="/raccoon.png"
-                                    className="header-logo"
-                                    alt="logo" width="70px" height="70px" background="none" />
-                            </a>
-                            <div className="header-elem" id="intro">
-                                <a className="header-work" href="#project-one"> work </a>
-                                <img src="/hamburger.png"
-                                    className="header-hamburger"
-                                    alt="hamburger" width="50px" height="50px"
-                                    onClick={() => this.toggleMenuModal()} />
-                            </div>
-                        </div>
-                    </div >
-                    <Intro />
-                    {this.state.menumodalvisible && <HeaderModal toggleMenuModal={this.toggleMenuModal} />}
-                    <Description />
-                    <ProjectOne />
-                    <ProjectTwo />
-                    <ProjectThree />
-                    <div className="otherproject">
-                        <h1>curious to see more?</h1>
-                        <div className="otherproject-app-buttons">
-                            <a className="otherproject-yes"
-                                href="http://edithchevallier.com/otherprojects"
-                                rel="noopener noreferrer"
-                                target="_blank">bring it on</a>
-                            <a className="otherproject-no" onClick={() => this.toggleWindowsModal()}>absolutely not</a>
-                            {this.state.windowsmodalvisible &&
-                                <div className="otherporject-windows" onClick={() => this.toggleWindowsModal()}></div>}
-                            <a className="otherproject-play"
-                                href="https://edith2019.github.io/connect-four/"
-                                rel="noopener noreferrer" target="_blank">i just wanna play</a>
-                        </div>
-                    </div>
-                    <p className="copyright">Copyright © 2020 Edith-portfolio</p>
-                    <Footer />
-                </BrowserRouter> */}
-<Header/>
-<Home />
-<FadeIn>
-<About/>
-</FadeIn>
-<FadeIn>
-<Projects/>
-                </FadeIn>
-                <FadeIn>
-<Volunteer/>
-                </FadeIn>
-                <FadeIn>
-<ContactN/>
-                </FadeIn>   
-            
-                <FooterN/>
-               
+                    <Header/>
+                    <Home />
+                        <FadeIn>
+                            <About/>
+                        </FadeIn>
+                        <FadeIn>
+                            <Projects/>
+                        </FadeIn>
+                        <FadeIn>
+                            <Volunteer/>
+                        </FadeIn>
+                        <FadeIn>
+                            <ContactN/>
+                        </FadeIn>              
+                        <FooterN/>
+              
             </React.Fragment >
         );
     }

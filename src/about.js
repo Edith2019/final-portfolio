@@ -11,6 +11,7 @@ import FileSaver  from 'file-saver';
 import saveAs  from 'file-saver'
 // import MyPDF from '../public/Resume.pdf';
 import { Link } from "react-scroll";
+// import PropTypes from 'prop-types';
 
 
 class About extends React.Component {
@@ -76,7 +77,7 @@ render() {
                                     <Accordion.Toggle as={Card.Title} eventKey="0" >
 
                                         <svg width="3em" height="3em" viewBox="0 0 16 16" className="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                                            <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
                                         </svg>
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
@@ -128,7 +129,7 @@ render() {
                                    
                         <Button variant="warning" size="lg" block>Contact</Button>
                         </Link>
-                        <a href="http://localhost:8080/public/Resume.pdf" target="_blank" onClick={this.downloadResume}>
+                        <a href="public/Edith_Chevallier-Resume.pdf" download >
                         <Button variant="outline-warning" size="lg" className="mt-2" block >Download Resume</Button>
                         </a>
 

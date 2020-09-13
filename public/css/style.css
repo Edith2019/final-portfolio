@@ -17,6 +17,11 @@
     border: solid green 4px;
 }
 
+/* .navbar.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top {
+    border: solid blue 4px;
+
+
+} */
 
 /* .card-deck{
     background-image: url("lines.png") !important;
@@ -85,10 +90,4 @@ textarea.border-0.border-contact.form-control:hover {
   visibility: visible;
 }
 
-.NavBar {
-    position: fixed;
-}
 
-.NavBar:hover {
-    visibility: visible;
-}

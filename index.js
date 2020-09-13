@@ -63,6 +63,8 @@ app.post("/message", (req, res) => {
     });
 });
 
+app.use('/public', express.static(__dirname + '/public'));
+
 // needs to be the last route //
 app.get("*", function (req, res) {
     res.sendFile(__dirname + "/index.html");
