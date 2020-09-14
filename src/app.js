@@ -16,8 +16,9 @@ import ContactN from "./contactN.js"
 import FooterN from "./footerN.js"
 import FadeIn from "./hooks/fadeIn.js"
 // import MouseHover from "./hooks/mouseHover.js"
-import cardProjects from './js/projectsData.js'
-
+// import projectsData from './js/projectsData.js'
+// import moreProjectsData from './js/moreProjectsData.js'
+// import AccordionProjects from './accordionProject.js'
 
 export default class App extends React.Component {
     constructor(props) {
@@ -50,22 +51,22 @@ export default class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                    <Header/>
-                    <Home />
-                        <FadeIn>
-                            <About/>
-                        </FadeIn>
-                        <FadeIn>
-                            <Projects/>
-                        </FadeIn>
-                        <FadeIn>
-                            <Volunteer/>
-                        </FadeIn>
-                        <FadeIn>
-                            <ContactN/>
-                        </FadeIn>              
-                        <FooterN/>
-              
+                <Header />
+                <Home />
+                <FadeIn>
+                    <About />
+                </FadeIn>
+                <FadeIn>
+                    <Projects />
+                </FadeIn>
+                <FadeIn>
+                    <Volunteer />
+                </FadeIn>
+                <FadeIn>
+                    <ContactN />
+                </FadeIn>
+                <FooterN />
+
             </React.Fragment >
         );
     }
