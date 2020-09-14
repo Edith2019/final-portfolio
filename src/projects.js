@@ -28,6 +28,7 @@ class Projects extends React.Component {
         })
     }
 
+
     render() {
         const { t } = this.props;
         var { title } = this.props;

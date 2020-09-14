@@ -44,8 +44,16 @@ if (process.env.NODE_ENV !== "production") {
 
 // route to post data from contact //
 app.post("/message", (req, res) => {
-    const { first, last, email, message, checkbox } = req.body;
-    db.addContactsData(first, last, email, message, checkbox).then(result => {
+    console.log("something in messg")
+    // const { first, last, email, message } = req.body;
+    const first = req.body.first;
+    const last = req.body.last;
+    const email = req.body.email;
+    const message = req.body.message;
+    console.log("first in backend", req.body)
+
+    db.addContactsData(first, last, email, message).then(result => {
+        console.log("result", result)
         if (result.rows[0].message) {
             const sender = JSON.stringify(result.rows[0]);
             ses.sendEmail("edith.chevallier3000@gmail.com", "Email from  portfolio", sender)
@@ -55,10 +63,11 @@ app.post("/message", (req, res) => {
                     });
                 });
         }
+        consol.log("soetinh afer submit to db")
         const data = result.rows[0];
         res.json({ data });
     }).catch(err => {
-        console.error(err);
+        console.error("error", err);
         res.json({ error: true });
     });
 });

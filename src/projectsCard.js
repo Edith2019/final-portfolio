@@ -13,14 +13,21 @@ class ProjectCard extends React.Component {
                 <Container fluid className=" pb-5" id="Projects">
                     <Row className="d-flex justify-content-center px-5 py-5" xs={1} md={1} lg={3}>
                         {this.props.projects.map(project => (
-                            <Col className="d-flex justify-content-center px-5 py-5" key={project.key}>
+                            <Col className="d-flex justify-content-center px-5 py-5" key={project.keyP}>
                                 <Card className="bg-warning" border="light" >
-                                    <Card.Img variant="top" src="./Swork.png" className="overlay" />
+                                    <Card.Img variant="top" src={project.srcP} className="overlay" />
                                     <Card.Body className="bg-light">
                                         <Card.Title >{t(project.titleP)}</Card.Title>
                                         <Card.Text>
                                             {t(project.descriptionP)}
                                         </Card.Text>
+                                        <Col>
+                                            <a href={project.hrefGitHubP} target="_blank">Github</a>
+                                        </Col>
+                                        <Col>
+                                            <a href={project.hrefHerokuP} target="_blank">{project.heroku}</a>
+                                        </Col>
+
                                     </Card.Body>
                                 </Card>
                             </Col>

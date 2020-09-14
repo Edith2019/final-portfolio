@@ -8,15 +8,71 @@ import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { withTranslation } from 'react-i18next';
-
+import axios from "./axios"; // need to put the slash to use the copy
+import Modal from 'react-bootstrap/Modal';
 class ContactN extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-
-
+            first: "",
+            last: "",
+            email: "",
+            message: "",
+            show: false
         }
+
+    }
+
+
+    submit() {
+        console.log("something submit")
+        console.log("first", this.state.first)
+        axios.post("/message", {
+            first: this.state.first,
+            last: this.state.last,
+            email: this.state.email,
+            message: this.state.message,
+            // checkbox: this.state.checkbox
+        }).then(
+            ({ data }) => {
+                if (data.data) {
+                    this.setState({
+                        // userFirst: data.data.first,
+                        // userLast: data.data.last,
+                        first: "",
+                        last: "",
+                        email: "",
+                        message: "",
+                    });
+                } else {
+                    this.setState({ error: true });
+                }
+            }
+        );
+
+
+    }
+
+
+
+
+    handleChange({ target }) {
+        this.setState({
+            [target.name]: target.value
+        });
+    }
+    handleShow() {
+        this.setState({
+            show: !this.show
+        });
+        // console.log("this.show in handleshow", this.state.show)
+    }
+
+    handleClose() {
+        this.setState({
+            show: false
+        });
 
     }
 
@@ -46,8 +102,11 @@ class ContactN extends React.Component {
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
                                         className="border-0 border-contact rounded-0"
+                                        name="first"
+                                        value={this.state.first}
+                                        onChange={e => this.handleChange(e)}
+                                        type="text"
                                     />
-
 
                                 </InputGroup>
                                 <InputGroup className="mb-3 px-5">
@@ -56,6 +115,10 @@ class ContactN extends React.Component {
                                         aria-label="Recipient's username"
                                         aria-describedby="basic-addon2"
                                         className="border-0 border-contact rounded-0"
+                                        name="last"
+                                        value={this.state.last}
+                                        onChange={e => this.handleChange(e)}
+                                        type="text"
                                     />
                                 </InputGroup>
                                 <InputGroup className="mb-3 px-5">
@@ -64,6 +127,10 @@ class ContactN extends React.Component {
                                         aria-label="Recipient's username"
                                         aria-describedby="basic-addon2"
                                         className="border-0 border-contact rounded-0"
+                                        name="email"
+                                        value={this.state.email}
+                                        onChange={e => this.handleChange(e)}
+                                        type="text"
                                     />
                                 </InputGroup>
 
@@ -71,10 +138,14 @@ class ContactN extends React.Component {
                                     <FormControl as="textarea"
                                         placeholder="Message"
                                         className="border-0 border-contact rounded-0"
+                                        name="message"
+                                        value={this.state.message}
+                                        onChange={e => this.handleChange(e)}
+                                        type="text"
                                     />
                                 </InputGroup>
                                 <Row className="d-flex justify-content-center m-5" >
-                                    <Button variant="outline-warning" size="lg" block>{t("Send")}</Button>
+                                    <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
                                 </Row>
                             </span>
 
@@ -84,16 +155,26 @@ class ContactN extends React.Component {
                             <Image id="imgContact" src="./fcontact.png" />
                         </Col>
                     </Row>
+                    <Button variant="secondary" onClick={e => this.handleShow(e)}>
+                        Test
+                    </Button>
+
+
+                    <Modal show={this.state.show} onHide={e => this.handleClose(e)} >
+                        <Modal.Header closeButton >
+                            <Modal.Title>{t("titleTandC")}</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>{t("contentTandC")}</Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={e => this.handleClose(e)}>
+                                {t("Close")}
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Container>
             </React.Fragment>
         )
-
-
-
     }
-
-
-
 }
 
 export default (withTranslation()(ContactN));

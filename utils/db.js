@@ -4,11 +4,11 @@ const db = spicedPg(
     "postgres:postgres:postgres@localhost:5432/contacts"
 );
 
-module.exports.addContactsData = ({ first, last, email, message, checkbox }) => {
-    const q = `INSERT into contacts (first, last, email, message, checkbox)
-    VALUES ($1, $2, $3, $4, $5)
+module.exports.addContactsData = ({ first, last, email, message }) => {
+    const q = `INSERT INTO contacts (first, last, email, message)
+    VALUES ($1, $2, $3, $4)
     RETURNING *
     `;
-    const params = [first, last, email, message, checkbox];
+    const params = [first, last, email, message];
     return db.query(q, params);
 };

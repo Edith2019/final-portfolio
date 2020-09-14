@@ -1,34 +1,35 @@
 
 const projectsData = [
     {
-        key: "p1",
+        keyP: "p1",
         idP: "p1",
-        srcP: "",
+        srcP: ".././VGG.png",
         titleP: "titleP1",
-        descriptionP: "descriptionP2",
-        hrefGitHubP: "",
-        hrefHerokuP: "",
-        srcGitHubP: ""
+        descriptionP: "descriptionP1",
+        hrefGitHubP: "https://github.com/Edith2019/Garden-Vue-Cli",
+        heroku: "Heroku",
+        hrefHerokuP: "https://vgg-nkln.herokuapp.com/",
+
     },
     {
         keyP: "p2",
         idP: "p2",
-        srcP: "",
+        srcP: ".././ReactKarsten.jpg",
         titleP: "titleP2",
-        descriptionP: "escriptionP2",
-        hrefGitHubP: "",
+        descriptionP: "descriptionP2",
+        hrefGitHubP: "https://github.com/Edith2019/React-portfolio",
+        heroku: "In production",
         hrefHerokuP: "",
-        srcGitHubP: ""
     },
     {
         keyP: "p3",
         idP: "p3",
-        srcP: "",
+        srcP: ".././Swork.png",
         titleP: "titleP3",
-        descriptionP: "escriptionP3",
+        descriptionP: "descriptionP3",
+        heroku: "Heroku",
         hrefGitHubP: "",
-        hrefHerokuP: "",
-        srcGitHubP: ""
+        hrefHerokuP: "https://swork-berlin.herokuapp.com/",
     },
 ]
 
