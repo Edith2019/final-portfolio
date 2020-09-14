@@ -51,8 +51,8 @@ class EnFr extends React.Component {
                             inline
                             type='radio'
                             id={`custom-inline-radio-2`}
-                            label={"GER"}
-                            value="ger"
+                            label={"FR"}
+                            value="fr"
                             name="groupOptions"
                         />
 

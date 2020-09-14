@@ -8,6 +8,7 @@ import MoreProjectsCard from './moreProjectsCard';
 import moreProjectsData from './js/moreProjectsData';
 import ProjectCard from './projectsCard.js'
 import projectsData from './js/projectsData.js'
+import { withTranslation } from 'react-i18next';
 
 
 class Projects extends React.Component {
@@ -28,17 +29,18 @@ class Projects extends React.Component {
     }
 
     render() {
+        const { t } = this.props;
         var { title } = this.props;
         const { isVisible } = this.state;
         if (isVisible) {
-            title = "More projects"
+            title = "bmp"
         } else {
-            title = "Close"
+            title = "close"
         }
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
-                    <h1 className="display-1 ffont-weight-normal title pt-5" >Projects</h1>
+                    <h1 className="display-1 ffont-weight-normal title pt-5" > {t("Projects")}</h1>
                     <ProjectCard projects={projectsData} />
                     <Accordion >
                         <Accordion.Collapse eventKey="0">
@@ -46,7 +48,7 @@ class Projects extends React.Component {
                         </Accordion.Collapse>
                         <Row className="d-flex justify-content-center">
                             <Accordion.Toggle as={Button} variant="warning" eventKey="0" onClick={this.toggleHand} >
-                                {title}
+                                {t(title)}
                             </Accordion.Toggle>
                         </Row >
                     </Accordion>
@@ -62,4 +64,4 @@ class Projects extends React.Component {
     }
 }
 
-export default Projects;
+export default (withTranslation()(Projects));

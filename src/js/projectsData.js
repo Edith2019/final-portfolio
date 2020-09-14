@@ -2,33 +2,33 @@
 const projectsData = [
     {
         key: "p1",
-        id: "p1",
-        src: "",
-        title: "This is my first project",
-        description: "It's a bit shit but I still love it",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        idP: "p1",
+        srcP: "",
+        titleP: "titleP1",
+        descriptionP: "descriptionP2",
+        hrefGitHubP: "",
+        hrefHerokuP: "",
+        srcGitHubP: ""
     },
     {
-        key: "p2",
-        id: "p2",
-        src: "",
-        title: "Here's project number two",
-        description: "Yeah this one is useless.",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        keyP: "p2",
+        idP: "p2",
+        srcP: "",
+        titleP: "titleP2",
+        descriptionP: "escriptionP2",
+        hrefGitHubP: "",
+        hrefHerokuP: "",
+        srcGitHubP: ""
     },
     {
-        key: "p3",
-        id: "p3",
-        src: "",
-        title: "Here's project number three",
-        description: "Best of the bunch!",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        keyP: "p3",
+        idP: "p3",
+        srcP: "",
+        titleP: "titleP3",
+        descriptionP: "escriptionP3",
+        hrefGitHubP: "",
+        hrefHerokuP: "",
+        srcGitHubP: ""
     },
 ]
 

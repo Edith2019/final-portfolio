@@ -11,6 +11,7 @@ import FileSaver from 'file-saver';
 import saveAs from 'file-saver'
 // import MyPDF from '../public/Resume.pdf';
 import { Link } from "react-scroll";
+import { withTranslation } from 'react-i18next';
 // import PropTypes from 'prop-types';
 
 
@@ -42,25 +43,22 @@ class About extends React.Component {
 
     render() {
 
-
+        const { t } = this.props;
         return (
 
             <React.Fragment>
                 <Container fluid className=" pb-5" id="About">
 
-                    <h1 className="display-1 title pt-5">About</h1>
+                    <h1 className="display-1 title pt-5">{t("About")}</h1>
                     <Row xs={1} md={1} lg={2} >
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center " >
                             <Image className="pt-5" src="./Edith.png" />
                         </Col>
                         <Col sm={{ order: 'first' }} >
                             <Card.Body >
-                                <Card.Title className="display-3 pt-5 pl-5">Hi,</Card.Title>
+                                <Card.Title className="display-3 pt-5 pl-5">{t("Hi")}</Card.Title>
                                 <Card.Text className="text-justify px-5">
-                                    I’m Edith. A fullstack developer based in Berlin, but available worldwide. I speak Javascript, HTML, CSS, vue.js,
-                                    React.js, english, french and sufficient german (ein bier bitte).
-                                    I’m a quick learner eager to master the tangle of Javascript in a silk CSS wrap. Currently exploring
-                                    in-depth frameworks like vue.js and with a huge crush on React.js, I as well appreciate working with bootstrap.
+                                    {t("AboutDesc")}
                                 </Card.Text>
                             </Card.Body>
                         </Col>
@@ -68,7 +66,7 @@ class About extends React.Component {
 
                         <Col className="d-flex justify-content-center">
                             <Card className="border-0 text-center pb-4" style={{ width: '25rem' }} >
-                                <Card.Title className="display-3 pt-5">Languages</Card.Title>
+                                <Card.Title className="display-3 pt-5">{t("Languages")}</Card.Title>
                                 <Row className=" pt-5">
                                     <Col >
                                         <Accordion>
@@ -130,7 +128,7 @@ class About extends React.Component {
                                 <Button variant="warning" size="lg" block>Contact</Button>
                             </Link>
                             <a href="public/Edith_Chevallier-Resume.pdf" download >
-                                <Button variant="outline-warning" size="lg" className="mt-2" block >Download Resume</Button>
+                                <Button variant="outline-warning" size="lg" className="mt-2" block >{t("DR")}</Button>
                             </a>
 
 
@@ -157,5 +155,5 @@ class About extends React.Component {
 
 }
 
-export default About;
+export default (withTranslation()(About));
 

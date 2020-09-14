@@ -3,9 +3,11 @@ import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { withTranslation } from 'react-i18next';
 
 class ProjectCard extends React.Component {
     render() {
+        const { t } = this.props
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
@@ -15,9 +17,9 @@ class ProjectCard extends React.Component {
                                 <Card className="bg-warning" border="light" >
                                     <Card.Img variant="top" src="./Swork.png" className="overlay" />
                                     <Card.Body className="bg-light">
-                                        <Card.Title >{project.title}</Card.Title>
+                                        <Card.Title >{t(project.titleP)}</Card.Title>
                                         <Card.Text>
-                                            {project.description}
+                                            {t(project.descriptionP)}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -30,4 +32,4 @@ class ProjectCard extends React.Component {
     }
 }
 
-export default ProjectCard;
+export default (withTranslation()(ProjectCard));

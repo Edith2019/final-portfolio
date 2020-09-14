@@ -2,35 +2,38 @@ const moreProjectsData = [
 
 
     {
-        key: "mp1",
-        id: "mp1",
-        src: "",
-        title: "This is my first project",
-        description: "It's a bit shit but I still love it",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        keyMP: "mp1",
+        idMP: "mp1",
+        srcMP: "",
+        titleMP: "titleMP1",
+        descriptionMP: "descriptionMP1",
+        hrefGitHubMP: "",
+        hrefHerokuMP: "",
+        srcGitHubMP: ""
     },
+
     {
-        key: "mp2",
-        id: "mp2",
-        src: "",
-        title: "Here's project number two",
-        description: "Yeah this one is useless.",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        keyMP: "mp2",
+        idMP: "mp2",
+        srcMP: "",
+        titleMP: "titleMP2",
+        descriptionMP: "descriptionMP2",
+        hrefGitHubMP: "",
+        hrefHerokuMP: "",
+        srcGitHubMP: ""
     },
+
     {
-        key: "mp3",
-        id: "mp3",
-        src: "",
-        title: "Here's project number three",
-        description: "Best of the bunch!",
-        hrefGitHub: "",
-        hrefHeroku: "",
-        srcGitHub: ""
+        keyMP: "mp3",
+        idMP: "mp3",
+        srcMP: "",
+        titleMP: "titleMP3",
+        descriptionMP: "descriptionMP3",
+        hrefGitHubMP: "",
+        hrefHerokuMP: "",
+        srcGitHubMP: ""
     },
+
 ]
 
 
