@@ -58,12 +58,11 @@ app.post("/message", (req, res) => {
             const sender = JSON.stringify(result.rows[0]);
             ses.sendEmail("edith.chevallier3000@gmail.com", "Email from  portfolio", sender)
                 .then(() => {
-                    res.json({
-                        success: true
-                    });
+
+                    console.log("someting in res ses")
                 });
         }
-        consol.log("soetinh afer submit to db")
+        console.log("soetinh afer submit to db")
         const data = result.rows[0];
         res.json({ data });
     }).catch(err => {
@@ -71,6 +70,13 @@ app.post("/message", (req, res) => {
         res.json({ error: true });
     });
 });
+
+
+// res.json({
+//     success: true,
+//     data
+// });
+
 
 app.use('/public', express.static(__dirname + '/public'));
 

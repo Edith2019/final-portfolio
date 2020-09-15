@@ -50,24 +50,21 @@ class FooterN extends React.Component {
         console.log("show in render", show);
         return (
             <React.Fragment>
-                <Nav className="justify-content-center bg-warning pt-5" id="footerN">
+                <Nav className="justify-content-center bg-warning pb-2 pt-4" id="footerN">
                     <Nav.Item className="pr-5 mr-5">
                         © 2020 EdithChevallier
                     </Nav.Item>
-                    <Nav.Item className="pl-5 ml-5">
-                        <Button eventKey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
+                    <Nav.Item className="pl-5 ml-5 ">
+                        <Button className="pt-0 tandc" variant="link" eventkey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
                     </Nav.Item>
                 </Nav>
-                {/* {show && (
-                    <ThankYouModal />
-                )} */}
                 <Modal show={this.state.show} onHide={e => this.handleClose(e)} >
                     <Modal.Header closeButton >
                         <Modal.Title>{t("titleTandC")}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>{t("contentTandC")}</Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={e => this.handleClose(e)}>
+                        <Button variant="warning" onClick={e => this.handleClose(e)}>
                             {t("Close")}
                         </Button>
                     </Modal.Footer>

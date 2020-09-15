@@ -107,7 +107,6 @@ class ContactN extends React.Component {
                                         onChange={e => this.handleChange(e)}
                                         type="text"
                                     />
-
                                 </InputGroup>
                                 <InputGroup className="mb-3 px-5">
                                     <FormControl

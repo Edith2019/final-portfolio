@@ -43,7 +43,7 @@ class Header extends React.Component {
 
     handleScroll() {
 
-        if (window.pageYOffset <= 15) {
+        if (window.pageYOffset <= 20) {
             this.setState({
                 visible: true
             })
@@ -56,7 +56,7 @@ class Header extends React.Component {
     };
 
     handleHover() {
-        console.log("something mouse")
+        // console.log("something mouse")
 
         this.setState({
             visible: true
@@ -67,7 +67,7 @@ class Header extends React.Component {
 
     render() {
         const visible = this.state.visible;
-        console.log("this.state.visible", this.state.visible)
+        // console.log("this.state.visible", this.state.visible)
         const { t } = this.props;
         return (
 

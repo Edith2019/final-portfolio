@@ -81,3 +81,29 @@ textarea.border-0.border-contact.form-control:hover {
     transform: none;
     visibility: visible;
 }
+
+.pt-0.tandc.btn.btn-link {
+    text-decoration: none;
+    color: black;
+}
+
+.pt-0.tandc.btn.btn-link:hover {
+    text-decoration: underline black;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    /* color: #fff; */
+    border-color: #ffc108 !important;
+    background-color: #ffc108 !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+    /* color: #fff; */
+    border-color: #ffc108 !important;
+    background-color: #ffc108 !important;
+}
