@@ -10,33 +10,59 @@ class EnFr extends React.Component {
         this.state = {
             // images: this.props.images,
             value: "en",
-            checkbox1: true
+            checkedFR: true,
+            checkedEN: false,
+            // checkedFR: false,
+            // isChecked: true
 
         };
     }
 
     componentDidMount() {
         console.log("value", this.state.value)
-        if (this.state.value === "en") {
-
-            console.log("yey")
 
 
+    }
+    // handleChangeCheck(event) {
+
+    //     let langBoxVal = event.target.value;
+    //     console.log("langBoxVal ", langBoxVal)
+    //     if (langBoxVal === "en") {
+    //         this.setState(() => ({ checkedEN: true, checkFR: false }));
+    //     }
+    //     else if (langBoxVal === "fr") {
+    //         this.setState(() => ({ checkedFR: true, checkedEN: false }));
+    //     }
+    // }
+
+    handleCheckEN() {
+        this.setState({
+            checkedEN: true,
+            checkedFR: false
+        })
 
 
-        }
     }
 
 
+    handleCheckFR() {
+        this.setState({
+            checkedEN: false,
+            checkedFR: true
+        })
+
+
+    }
+
     handleChange(event) {
-        console.log("selected val is ", event.target.value);
+        // console.log("selected val is ", event.target.value);
         let newlang = event.target.value;
 
         this.setState(() => ({ value: newlang }));
-        console.log("state value is", newlang, this.props.i18n.changeLanguage);
-        console.log("this.props", this.props);
+        // console.log("state value is", newlang, this.props.i18n.changeLanguage);
+        // console.log("this.props", this.props);
         this.props.i18n.changeLanguage(newlang);
-        console.log("this.props.i18n.changeLanguage(newlang)", this.props.i18n.changeLanguage(newlang))
+        // console.log("this.props.i18n.changeLanguage(newlang)", this.props.i18n.changeLanguage(newlang))
     }
 
     render() {
@@ -49,7 +75,7 @@ class EnFr extends React.Component {
 
                 >
 
-                    <div className=" input" key={`custom-inline-radio`}>
+                    <div className=" input" key={`custom-inline-radio`} >
                         <Form.Check
                             bsCustomPrefix="custom-control"
                             custom
@@ -60,6 +86,9 @@ class EnFr extends React.Component {
                             value="en"
                             name="groupOptions"
                             className="pt-3"
+                            checked={this.state.checkedEN}
+                            onChange={() => { this.handleCheckEN() }}
+
                         />
 
                         <Form.Check
@@ -70,6 +99,9 @@ class EnFr extends React.Component {
                             label={"FR"}
                             value="fr"
                             name="groupOptions"
+                            checked={this.state.checkedFR}
+                            onChange={() => { this.handleCheckFR() }}
+
                         />
 
                     </div>
