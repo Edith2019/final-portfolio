@@ -38,7 +38,7 @@ i18n.use(LanguageDetector).init({
                 LastName: "Last Name",
                 Send: "Send",
                 titleTandC: "Terms and conditions",
-                contentTandC: "blablabla",
+                contentTandC: "Je m'appelle Edith. Un développeur de pile complète basé à Berlin, mais disponible dans le monde entier. Je parle Javascript, HTML, CSS, vue.js, React.js, anglais, français et suffisamment d'allemand(ein bier bitte).J'apprends rapidement et je suis impatiente de maîtriser l'enchevêtrement de Javascript dans un environnement CSS en soie.J'explore actuellement des cadres de travail approfondis comme vue.js et, comme j'ai un faible pour React.js, j'apprécie également de travailler avec bootstrap.",
                 TandC: "TandC",
                 ThankYou: "Thank you",
                 forMsg: "for your message!",

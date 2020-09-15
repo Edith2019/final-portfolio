@@ -114,3 +114,7 @@ input:focus {
     border-radius: 0px !important;
     border: none !important;
 }
+
+#modalBodyTandC.modal {
+    background-image: url("../tandC.png") !important;
+}

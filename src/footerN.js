@@ -55,14 +55,19 @@ class FooterN extends React.Component {
                         © 2020 EdithChevallier
                     </Nav.Item>
                     <Nav.Item className="pl-5 ml-5 ">
-                        <Button className="pt-0 tandc" variant="link" eventkey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
+                        <Button className="pt-0 tandc" variant="link" eventey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
                     </Nav.Item>
                 </Nav>
-                <Modal show={this.state.show} onHide={e => this.handleClose(e)} >
+                <Modal show={this.state.show} onHide={e => this.handleClose(e)}>
                     <Modal.Header closeButton >
-                        <Modal.Title>{t("titleTandC")}</Modal.Title>
+                        <Modal.Title>
+                            {t("titleTandC")}
+                        </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{t("contentTandC")}</Modal.Body>
+                    <Modal.Body id="modalBodyTandC">
+
+                        {t("contentTandC")}
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="warning" onClick={e => this.handleClose(e)}>
                             {t("Close")}
