@@ -2,9 +2,12 @@
     /* background-color: green; */
     font-family: sans-serif;
     margin: 0px;
-    outline: none;
+    /* outline: none; */
     text-decoration: none;
     text-decoration-line: none;
+}
+*:focus {
+    outline: none !important;
 }
 
 .title:hover {
@@ -115,6 +118,18 @@ input:focus {
     border: none !important;
 }
 
-#modalBodyTandC.modal {
-    background-image: url("../tandC.png") !important;
+.border-0.border-contact.rounded-0.form-control:focus {
+    /* outline: none !important; */
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.pt-0.tandc.btn.btn-link:focus,
+.pt-0.tandc.btn.btn-link:active {
+    /* border: #ffc108; */
+    /* border-color: inherit; */
+    /* outline: none !important; */
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
