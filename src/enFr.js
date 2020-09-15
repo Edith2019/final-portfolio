@@ -8,61 +8,31 @@ class EnFr extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // images: this.props.images,
             value: "en",
-            checkedFR: true,
-            checkedEN: false,
-            // checkedFR: false,
-            // isChecked: true
-
+            checkedEN: true,
+            checkedFR: false,
         };
     }
-
-    componentDidMount() {
-        console.log("value", this.state.value)
-
-
-    }
-    // handleChangeCheck(event) {
-
-    //     let langBoxVal = event.target.value;
-    //     console.log("langBoxVal ", langBoxVal)
-    //     if (langBoxVal === "en") {
-    //         this.setState(() => ({ checkedEN: true, checkFR: false }));
-    //     }
-    //     else if (langBoxVal === "fr") {
-    //         this.setState(() => ({ checkedFR: true, checkedEN: false }));
-    //     }
-    // }
 
     handleCheckEN() {
         this.setState({
             checkedEN: true,
             checkedFR: false
         })
-
-
     }
-
 
     handleCheckFR() {
         this.setState({
             checkedEN: false,
             checkedFR: true
         })
-
-
     }
 
     handleChange(event) {
-        // console.log("selected val is ", event.target.value);
         let newlang = event.target.value;
-
         this.setState(() => ({ value: newlang }));
-        // console.log("state value is", newlang, this.props.i18n.changeLanguage);
-        // console.log("this.props", this.props);
         this.props.i18n.changeLanguage(newlang);
-        // console.log("this.props.i18n.changeLanguage(newlang)", this.props.i18n.changeLanguage(newlang))
+
     }
 
     render() {

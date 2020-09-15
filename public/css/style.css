@@ -70,6 +70,9 @@ textarea.border-0.border-contact.form-control:hover {
 .custom-control-input:checked ~ .custom-control-label::before {
     border-color: #ffc108 !important;
     background-color: #ffc108 !important;
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .custom-control-input:checked ~ .custom-control-label::after {
@@ -87,7 +90,7 @@ textarea.border-0.border-contact.form-control:hover {
 .border-0.border-contact.rounded-0.form-control:focus {
     border-color: inherit;
     -webkit-box-shadow: none;
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .pt-0.tandc.btn.btn-link:focus,
@@ -95,3 +98,10 @@ textarea.border-0.border-contact.form-control:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+/* label.custom-control-label:focus,
+label.custom-control-label::after {
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+} */

@@ -131,10 +131,6 @@ class About extends React.Component {
                                 <Button variant="outline-warning" size="lg" className="mt-2 download" block >{t("DR")}</Button>
                             </a>
 
-
-                            {/* <a href={myPDF} download="./Resume.pdf"> Download Here </a> */}
-
-
                         </Col>
 
 
