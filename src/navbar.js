@@ -33,8 +33,8 @@ class Header extends React.Component {
     componentDidMount() {
         var hide = this;
         window.addEventListener('scroll', this.handleScroll);
-        document.getElementById("appear").addEventListener('mouseenter', this.handleHover);
-        document.getElementById("appear").addEventListener('mouseleave', this.handleLeave);
+        // document.getElementById("appear").addEventListener('mouseenter', this.handleHover);
+        // document.getElementById("appear").addEventListener('mouseleave', this.handleLeave);
         hide.handleScroll();
         // hide.handleHover();
         // hide.handleLeave();
@@ -65,19 +65,19 @@ class Header extends React.Component {
     handleHover() {
         console.log("something mouse")
         var element = document.getElementById("appear");
-        element.classList.add("isVisible")
-        element.classList.remove("notVisible")
-
+        if (window.pageYOffset >= 20) {
+            element.classList.add("isVisible")
+            element.classList.remove("notVisible")
+        }
     }
 
 
     handleLeave() {
         var element = document.getElementById("appear");
-
-
-        element.classList.remove("isVisible")
-        element.classList.add("notVisible")
-
+        if (window.pageYOffset >= 20) {
+            element.classList.remove("isVisible")
+            element.classList.add("notVisible")
+        }
 
     }
 
@@ -91,9 +91,9 @@ class Header extends React.Component {
             <React.Fragment>
                 {/* <div id="appear">
                     {visible && ( */}
-                <Container id="aboutcont">
+                <Container fluid className="p-0">
                     <div id="appear" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
-                        <Navbar id="aboutcont" collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
+                        <Navbar collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
                             <Navbar.Brand href="#home" >Edith</Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
