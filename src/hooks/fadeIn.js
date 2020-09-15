@@ -1,33 +1,33 @@
-import React, { useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 
 
 export default function FadeIn(props) {
-const [isVisible, setVisible] = useState(true)
+    const [isVisible, setVisible] = useState(true)
     const elemRef = useRef();
 
-useEffect(() => {
-// callback 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => setVisible(entry.isIntersecting));
-});
-// Observer.observe is a method that detect what is on screen
-    observer.observe(elemRef.current);
+    useEffect(() => {
+        // callback 
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        // Observer.observe is a method that detect what is on screen
+        observer.observe(elemRef.current);
 
-    return () => observer.unobserve(elemRef.current)
+        return () => observer.unobserve(elemRef.current)
 
-}, [])
+    }, [])
 
-return (
+    return (
 
-    <div
-        className={`fadeInHook ${isVisible ? 'is-visibleHook' : ''}`}
-        ref={elemRef}
-    >
-        {props.children}
-    </div>
+        <div
+            className={`fadeInHook ${isVisible ? 'is-visibleHook' : ''}`}
+            ref={elemRef}
+        >
+            {props.children}
+        </div>
 
-)
+    )
 
 }
 

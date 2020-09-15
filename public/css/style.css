@@ -10,9 +10,9 @@
     text-decoration-color: #ffc108;
 }
 
-/* #aboutcont {
+#aboutcont {
     border: solid green 4px;
-} */
+}
 
 .card-img-top {
     filter: grey; /* IE6-9 */
@@ -50,12 +50,14 @@ textarea.border-0.border-contact.form-control:hover {
     visibility: hidden;
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
+    z-index: 1;
 }
 
 .fadeInHook.is-visibleHook {
     opacity: 1;
     transform: none;
     visibility: visible;
+    z-index: 2;
 }
 
 .pt-0.tandc.btn.btn-link {
@@ -105,3 +107,22 @@ label.custom-control-label::after {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 } */
+
+/* #ContactN {
+    border: solid blue 4px;
+    z-index: 1;
+}
+
+#hooks.fadeInHook {
+    z-index: 1;
+}
+
+#hooks.fadeInHook.fadeInHook.is-visibleHook {
+    z-index: 1;
+} */
+
+#footerN {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+}

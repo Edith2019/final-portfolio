@@ -74,7 +74,7 @@ class Header extends React.Component {
             <React.Fragment>
                 {visible && (
                     <div id="aboutcont" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} >
-                        <Navbar collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
+                        <Navbar id="aboutcont" collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
                             <Navbar.Brand href="#home" >Edith</Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">

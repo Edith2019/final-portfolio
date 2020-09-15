@@ -154,7 +154,7 @@ class ContactN extends React.Component {
 
                         </Col>
 
-                        <Col className="d-flex justify-content-center">
+                        <Col className="d-flex justify-content-center" id="aboutcont">
                             <Image id="imgContact" src="./fcontact.png" />
                         </Col>
                     </Row>
