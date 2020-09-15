@@ -46,6 +46,10 @@
     filter: none; /* IE6-9 */
 }
 
+#downloadA {
+    text-decoration: none !important;
+}
+
 input.border-0.border-contact.form-control {
     border-bottom: 2px black solid !important;
     transition: 0.4s;

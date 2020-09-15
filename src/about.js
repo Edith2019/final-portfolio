@@ -127,8 +127,8 @@ class About extends React.Component {
 
                                 <Button variant="warning" size="lg" block>Contact</Button>
                             </Link>
-                            <a href="public/Edith_Chevallier-Resume.pdf" download >
-                                <Button variant="outline-warning" size="lg" className="mt-2" block >{t("DR")}</Button>
+                            <a href="public/Edith_Chevallier-Resume.pdf" download id="downloadA">
+                                <Button variant="outline-warning" size="lg" className="mt-2 download" block >{t("DR")}</Button>
                             </a>
 
 
