@@ -126,3 +126,22 @@ label.custom-control-label::after {
     position: absolute;
     width: 100%;
 }
+
+/* .Navbar:hover {
+    visibility: visible;
+} */
+
+.notVisible {
+    /* visibility: hidden; */
+    opacity: 0%;
+}
+
+.isVisible {
+    /* visibility: visible; */
+    opacity: 100%;
+}
+
+#appear {
+    position: fixed;
+    z-index: 998;
+}

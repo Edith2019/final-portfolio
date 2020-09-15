@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-scroll";
 import EnFr from './enFr.js';
 import { withTranslation } from 'react-i18next';
+import Container from "react-bootstrap/Container";
 
 // import PropTypes from 'prop-types';
 
@@ -32,8 +33,8 @@ class Header extends React.Component {
     componentDidMount() {
         var hide = this;
         window.addEventListener('scroll', this.handleScroll);
-        // window.addEventListener('mouseenter', this.handleHover);
-        // window.addEventListener('mouseleave', this.handleLeave);
+        document.getElementById("appear").addEventListener('mouseenter', this.handleHover);
+        document.getElementById("appear").addEventListener('mouseleave', this.handleLeave);
         hide.handleScroll();
         // hide.handleHover();
         // hide.handleLeave();
@@ -42,27 +43,43 @@ class Header extends React.Component {
 
 
     handleScroll() {
-
+        var element = document.getElementById("appear");
         if (window.pageYOffset <= 20) {
-            this.setState({
-                visible: true
-            })
+            element.classList.add("isVisible")
+            element.classList.remove("notVisible")
+
+            // this.setState({
+            //     visible: true
+            // })
 
         } else {
-            this.setState({
-                visible: false
-            })
+            // this.setState({
+            //     visible: false
+            // })
+            element.classList.remove("isVisible")
+            element.classList.add("notVisible")
+
         }
     };
 
     handleHover() {
-        // console.log("something mouse")
+        console.log("something mouse")
+        var element = document.getElementById("appear");
+        element.classList.add("isVisible")
+        element.classList.remove("notVisible")
 
-        this.setState({
-            visible: true
-        })
     }
 
+
+    handleLeave() {
+        var element = document.getElementById("appear");
+
+
+        element.classList.remove("isVisible")
+        element.classList.add("notVisible")
+
+
+    }
 
 
     render() {
@@ -72,8 +89,10 @@ class Header extends React.Component {
         return (
 
             <React.Fragment>
-                {visible && (
-                    <div id="aboutcont" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} >
+                {/* <div id="appear">
+                    {visible && ( */}
+                <Container id="aboutcont">
+                    <div id="appear" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
                         <Navbar id="aboutcont" collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
                             <Navbar.Brand href="#home" >Edith</Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -114,7 +133,9 @@ class Header extends React.Component {
                             </Navbar.Collapse>
                         </Navbar>
                     </div>
-                )}
+                    {/* )}
+                </div> */}
+                </Container>
             </React.Fragment>
         )
     }
