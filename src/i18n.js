@@ -40,6 +40,9 @@ i18n.use(LanguageDetector).init({
                 titleTandC: "Terms and conditions",
                 contentTandC: "blablabla",
                 TandC: "TandC",
+                ThankYou: "Thank you",
+                forMsg: "for your message!",
+                contentTY: "I will come back to you as soon as possible."
             },
 
         },

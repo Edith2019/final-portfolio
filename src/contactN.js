@@ -37,14 +37,18 @@ class ContactN extends React.Component {
         }).then(
             ({ data }) => {
                 if (data.data) {
+                    console.log("data.data", data.data)
                     this.setState({
-                        // userFirst: data.data.first,
-                        // userLast: data.data.last,
+                        userFirst: data.data.first,
+                        userLast: data.data.last,
                         first: "",
                         last: "",
                         email: "",
                         message: "",
                     });
+                    this.setState({
+                        show: true
+                    })
                 } else {
                     this.setState({ error: true });
                 }
@@ -154,21 +158,18 @@ class ContactN extends React.Component {
                             <Image id="imgContact" src="./fcontact.png" />
                         </Col>
                     </Row>
-                    <Button variant="secondary" onClick={e => this.handleShow(e)}>
-                        Test
-                    </Button>
-
-
-                    <Modal show={this.state.show} onHide={e => this.handleClose(e)} >
-                        <Modal.Header closeButton >
-                            <Modal.Title>{t("titleTandC")}</Modal.Title>
+                    <Modal show={this.state.show} className="border border-0 border-dark">
+                        <Modal.Header closeButton onClick={e => this.handleClose(e)}>
+                            <Modal.Title>{t("ThankYou")} {this.state.userFirst} {t("forMsg")}</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>{t("contentTandC")}</Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={e => this.handleClose(e)}>
-                                {t("Close")}
-                            </Button>
-                        </Modal.Footer>
+                        <Modal.Body >
+                            <Row className="d-flex justify-content-center">
+                                <img src="./giphy.gif" alt="gif" width="300" height="300" />
+                            </Row>
+                            <Row className="d-flex justify-content-center mt-2">
+                                {t("contentTY")}
+                            </Row>
+                        </Modal.Body>
                     </Modal>
                 </Container>
             </React.Fragment>

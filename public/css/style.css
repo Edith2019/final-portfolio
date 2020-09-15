@@ -107,3 +107,10 @@ input:focus {
     border-color: #ffc108 !important;
     background-color: #ffc108 !important;
 }
+
+.modal-content {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border: none !important;
+}

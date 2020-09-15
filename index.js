@@ -56,7 +56,7 @@ app.post("/message", (req, res) => {
         console.log("result", result)
         if (result.rows[0].message) {
             const sender = JSON.stringify(result.rows[0]);
-            ses.sendEmail("edith.chevallier3000@gmail.com", "Email from  portfolio", sender)
+            ses.sendEmail("edith.chevallier3000@gmail.com", "Email from Edith's portfolio", sender)
                 .then(() => {
 
                     console.log("someting in res ses")
