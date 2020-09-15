@@ -43,12 +43,12 @@ class Projects extends React.Component {
                 <Container fluid className=" pb-5" id="Projects">
                     <h1 className="display-1 ffont-weight-normal title pt-5" > {t("Projects")}</h1>
                     <ProjectCard projects={projectsData} />
-                    <Accordion >
-                        <Accordion.Collapse eventkey="0">
+                    <Accordion>
+                        <Accordion.Collapse eventKey="0">
                             <MoreProjectsCard moreProjects={moreProjectsData} />
                         </Accordion.Collapse>
                         <Row className="d-flex justify-content-center">
-                            <Accordion.Toggle as={Button} variant="warning" eventkey="0" onClick={this.toggleHand} >
+                            <Accordion.Toggle as={Button} variant="warning" eventKey="0" onClick={this.toggleHand} >
                                 {t(title)}
                             </Accordion.Toggle>
                         </Row >

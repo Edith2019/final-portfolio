@@ -45,7 +45,7 @@ class EnFr extends React.Component {
                 <Form.Group
                     value={this.state.value}
                     onChange={e => this.handleChange(e)}
-                    classNAme="mt-2"
+                    className="mt-2"
 
                 >
 
