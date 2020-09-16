@@ -22,6 +22,12 @@ class ProjectCard extends React.Component {
         var arrowUp = document.getElementById("up")
         arrowDown.classList.add("arrowVisible")
         arrowUp.classList.add("arrowNotVisible");
+
+        var arrowDownTech = document.getElementById("downTech");
+        var arrowUpTech = document.getElementById("upTech")
+        arrowDownTech.classList.add("arrowVisible")
+        arrowUpTech.classList.add("arrowNotVisible");
+
     }
 
     //     handleClick() {
@@ -57,6 +63,30 @@ class ProjectCard extends React.Component {
     }
 
 
+
+
+    handleArrowTech() {
+
+        var arrowDownTech = document.getElementById("downTech");
+        var arrowUpTech = document.getElementById("upTech")
+
+        if (arrowDownTech.classList.contains("arrowVisible")) {
+            console.log("something is in arrow down")
+            arrowDownTech.classList.remove("arrowVisible")
+            arrowDownTech.classList.add("arrowNotVisible")
+            arrowUpTech.classList.remove("arrowNotVisible")
+            arrowUpTech.classList.add("arrowVisible")
+
+        } else if (arrowUpTech.classList.contains("arrowVisible")) {
+            console.log("something is in arrow up")
+            arrowDownTech.classList.remove("arrowNotVisible")
+            arrowDownTech.classList.add("arrowVisible")
+            arrowUpTech.classList.remove("arrowVisible")
+            arrowUpTech.classList.add("arrowNotVisible")
+
+        }
+
+    }
     render() {
         const { t } = this.props
 
@@ -100,11 +130,11 @@ class ProjectCard extends React.Component {
                                             <Card.Text>
                                                 <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP">
                                                     <Card.Title className="text-warning">Technologies
-                                                    <svg id="down" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onClick={() => { this.handleArrow() }}>
+                                                    <svg id="downTech" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onClick={() => { this.handleArrowTech() }}>
                                                             <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                             <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                         </svg>
-                                                        <svg id="up" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onClick={() => { this.handleArrow() }}>
+                                                        <svg id="upTech" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onClick={() => { this.handleArrowTech() }}>
                                                             <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
                                                         </svg>
