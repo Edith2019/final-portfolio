@@ -22,10 +22,10 @@ class MoreProjectsCard extends React.Component {
                                             {t(moreProject.descriptionMP)}
                                         </Card.Text>
                                         <Col>
-                                            <a href={moreProject.hrefGitHubMP} target="_blank">Github</a>
+                                            <a href={moreProject.hrefGitHubMP} target="_blank" rel="noopener noreferrer">Github</a>
                                         </Col>
                                         <Col>
-                                            <a href={moreProject.hrefHerokuMP} target="_blank"> {moreProject.herokuMP}</a>
+                                            <a href={moreProject.hrefHerokuMP} target="_blank" rel="noopener noreferrer"> {moreProject.herokuMP}</a>
                                         </Col>
                                     </Card.Body>
                                 </Card>

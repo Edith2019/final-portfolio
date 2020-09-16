@@ -28,7 +28,9 @@
     filter: none; /* IE6-9 */
 }
 
-#downloadA {
+#downloadA,
+#featureP,
+#technologiesP {
     text-decoration: none !important;
 }
 
@@ -96,7 +98,9 @@ textarea.border-0.border-contact.form-control:hover {
 }
 
 .pt-0.tandc.btn.btn-link:focus,
-.pt-0.tandc.btn.btn-link:active {
+.pt-0.tandc.btn.btn-link:active,
+#featureP,
+#technologiesP {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -144,4 +148,15 @@ label.custom-control-label::after {
 #appear {
     position: fixed;
     z-index: 998;
+}
+
+li {
+    list-style-type: none;
+}
+
+.text-warning.card-title.h5 {
+    text-decoration: none !important;
+}
+.text-warning.card-title.h5:hover {
+    text-decoration: none !important;
 }
