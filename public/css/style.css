@@ -21,6 +21,10 @@
     transition: 0.8s;
 }
 
+#navCur {
+    cursor: pointer;
+}
+
 .overlay:hover {
     transition: 0.8s;
     background-color: none;
@@ -137,12 +141,22 @@ label.custom-control-label::after {
 
 .notVisible {
     /* visibility: hidden; */
-    opacity: 0%;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    -ms-transition: opacity 0.4s ease-in;
+    -o-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    opacity: 0;
 }
 
 .isVisible {
     /* visibility: visible; */
-    opacity: 100%;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    -ms-transition: opacity 0.4s ease-in;
+    -o-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    opacity: 1;
 }
 
 #appear {
@@ -159,4 +173,20 @@ li {
 }
 .text-warning.card-title.h5:hover {
     text-decoration: none !important;
+}
+
+.arrowVisible {
+    visibility: visible;
+}
+
+.arrowNotVisible {
+    visibility: hidden;
+}
+
+#down {
+    margin-left: 1rem;
+}
+
+#up {
+    margin-left: -1.3rem;
 }

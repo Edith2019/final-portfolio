@@ -97,7 +97,7 @@ class Header extends React.Component {
                             <Navbar.Brand href="#home" >Edith</Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
-                                <Nav className="mr-auto pt-1" >
+                                <Nav className="mr-auto pt-1 " id="navCur">
                                     <Link to="About"
                                         activeClass="active"
                                         spy={true}
