@@ -85,7 +85,7 @@ class ContactN extends React.Component {
         const { t } = this.props;
         return (
             <React.Fragment >
-                <Container fluid id="ContactN">
+                <Container fluid>
                     <h1 className="display-1  title pt-5">Contact</h1>
 
                     <Row xs={1} md={1} lg={2}>
@@ -154,7 +154,7 @@ class ContactN extends React.Component {
 
                         </Col>
 
-                        <Col className="d-flex justify-content-center" id="aboutcont">
+                        <Col className="d-flex justify-content-center">
                             <Image id="imgContact" src="./fcontact.png" />
                         </Col>
                     </Row>

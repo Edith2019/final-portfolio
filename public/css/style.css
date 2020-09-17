@@ -183,12 +183,9 @@ li {
     visibility: hidden;
 }
 
-#down,
-#downTech {
-    margin-left: 1rem;
-}
-
-#up,
+.down,
+#downTech,
+.up,
 #upTech {
-    margin-left: -1.3rem;
+    margin-left: 1rem;
 }
