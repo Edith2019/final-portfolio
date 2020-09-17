@@ -35,37 +35,39 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src="./fish.png" />
+                            <Image src="./fish.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
 
-                    <Row  >
-
+                    <Row >
                         <Col className="d-flex justify-content-center">
                             <Card.Body >
-                                <Card.Title className="display-4 pt-5 pl-5">{t("titleV2")}</Card.Title>
+                                <Card.Title className="display-4 pt-5 pl-5">OpenTechSchool Berlin</Card.Title>
                                 <Card.Text className="text-justify px-5">
                                     {t("descriptionV2")}
                                 </Card.Text>
                             </Card.Body>
                         </Col>
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center">
-                            <Image src="./Leave.png" />
+                            <Image src="./Leave.png" fluid alt="Responsive image" />
                         </Col>
+
+
+
                     </Row>
 
                     <Row xs={1} md={1} lg={2} >
 
                         <Col className="d-flex justify-content-center">
                             <Card.Body >
-                                <Card.Title className="display-4 pt-5 pl-5">{t("titleV3")}</Card.Title>
+                                <Card.Title className="display-4 pt-5 pl-5">OpenTechSchool Berlin</Card.Title>
                                 <Card.Text className="text-justify px-5">
                                     {t("descriptionV3")}
                                 </Card.Text>
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src="./leopard.png" />
+                            <Image src="./leopard.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
 

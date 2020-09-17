@@ -11,7 +11,7 @@ i18n.use(LanguageDetector).init({
                 Contact: "Contact",
                 Welcome: "Welcome",
                 Hi: "Hi,",
-                AboutDesc: "I’m Edith. A fullstack developer from my mother's vigina (she is an awesome lady). I speak Javascript, HTML, CSS, Vue.js, React.js (and a bunch of other stuff), english, french and some needed german (konnen Sie Bitte viederholen?). I love coding, I love debugging but I don't like brussels sprouts (tho I love Brussels). I am a communicative and a reliable person who believe in weirdness and practice. I changed career for the sake of brain stimuli, so you can be reasured, I am gonna be full on to your useless startup. #milienial#Idonthaveinstacauseihavealife",
+                AboutDesc: "I’m Edith. A fullstack developer from my mother's vigina (she is an awesome lady). I speak Javascript, HTML, CSS, Vue.js, React.js (and a bunch of other stuff), english, french and some needed german (konnen Sie Bitte viederholen?). I love coding, I love debugging but I don't like brussels sprouts (tho I love Brussels). I am a communicative and a reliable person who believe in weirdness and practice. I changed career for the sake of brain stimuli, so you can be reasured, I am gonna be full on to your useless startup.",
                 Languages: "languages",
                 DR: "Download Resume",
                 titleP1: "Vue.js - VGG Garden - nkln",

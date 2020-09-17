@@ -31,13 +31,16 @@ class Header extends React.Component {
     }
 
     componentDidMount() {
-        var hide = this;
-        window.addEventListener('scroll', this.handleScroll);
-        // document.getElementById("appear").addEventListener('mouseenter', this.handleHover);
-        // document.getElementById("appear").addEventListener('mouseleave', this.handleLeave);
-        hide.handleScroll();
-        // hide.handleHover();
-        // hide.handleLeave();
+
+        if (window.screen.width > 450) {
+            var hide = this;
+            window.addEventListener('scroll', this.handleScroll);
+            hide.handleScroll();
+        } else {
+            var navElement = document.getElementById("appear")
+            navElement.classList.add("mobileNavBar")
+        }
+
 
     };
 
@@ -48,14 +51,7 @@ class Header extends React.Component {
             element.classList.add("isVisible")
             element.classList.remove("notVisible")
 
-            // this.setState({
-            //     visible: true
-            // })
-
         } else {
-            // this.setState({
-            //     visible: false
-            // })
             element.classList.remove("isVisible")
             element.classList.add("notVisible")
 
@@ -63,7 +59,6 @@ class Header extends React.Component {
     };
 
     handleHover() {
-        console.log("something mouse")
         var element = document.getElementById("appear");
         if (window.pageYOffset >= 20) {
             element.classList.add("isVisible")
@@ -84,17 +79,14 @@ class Header extends React.Component {
 
     render() {
         const visible = this.state.visible;
-        // console.log("this.state.visible", this.state.visible)
         const { t } = this.props;
         return (
 
             <React.Fragment>
-                {/* <div id="appear">
-                    {visible && ( */}
-                <Container fluid className="p-0">
-                    <div id="appear" className="NavBar" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
-                        <Navbar collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
-                            <Navbar.Brand href="#home" >Edith</Navbar.Brand>
+                <Container fluid className="pb-0 pt-4">
+                    <div id="appear" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
+                        <Navbar id="mobileNav" collapseOnSelect expand="lg" bg="white" color="black" fixed="top" className="navbar" >
+                            <Navbar.Brand href="#home" className="pl-2 pt-4">Edith</Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className="mr-auto pt-1 " id="navCur">
@@ -104,7 +96,7 @@ class Header extends React.Component {
                                         smooth={true}
                                         offset={-60}
                                         duration={500}
-                                        className="pr-3">{t("About")}
+                                        className="pr-3 pt-3">{t("About")}
                                     </Link>
                                     <Link to="Projects"
                                         activeClass="active"
@@ -112,21 +104,21 @@ class Header extends React.Component {
                                         smooth={true}
                                         offset={-60}
                                         duration={800}
-                                        className="pr-3">{t("Projects")}
+                                        className="pr-3 pt-3">{t("Projects")}
                                     </Link>
                                     <Link to="Volunteering"
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
                                         offset={-60}
-                                        duration={1100} className="pr-3">{t("Volunteering")}
+                                        duration={1100} className="pr-3 pt-3">{t("Volunteering")}
                                     </Link>
                                     <Link to="ContactN"
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
                                         offset={-60}
-                                        duration={1400} className="pr-3">{t("Contact")}
+                                        duration={1400} className="pr-3 pt-3">{t("Contact")}
                                     </Link>
                                 </Nav>
                                 <EnFr />

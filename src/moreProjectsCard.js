@@ -13,7 +13,7 @@ class MoreProjectsCard extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
-                    <Row className="d-flex justify-content-center px-5 py-5" xs={1} md={1} lg={3}>
+                    <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
                         {this.props.moreProjects.map(moreProject => (
                             <Col className="d-flex justify-content-center px-5 py-5" key={moreProject.keyMP}>
                                 <Card className="bg-warning" border="light" >

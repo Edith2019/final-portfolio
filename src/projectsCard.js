@@ -20,168 +20,29 @@ class ProjectCard extends React.Component {
         }
     }
 
-
-    componentDidMount() {
-        // var arrowDown = document.getElementById("down");
-        // var arrowUp = document.getElementById("up")
-        // arrowDown.classList.add("arrowVisible")
-        // arrowUp.classList.add("arrowNotVisible");
-
-        // var arrowDownTech = document.getElementById("downTech");
-        // var arrowUpTech = document.getElementById("upTech")
-        // arrowDownTech.classList.add("arrowVisible")
-        // arrowUpTech.classList.add("arrowNotVisible");
-
-        this.setState({
-            arrowDown: true,
-            arrowUp: false
-
-        })
-
-        console.log("this.state.arrowDownin component", this.state.arrowDown)
-        console.log("this.state.arrowup in component", this.state.arrowUp)
-
-    }
-
-    //     handleClick() {
-
-    // if ()
-
-
-    //     }
-
-
-
     handleArrow() {
-
-
-        // var arrowDown = document.getElementById("down");
-        // console.log("arrowdown", arrowDown)
-        // var arrowUp = document.getElementById("up")
-
-        // if (arrowDown.classList.contains("arrowVisible")) {
-        //     console.log("something is in arrow down")
-        //     arrowDown.classList.remove("arrowVisible")
-        //     arrowDown.classList.add("arrowNotVisible")
-        //     arrowUp.classList.remove("arrowNotVisible")
-        //     arrowUp.classList.add("arrowVisible")
-
-        // } else if (arrowUp.classList.contains("arrowVisible")) {
-        //     console.log("something is in arrow up")
-        //     arrowDown.classList.remove("arrowNotVisible")
-        //     arrowDown.classList.add("arrowVisible")
-        //     arrowUp.classList.remove("arrowVisible")
-        //     arrowUp.classList.add("arrowNotVisible")
-
-        // }
         console.log("omething in handleclick")
         this.setState({
             arrowDown: !this.state.arrowDown,
             arrowUp: !this.state.arrowUp,
-
-
         })
-        console.log("this.state.arrowDown", this.state.arrowDown)
-        console.log("this.state.arrowup", this.state.arrowUp)
-
     }
-
-
 
 
     handleArrowTech() {
-
-
-        // var arrowDown = document.getElementById("down");
-        // console.log("arrowdown", arrowDown)
-        // var arrowUp = document.getElementById("up")
-
-        // if (arrowDown.classList.contains("arrowVisible")) {
-        //     console.log("something is in arrow down")
-        //     arrowDown.classList.remove("arrowVisible")
-        //     arrowDown.classList.add("arrowNotVisible")
-        //     arrowUp.classList.remove("arrowNotVisible")
-        //     arrowUp.classList.add("arrowVisible")
-
-        // } else if (arrowUp.classList.contains("arrowVisible")) {
-        //     console.log("something is in arrow up")
-        //     arrowDown.classList.remove("arrowNotVisible")
-        //     arrowDown.classList.add("arrowVisible")
-        //     arrowUp.classList.remove("arrowVisible")
-        //     arrowUp.classList.add("arrowNotVisible")
-
-        // }
-        console.log("omething in handleclick")
         this.setState({
             arrowTechDown: !this.state.arrowTechDown,
             arrowTechUp: !this.state.arrowTechUp
-
         })
-        console.log("this.state.arrowDown", this.state.arrowDown)
-        console.log("this.state.arrowup", this.state.arrowUp)
-
     }
 
-    // handleArrowDown() {
 
-    //     var arrowDown = document.getElementById("down");
-    //     var arrowUp = document.getElementById("up")
-
-
-
-    //     if (arrowDown.classList.contains("arrowVisible")) {
-    //         console.log("something is in arrow down")
-    //         arrowDown.classList.remove("arrowVisible")
-    //         arrowDown.classList.add("arrowNotVisible")
-    //         arrowUp.classList.remove("arrowNotVisible")
-    //         arrowUp.classList.add("arrowVisible")
-
-    //     } else if (arrowUp.classList.contains("arrowVisible")) {
-    //         console.log("something is in arrow up")
-    //         arrowDown.classList.remove("arrowNotVisible")
-    //         arrowDown.classList.add("arrowVisible")
-    //         arrowUp.classList.remove("arrowVisible")
-    //         arrowUp.classList.add("arrowNotVisible")
-
-    //     }
-
-    // }
-
-
-
-
-
-
-    // handleArrowTech() {
-
-    //     var arrowDownTech = document.getElementById("downTech");
-    //     var arrowUpTech = document.getElementById("upTech")
-
-    //     if (arrowDownTech.classList.contains("arrowVisible")) {
-    //         console.log("something is in arrow down")
-    //         arrowDownTech.classList.remove("arrowVisible")
-    //         arrowDownTech.classList.add("arrowNotVisible")
-    //         arrowUpTech.classList.remove("arrowNotVisible")
-    //         arrowUpTech.classList.add("arrowVisible")
-
-    //     } else if (arrowUpTech.classList.contains("arrowVisible")) {
-    //         console.log("something is in arrow up")
-    //         arrowDownTech.classList.remove("arrowNotVisible")
-    //         arrowDownTech.classList.add("arrowVisible")
-    //         arrowUpTech.classList.remove("arrowVisible")
-    //         arrowUpTech.classList.add("arrowNotVisible")
-
-    //     }
-
-    // }
     render() {
         const { t } = this.props;
-        // const { arrowDown } = this.state;
-
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
-                    <Row className="d-flex justify-content-center px-5 py-5" xs={1} md={1} lg={3}>
+                    <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
                         {this.props.projects.map(project => (
                             <Col className="d-flex justify-content-center px-5 py-5" key={project.keyP}>
                                 <Card className="bg-warning" border="light" >
@@ -205,7 +66,6 @@ class ProjectCard extends React.Component {
                                                     }
 
                                                     {this.state.arrowUp &&
-
                                                         <svg id="up" width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
                                                             <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
@@ -223,7 +83,8 @@ class ProjectCard extends React.Component {
                                         </Accordion>
                                         <Accordion>
                                             <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP" onClick={this.handleArrowTech.bind(this)}>
-                                                <Card.Title className="text-warning">Technologies
+                                                <Card.Title className="text-warning">
+                                                    Technologies
                                                 {this.state.arrowTechDown &&
                                                         <svg id="downTech" width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
                                                             <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -248,7 +109,6 @@ class ProjectCard extends React.Component {
                                                         ))}
                                                     </Col>
                                                     <Col>
-                                                        {/* <p className="font-weight-bold"> */}
                                                         <Card.Text className="font-weight-bold">Back-End</Card.Text>
                                                         {project.technologiesBEP.map((element, index) => (
                                                             <li key={project[index]}>{element}</li>

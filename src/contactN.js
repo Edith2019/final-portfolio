@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/Button'
 import { withTranslation } from 'react-i18next';
 import axios from "./axios"; // need to put the slash to use the copy
 import Modal from 'react-bootstrap/Modal';
+
 class ContactN extends React.Component {
 
     constructor(props) {
@@ -86,6 +87,7 @@ class ContactN extends React.Component {
         return (
             <React.Fragment >
                 <Container fluid>
+
                     <h1 className="display-1  title pt-5">Contact</h1>
 
                     <Row xs={1} md={1} lg={2}>
@@ -155,7 +157,7 @@ class ContactN extends React.Component {
                         </Col>
 
                         <Col className="d-flex justify-content-center">
-                            <Image id="imgContact" src="./fcontact.png" />
+                            <Image fluid id="imgContact" src="./fcontact.png " alt="Responsive image" />
                         </Col>
                     </Row>
                     <Modal show={this.state.show} className="border border-0 border-dark">
@@ -164,7 +166,7 @@ class ContactN extends React.Component {
                         </Modal.Header>
                         <Modal.Body >
                             <Row className="d-flex justify-content-center">
-                                <img src="./giphy.gif" alt="gif" width="300" height="300" />
+                                <Image fluid src="./giphy.gif" alt="Responsive image" />
                             </Row>
                             <Row className="d-flex justify-content-center mt-2">
                                 {t("contentTY")}

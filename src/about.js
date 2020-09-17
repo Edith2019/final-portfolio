@@ -18,14 +18,10 @@ import { withTranslation } from 'react-i18next';
 class About extends React.Component {
     constructor() {
         super();
-        // this.downloadResume = this.downloadResume.bind(this);
         this.state = {
 
         }
-
-
     }
-
 
     downloadResume() {
 
@@ -33,13 +29,7 @@ class About extends React.Component {
             process.env.REACT_APP_CLIENT_URL + "./Resume.pdf",
             "Edith_Chevallier_Resume.pdf",
             { autoBom: true });
-
     }
-
-    // try {
-    //     var isFileSaverSupported = !!new Blob;
-    // } catch (e) { }
-
 
     render() {
 
@@ -48,11 +38,12 @@ class About extends React.Component {
 
             <React.Fragment>
                 <Container fluid className=" pb-5" id="About">
-
-                    <h1 className="display-1 title pt-5">{t("About")}</h1>
+                    <Row>
+                        <h1 className="display-1 title pt-5">{t("About")}</h1>
+                    </Row>
                     <Row xs={1} md={1} lg={2} >
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center " >
-                            <Image className="pt-5" src="./Edith.png" />
+                            <Image className="pt-5" src="./Edith.png" fluid alt="Responsive image" />
                         </Col>
                         <Col sm={{ order: 'first' }} >
                             <Card.Body >
@@ -117,7 +108,7 @@ class About extends React.Component {
 
                         </Col>
                         <Col className="text-center px-5" >
-                            <Image src="Bird.png" />
+                            <Image src="Bird.png" fluid alt="Responsive image" />
                             <Link to="ContactN"
                                 activeClass="active"
                                 spy={true}
@@ -136,13 +127,12 @@ class About extends React.Component {
 
                     </Row>
 
-                    {/* <img src="./Resume.pdf" /> */}
 
 
 
-                </Container>
+                </Container >
 
-            </React.Fragment>
+            </React.Fragment >
 
         );
     }
