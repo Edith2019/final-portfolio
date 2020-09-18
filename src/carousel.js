@@ -21,40 +21,44 @@ class CarouselComponent extends React.Component {
                     <Carousel>
 
 
+                        {this.props.comments.map(comment =>
+                            <Carousel.Item>
 
-                        <Row>
-                            <Col>
-                            </Col>
-                            <Col xs={8}>
-                                <div className="carousel-inner">
-                                    {this.props.comments.map(comment =>
-                                        <Row className="py-5">
+                                <Row>
+                                    <Col>
+                                    </Col>
+                                    <Col xs={8}>
+                                        <div className="carousel-inner">
+                                            <Row className="py-5">
 
-                                            <Col className="text-center" >
-                                                <Image
-                                                    roundedCircle
-                                                    fluid
-                                                    className=""
-                                                    src={comment.srcCD}
-                                                    alt="First slide"
-                                                />
-                                            </Col>
-                                            <Col className="my-auto" >
-                                                <p>{comment.descriptionCD}</p>
-                                                <footer className="blockquote-footer">
-                                                    {comment.footerCD} <cite title="Source Title">{comment.sourceCD}</cite>
-                                                </footer>
-                                            </Col>
+                                                <Col className="text-center" >
+                                                    <Image
+                                                        roundedCircle
+                                                        fluid
+                                                        className=""
+                                                        src={comment.srcCD}
+                                                        alt="First slide"
+                                                    />
+                                                </Col>
+                                                <Col className="my-auto" >
+                                                    <p>{comment.descriptionCD}</p>
+                                                    <footer className="blockquote-footer">
+                                                        {comment.footerCD} <cite title="Source Title">{comment.sourceCD}</cite>
+                                                    </footer>
+                                                </Col>
 
-                                        </Row>
-                                    )}
-                                </div>
+                                            </Row>
 
-                            </Col>
-                            <Col >
-                            </Col>
-                        </Row>
+                                        </div>
 
+                                    </Col>
+
+
+                                    <Col >
+                                    </Col>
+                                </Row>
+                            </Carousel.Item>
+                        )}
                     </Carousel>
 
                 </Container>
