@@ -17,8 +17,13 @@ class CarouselComponent extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container lassName="border border-dark">
-                    <Carousel>
+                <Container fluid>
+                    <h1 className="display-3 py-5 text-center">What they say...</h1>
+
+
+
+
+                    <Carousel className="w-75 mx-auto">
 
 
                         {this.props.comments.map(comment =>

@@ -25,10 +25,9 @@ class Volunteer extends React.Component {
                     <h1 className="display-1 title pt-5">{t("Volunteering")}</h1>
 
                     <Row xs={1} md={1} lg={2}>
-
                         <Col className="d-flex justify-content-center">
-                            <Card.Body >
-                                <Card.Title className="display-4 pt-5 pl-5">OpenTechSchool Berlin</Card.Title>
+                            <Card.Body>
+                                <Card.Title className="display-4 pt-5 pl-5">{t("titleV1")}</Card.Title>
                                 <Card.Text className="text-justify px-5">
                                     {t("descriptionV1")}
                                 </Card.Text>
@@ -39,10 +38,10 @@ class Volunteer extends React.Component {
                         </Col>
                     </Row>
 
-                    <Row >
+                    <Row>
                         <Col className="d-flex justify-content-center">
-                            <Card.Body >
-                                <Card.Title className="display-4 pt-5 pl-5">OpenTechSchool Berlin</Card.Title>
+                            <Card.Body>
+                                <Card.Title className="display-4 pt-5 pl-5">{t("titleV2")}</Card.Title>
                                 <Card.Text className="text-justify px-5">
                                     {t("descriptionV2")}
                                 </Card.Text>
@@ -51,16 +50,13 @@ class Volunteer extends React.Component {
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center">
                             <Image src="./Leave.png" fluid alt="Responsive image" />
                         </Col>
-
-
-
                     </Row>
 
-                    <Row xs={1} md={1} lg={2} >
 
+                    <Row xs={1} md={1} lg={2}>
                         <Col className="d-flex justify-content-center">
-                            <Card.Body >
-                                <Card.Title className="display-4 pt-5 pl-5">OpenTechSchool Berlin</Card.Title>
+                            <Card.Body>
+                                <Card.Title className="display-4 pt-5 pl-5">{t("titleV3")}</Card.Title>
                                 <Card.Text className="text-justify px-5">
                                     {t("descriptionV3")}
                                 </Card.Text>

@@ -28,6 +28,7 @@ i18n.use(LanguageDetector).init({
                 descriptionMP2: "Knock, knock! Who is there? Global warming b**ch! Let's focus on planting trees, not on bullshit.",
                 titleMP3: "...and here is all the rest",
                 descriptionMP3: "If I win you hire me, if I lose you hire me as well <3. Let's meet and play connect four!",
+                titleV1: "Open TechSchool Berlin",
                 descriptionV1: "In a confusing time, I seeked for guidelines in how to become a developer. With OpenTechschool Berlin, I have found a community of mentors and newbies, a platform for learning, sharing, guiding and caring. When the opportunity, to be a coodinator, has been offered, I got really excited and felt that it was a chance not only to share knowledge but as well to practice vulnerability: from technical to human spectrum: how to talk about code? How to ask the right question to understand someone's issue? How to manage many poeple wanting to interact at once?",
                 titleV2: "VGG Garden - Nkln",
                 descriptionV2: "Cities are directed by a fragile dance of trucks, dispatching questionable goods from nameless places. A community garden offers you a concrete, local, inclusive place to be and to evolve. From growing plants to embracing diversity of gender, skills, religion, sexual orientation. It provides human space, away from the bubble of individualism. I believe we need to care more about our people.",

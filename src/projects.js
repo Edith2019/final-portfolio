@@ -42,7 +42,7 @@ class Projects extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
-                    <h1 className="display-1 font-weight-normal title pt-5" > {t("Projects")}</h1>
+                    <h1 className="display-1 title pt-5" > {t("Projects")}</h1>
                     <ProjectCard projects={projectsData} />
                     <Accordion>
                         <Accordion.Collapse eventKey="0">
@@ -59,7 +59,7 @@ class Projects extends React.Component {
                             <Image src="./handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
                         </Row>
                     )}
-                    <CarouselComponent comments={commentsData}/>
+                    <CarouselComponent comments={commentsData} />
                 </Container >
             </React.Fragment >
         )
