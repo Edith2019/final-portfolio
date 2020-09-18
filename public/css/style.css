@@ -185,9 +185,12 @@ li {
 
 .down,
 #downTech,
-.up,
 #upTech {
     margin-left: 1rem;
+}
+
+.up {
+    margin-left: -1.2rem;
 }
 
 /* .mobileNavBar {
