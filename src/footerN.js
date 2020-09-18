@@ -51,11 +51,11 @@ class FooterN extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid className="p-0" id="footerN">
-                    <Nav className="justify-content-center bg-warning pb-2 pt-4" id="footerN">
-                        <Nav.Item className="pr-5 mr-5">
+                    <Nav className="justify-content-around bg-warning pb-2 pt-4" id="footerN">
+                        <Nav.Item className="">
                             © 2020 EdithChevallier
                     </Nav.Item>
-                        <Nav.Item className="pl-5 ml-5 ">
+                        <Nav.Item className="">
                             <Button className="pt-0 tandc" variant="link" eventey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
                         </Nav.Item>
                     </Nav>
