@@ -18,122 +18,167 @@ class ProjectCard extends React.Component {
             arrowTechDown: true,
             arrowTechUp: false,
 
+
         }
         this.handleClick = this.handleClick.bind(this);
+        this.ref = React.createRef();
+
         // this.handleArrow = this.handleArrow.bind(this);
     }
 
     componentDidMount() {
-        const projectArr = this.props.projects
+        // const projectArr = this.props.projects
 
-        for (var i = 0; i < projectArr.length; i++) {
-            var idDocDown = document.getElementById(projectArr[i].idP2)
-            idDocDown.classList.add("arrowVisible")
-            var idDocUp = document.getElementById(projectArr[i].idP3)
-            idDocUp.classList.remove("arrowVisible")
-            idDocUp.classList.add("arrowNotVisible")
-            var idDocDownTech = document.getElementById(projectArr[i].idP4)
-            idDocDownTech.classList.add("arrowVisible")
-            var idDocUpTech = document.getElementById(projectArr[i].idP5)
-            idDocUpTech.classList.remove("arrowVisible")
-            idDocUpTech.classList.add("arrowNotVisible")
+        // for (var i = 0; i < projectArr.length; i++) {
+        //     var idDocDown = document.getElementById(projectArr[i].idP2)
+        //     idDocDown.classList.add("arrowVisible")
+        //     var idDocUp = document.getElementById(projectArr[i].idP3)
+        //     idDocUp.classList.remove("arrowVisible")
+        //     idDocUp.classList.add("arrowNotVisible")
+        //     var idDocDownTech = document.getElementById(projectArr[i].idP4)
+        //     idDocDownTech.classList.add("arrowVisible")
+        //     var idDocUpTech = document.getElementById(projectArr[i].idP5)
+        //     idDocUpTech.classList.remove("arrowVisible")
+        //     idDocUpTech.classList.add("arrowNotVisible")
 
-        }
+        // }
     }
+
+
+    // handleClick(event, index) {
+    //     console.log("something in handle click")
+    //     const id = event.currentTarget.id;
+    //     console.log("Id", id);
+    //     console.log("index", index)
+
+    //     const projectArr = this.props.projects
+    //     console.log("this.props.porjects", this.props.projects)
+
+
+    //     for (var i = 0; i < projectArr.length; i++) {
+
+    //         console.log("projectArr[i].idP1", projectArr[i].idP1)
+    //         if (projectArr[i].idP2 === id) {
+    //             console.log("same same")
+    //             // const idMatching = (element) => element === projectArr[i];
+    //             // const index = projectArr.findIndex(idMatching);
+    //             var idDocDown = document.getElementById(projectArr[i].idP2)
+    //             console.log("idDoc ", idDocDown)
+    //             idDocDown.classList.add("arrowNotVisible")
+    //             idDocDown.classList.remove("arrowVisible")
+
+    //             var idDocUp = document.getElementById(projectArr[i].idP3)
+    //             idDocUp.classList.remove("arrowNotVisible")
+    //             idDocUp.classList.add("arrowVisible")
+    //             // this.arrowShown = !this.state.arrowShown;
+    //             // this.arrowHidden = !this.state.arrowHidden;
+
+    //             // this.setState({ arrowShown })
+    //             // console.log("this.state.arrowDown", this.state.arrowDown)
+    //         } else if (projectArr[i].idP3 === id) {
+    //             console.log("id")
+    //             // console.log("idDoc ", idDocDown)
+    //             var idDocDown = document.getElementById(projectArr[i].idP2)
+
+    //             // console.log("idDoc ", idDocDown)
+    //             idDocDown.classList.remove("arrowNotVisible")
+    //             idDocDown.classList.add("arrowVisible")
+
+    //             var idDocUp = document.getElementById(projectArr[i].idP3)
+    //             idDocUp.classList.add("arrowNotVisible")
+    //             idDocUp.classList.remove("arrowVisible")
+
+
+
+    //             // this.setState({
+    //             //     arrowShown: true,
+    //             //     arrowHidden: false,
+    //             // })
+
+    //         } else if (projectArr[i].idP4 === id) {
+    //             console.log("same same")
+    //             console.log("id")
+
+    //             // const idMatching = (element) => element === projectArr[i];
+    //             // const index = projectArr.findIndex(idMatching);
+    //             var idDocDownTech = document.getElementById(projectArr[i].idP4)
+    //             // console.log("idDoc ", idDocDown)
+    //             idDocDownTech.classList.remove("arrowVisible")
+    //             idDocDownTech.classList.add("arrowNotVisible")
+
+    //             var idDocUpTech = document.getElementById(projectArr[i].idP5)
+    //             idDocUpTech.classList.remove("arrowNotVisible")
+    //             idDocUpTech.classList.add("arrowVisible")
+
+    //         } else if (projectArr[i].idP5 === id) {
+    //             console.log("id")
+
+    //             var idDocDownTech = document.getElementById(projectArr[i].idP4)
+    //             // console.log("idDoc ", idDocDown)
+    //             idDocDownTech.classList.remove("arrowNotVisible")
+    //             idDocDownTech.classList.add("arrowVisible")
+
+    //             var idDocUpTech = document.getElementById(projectArr[i].idP5)
+    //             idDocUpTech.classList.add("arrowNotVisible")
+    //             idDocUpTech.classList.remove("arrowVisible")
+
+
+
+    //             // this.setState({
+    //             //     arrowShown: true,
+    //             //     arrowHidden: false,
+    //             // })
+
+    //         }
+
+
+    //     }
+    // this.setState({
+    //     arrowSelectedDown: !this.state.arrowSelectedDown,
+    //     arrowUp: !this.state.arrowUp,
+    // })
 
 
     handleClick(event, index) {
         console.log("something in handle click")
         const id = event.currentTarget.id;
-        console.log("Id", id);
+        console.log("id", id)
         console.log("index", index)
 
         const projectArr = this.props.projects
         console.log("this.props.porjects", this.props.projects)
 
+        var arrowShown = this.state.arrowShown;
+        var arrowHidden = this.state.arrowHidden;
+        var newState = {};
+        console.log("outer loop arrowShown", arrowShown)
 
         for (var i = 0; i < projectArr.length; i++) {
 
-            console.log("projectArr[i].idP1", projectArr[i].idP1)
+            console.log("projectArr[i].idP1", projectArr[i].idP2)
             if (projectArr[i].idP2 === id) {
                 console.log("same same")
-                // const idMatching = (element) => element === projectArr[i];
-                // const index = projectArr.findIndex(idMatching);
-                var idDocDown = document.getElementById(projectArr[i].idP2)
-                console.log("idDoc ", idDocDown)
-                idDocDown.classList.add("arrowNotVisible")
-                idDocDown.classList.remove("arrowVisible")
+                var arrowShownCard = this.state.arrowShown[i];
+                console.log("arrowShown", arrowShownCard)
 
-                var idDocUp = document.getElementById(projectArr[i].idP3)
-                idDocUp.classList.remove("arrowNotVisible")
-                idDocUp.classList.add("arrowVisible")
-                // this.arrowShown = !this.state.arrowShown;
-                // this.arrowHidden = !this.state.arrowHidden;
-
-                // this.setState({ arrowShown })
-                // console.log("this.state.arrowDown", this.state.arrowDown)
-            } else if (projectArr[i].idP3 === id) {
-                console.log("id")
-                // console.log("idDoc ", idDocDown)
-                var idDocDown = document.getElementById(projectArr[i].idP2)
-
-                // console.log("idDoc ", idDocDown)
-                idDocDown.classList.remove("arrowNotVisible")
-                idDocDown.classList.add("arrowVisible")
-
-                var idDocUp = document.getElementById(projectArr[i].idP3)
-                idDocUp.classList.add("arrowNotVisible")
-                idDocUp.classList.remove("arrowVisible")
-
-
-
-                // this.setState({
-                //     arrowShown: true,
-                //     arrowHidden: false,
-                // })
-
-            } else if (projectArr[i].idP4 === id) {
-                console.log("same same")
-                console.log("id")
-
-                // const idMatching = (element) => element === projectArr[i];
-                // const index = projectArr.findIndex(idMatching);
-                var idDocDownTech = document.getElementById(projectArr[i].idP4)
-                // console.log("idDoc ", idDocDown)
-                idDocDownTech.classList.remove("arrowVisible")
-                idDocDownTech.classList.add("arrowNotVisible")
-
-                var idDocUpTech = document.getElementById(projectArr[i].idP5)
-                idDocUpTech.classList.remove("arrowNotVisible")
-                idDocUpTech.classList.add("arrowVisible")
-
-            } else if (projectArr[i].idP5 === id) {
-                console.log("id")
-
-                var idDocDownTech = document.getElementById(projectArr[i].idP4)
-                // console.log("idDoc ", idDocDown)
-                idDocDownTech.classList.remove("arrowNotVisible")
-                idDocDownTech.classList.add("arrowVisible")
-
-                var idDocUpTech = document.getElementById(projectArr[i].idP5)
-                idDocUpTech.classList.add("arrowNotVisible")
-                idDocUpTech.classList.remove("arrowVisible")
-
-
-
-                // this.setState({
-                //     arrowShown: true,
-                //     arrowHidden: false,
-                // })
+                this.setState({
+                    arrowShown: !this.state.arrowShown,
+                })
+                // newState[projectArr[i].idP2.arrowShown] = projectArr[i].idP2 === projectArr[i].idP2
 
             }
-
-
+            // console.log("projectArr[i].idP2.arrowShown", arrowShown.index)
         }
+
+        //     // this.setState(newState)
+
+
         // this.setState({
-        //     arrowSelectedDown: !this.state.arrowSelectedDown,
-        //     arrowUp: !this.state.arrowUp,
+        //     arrowShown: !this.state.arrowShown,
+        //     arrowHidden: !this.state.arrowHidden
         // })
+
+        // }
 
     }
 
@@ -156,7 +201,7 @@ class ProjectCard extends React.Component {
 
     render() {
         const { t } = this.props;
-
+        // arrowHidden = {}
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
@@ -175,18 +220,21 @@ class ProjectCard extends React.Component {
                                             <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id={project.idP1}  >
                                                 <Card.Title className="text-warning" >
                                                     Features
-                                                  {/* {this.state.arrowShown && */}
-                                                    <svg id={project.idP2} onClick={(event) => { this.handleClick(event, index) }} width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
-                                                        <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                        <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                    </svg>
+                                                  {this.state.arrowShown &&
+                                                        <svg id={project.idP2} onClick={(event) => { this.handleClick(event, index) }} width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                                                            <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                            <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                        </svg>
 
-                                                    {/* } */}
-                                                    <svg id={project.idP3} onClick={(event) => { this.handleClick(event, index) }} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
-                                                        <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
-                                                        <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
-                                                    </svg>
+                                                    }
+                                                    {this.state.arrowHidden &&
 
+
+                                                        <svg id={project.idP3} onClick={(event) => { this.handleClick(event, index) }} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
+                                                            <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+                                                            <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                                                        </svg>
+                                                    }
                                                 </Card.Title>
                                             </Accordion.Toggle>
 

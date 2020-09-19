@@ -103,20 +103,21 @@ textarea.border-0.border-contact.form-control:hover {
 
 .pt-0.tandc.btn.btn-link:focus,
 .pt-0.tandc.btn.btn-link:active,
-#featureP,
-#technologiesP {
+/* #featureP,
+#technologiesP */
+.up.bi.bi-chevron-double-up {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-/* label.custom-control-label:focus,
+label.custom-control-label:focus,
 label.custom-control-label::after {
     border-color: inherit !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-} */
+}
 
-/* #ContactN {
+#ContactN {
     border: solid blue 4px;
     z-index: 1;
 }
@@ -127,17 +128,16 @@ label.custom-control-label::after {
 
 #hooks.fadeInHook.fadeInHook.is-visibleHook {
     z-index: 1;
-} */
-
+}
 #footerN {
     z-index: 999;
     position: absolute;
     width: 100%;
 }
 
-/* .Navbar:hover {
+.Navbar:hover {
     visibility: visible;
-} */
+}
 
 .notVisible {
     /* visibility: hidden; */
