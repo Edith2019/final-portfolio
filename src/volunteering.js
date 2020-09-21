@@ -25,7 +25,7 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src=".././assets/fish.png" fluid alt="Responsive image" />
+                            <Image src=".././assets/Fish.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
                     <Row>
