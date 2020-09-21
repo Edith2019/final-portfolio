@@ -17,13 +17,13 @@ class CarouselComponent extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container fluid>
+                <Container fluid className="py-5">
                     <h1 className="display-3 py-5 text-center">What they say...</h1>
 
 
 
 
-                    <Carousel className="w-75 mx-auto">
+                    <Carousel className="w-75 mx-auto text-center " id="carousel">
 
 
                         {this.props.comments.map(comment =>
@@ -32,20 +32,20 @@ class CarouselComponent extends React.Component {
                                 <Row>
                                     <Col>
                                     </Col>
-                                    <Col xs={8}>
+                                    <Col xs={10}>
                                         <div className="carousel-inner">
-                                            <Row className="py-5">
+                                            <Row className="py-5 pr-3" >
 
-                                                <Col className="text-center" >
+                                                <Col className="text-right my-auto" xs={3}>
                                                     <Image
                                                         roundedCircle
                                                         fluid
-                                                        className=""
+                                                        className="my-auto"
                                                         src={comment.srcCD}
                                                         alt="First slide"
                                                     />
                                                 </Col>
-                                                <Col className="my-auto" >
+                                                <Col className="my-auto pr-5" >
                                                     <p>{comment.descriptionCD}</p>
                                                     <footer className="blockquote-footer">
                                                         {comment.footerCD} <cite title="Source Title">{comment.sourceCD}</cite>
