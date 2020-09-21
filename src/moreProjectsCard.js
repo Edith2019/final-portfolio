@@ -96,11 +96,11 @@ class MoreProjectsCard extends React.Component {
                                                 </Card.Title>
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
-                                                <Card.Body className="mb-3">
+                                                <Card.Text className="mb-3">
                                                     {moreProject.featuresMP.map(element => (
                                                         <li> {element}</li>
                                                     ))}
-                                                </Card.Body>
+                                                </Card.Text>
                                             </Accordion.Collapse>
                                         </Accordion>
                                         <Accordion>
