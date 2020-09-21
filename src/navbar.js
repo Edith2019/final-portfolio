@@ -94,7 +94,7 @@ class Header extends React.Component {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-60}
+                                        offset={-80}
                                         duration={500}
                                         className="pr-3 pt-3">{t("About")}
                                     </Link>
@@ -102,7 +102,7 @@ class Header extends React.Component {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-60}
+                                        offset={-80}
                                         duration={800}
                                         className="pr-3 pt-3">{t("Projects")}
                                     </Link>
@@ -110,14 +110,14 @@ class Header extends React.Component {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-60}
+                                        offset={-80}
                                         duration={1100} className="pr-3 pt-3">{t("Volunteering")}
                                     </Link>
                                     <Link to="ContactN"
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-60}
+                                        offset={-80}
                                         duration={1400} className="pr-3 pt-3">{t("Contact")}
                                     </Link>
                                 </Nav>

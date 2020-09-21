@@ -117,11 +117,6 @@ label.custom-control-label::after {
     box-shadow: none !important;
 }
 
-#ContactN {
-    border: solid blue 4px;
-    z-index: 1;
-}
-
 #hooks.fadeInHook {
     z-index: 1;
 }

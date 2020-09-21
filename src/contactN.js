@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
+import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
@@ -10,6 +11,7 @@ import Button from 'react-bootstrap/Button'
 import { withTranslation } from 'react-i18next';
 import axios from "./axios"; // need to put the slash to use the copy
 import Modal from 'react-bootstrap/Modal';
+
 
 class ContactN extends React.Component {
 
@@ -26,7 +28,9 @@ class ContactN extends React.Component {
     }
 
 
-    submit() {
+    submit(event) {
+        console.log("document.getElementById()", document.getElementById('formCheck'))
+        console.log("this.state.checkbox", this.state.checkbox)
         console.log("something submit")
         console.log("first", this.state.first)
         axios.post("/message", {
@@ -86,7 +90,7 @@ class ContactN extends React.Component {
         const { t } = this.props;
         return (
             <React.Fragment >
-                <Container fluid>
+                <Container fluid id="ContactN">
 
                     <h1 className="display-1  title pt-5">Contact</h1>
 
@@ -102,6 +106,7 @@ class ContactN extends React.Component {
                             </Card.Body>
 
                             <span className="px-5">
+
                                 <InputGroup className="mb-3 px-5">
                                     <FormControl
                                         placeholder={t("FirstName")}
@@ -149,8 +154,19 @@ class ContactN extends React.Component {
                                         type="text"
                                     />
                                 </InputGroup>
+                                <Form.Group id="formCheck" className="px-5" name="checkbox">
+                                    <Form.Check
+                                        required
+                                        label={t("Agree to terms and conditions")}
+                                        feedback={t("You must agree before submitting.")}
+                                        id="formCheck"
+                                    // className="px-5"
+
+                                    />
+
+                                </Form.Group>
                                 <Row className="d-flex justify-content-center m-5" >
-                                    <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
+                                    <Button variant="outline-warning" size="lg" block onClick={(event) => this.submit(event)} > {t("Send")}</Button>
                                 </Row>
                             </span>
 

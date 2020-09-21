@@ -46,12 +46,22 @@ class About extends React.Component {
                             <Image className="pt-5" src="./Edith.png" fluid alt="Responsive image" />
                         </Col>
                         <Col sm={{ order: 'first' }} >
-                            <Card.Body >
-                                <Card.Title className="display-3 pt-5 pl-5">{t("Hi")}</Card.Title>
-                                <Card.Text className="text-justify px-5">
-                                    {t("AboutDesc")}
-                                </Card.Text>
-                            </Card.Body>
+                            <Row>
+                                <Card.Body >
+                                    <Card.Title className="display-3 pt-5 pl-5">{t("Hi")}</Card.Title>
+                                    <Card.Text className="text-justify px-5">
+                                        {t("AboutDesc")}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Row>
+                            <Row className="px-5 pt-5 d-flex justify-content-around">
+                                <a href="https://github.com/Edith2019" rel="noopener noreferrer" target="_blank">
+                                    <Image src="./GitHub1.png" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/edith-chevallier/" rel="noopener noreferrer" target="_blank">
+                                    <Image src="./Link.png" /></a>
+
+                            </Row>
                         </Col>
 
 
