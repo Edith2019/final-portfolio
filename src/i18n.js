@@ -59,7 +59,7 @@ i18n.use(LanguageDetector).init({
                 Projects: "Projets",
                 Volunteering: "Volontariat",
                 Contact: "Contact",
-                Welcome: "Bienvenue",
+                Welcome: "Bienvenu",
                 Hi: "Bonjour,",
                 AboutDesc: "Je suis Edith. Développeur Full-Stack qui prend actuellement plaisir avec React.js et Vue.js tout en explorant de nouvelles approches techniques pour créer des fonctionnalités sympas. Je suis constamment à la recherche de nouvelles technologies et j'aime en parler. Dans l'ensemble, je maîtrise JS, CSS et HTML. J'aime les gens, les bières et discuter de code avec des gens autour d'une bière! Si vous voulez en savoir plus, consultez mon travail ci-dessous :",
                 Languages: "langues",
