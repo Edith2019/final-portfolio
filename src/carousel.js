@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 // import Blockquote from 'react-bootstrap/Blockquote'
+import { withTranslation } from 'react-i18next';
 
 
 class CarouselComponent extends React.Component {
@@ -15,10 +16,11 @@ class CarouselComponent extends React.Component {
 
 
     render() {
+        const { t } = this.props
         return (
             <React.Fragment>
                 <Container fluid >
-                    <h1 className="display-3 py-4 text-center">What they say...</h1>
+                    <h1 className="display-3 py-4 text-center">{t("WTS")}</h1>
 
 
 
@@ -46,7 +48,7 @@ class CarouselComponent extends React.Component {
                                                     />
                                                 </Col>
                                                 <Col className="my-auto pr-5" >
-                                                    <p>{comment.descriptionCD}</p>
+                                                    <p>{t(comment.descriptionCD)}</p>
                                                     <footer className="blockquote-footer">
                                                         {comment.footerCD} <cite title="Source Title">{comment.sourceCD}</cite>
                                                     </footer>
@@ -73,4 +75,4 @@ class CarouselComponent extends React.Component {
 
 }
 
-export default CarouselComponent;
+export default (withTranslation()(CarouselComponent));
