@@ -11,7 +11,7 @@ i18n.use(LanguageDetector).init({
                 Contact: "Contact",
                 Welcome: "Welcome",
                 Hi: "Hi,",
-                AboutDesc: "I am Edith. A Full-Stack developer currently enjoying React.js and Vue.js while exploring technical approaches for cool features. I constantly seek new technologies and love to talk about it. Overall, I speak JS, CSS & HTML. I like people, beers and talking about code with people around a beer! If you want to know more, check my work below:",
+                AboutDesc: "I am Edith. A Full-Stack developer currently enjoying React.js and Vue.js while exploring technical approaches for cool features. I constantly seeck new technologies and love to talk about it. Overall, I speak JS, CSS & HTML. I like people, beers and discussing about code with people around a beer! If you want to know more, check my work below:",
                 Languages: "languages",
                 DR: "Download Resume",
                 titleP1: "Vue.js - VGG Garden - nkln",
