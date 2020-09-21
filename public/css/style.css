@@ -103,8 +103,8 @@ textarea.border-0.border-contact.form-control:hover {
 
 .pt-0.tandc.btn.btn-link:focus,
 .pt-0.tandc.btn.btn-link:active,
-/* #featureP,
-#technologiesP */
+#featureP,
+#technologiesP,
 .up.bi.bi-chevron-double-up {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -184,14 +184,15 @@ li {
 }
 
 .down,
+.up,
 #downTech,
 #upTech {
     margin-left: 1rem;
 }
 
-.up {
+/* .up {
     margin-left: -1.2rem;
-}
+} */
 
 /* .mobileNavBar {
     min-height: 8%;
