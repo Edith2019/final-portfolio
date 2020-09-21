@@ -35,6 +35,7 @@ class ProjectCard extends React.Component {
         }
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleClickTech = this.handleClickTech.bind(this);
     }
 
 

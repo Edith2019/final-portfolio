@@ -12,28 +12,62 @@ class MoreProjectsCard extends React.Component {
     constructor() {
         super();
         this.state = {
-            arrowDown: true,
-            arrowUp: false,
-            arrowTechDown: true,
-            arrowTechUp: false,
+            [0]: {
+                arrowDownMP: true,
+                arrowUpMP: false,
+                arrowTechDownMP: true,
+                arrowTechUpMP: false,
+            },
+
+            [1]: {
+                arrowDownMP: true,
+                arrowUpMP: false,
+                arrowTechDownMP: true,
+                arrowTechUpMP: false,
+            },
+            [2]: {
+                arrowDownMP: true,
+                arrowUpMP: false,
+                arrowTechDownMP: true,
+                arrowTechUpMP: false,
+            },
         }
+        this.handleClickMP = this.handleClickMP.bind(this);
+        this.handleClickTechMP = this.handleClickTechMP.bind(this);
     }
 
-    // handleArrow() {
-    //     console.log("omething in handleclick")
-    //     this.setState({
-    //         arrowDown: !this.state.arrowDown,
-    //         arrowUp: !this.state.arrowUp,
-    //     })
-    // }
+
+    handleClickMP(event, index) {
+        event.preventDefault();
+        // console.log("this.props.porjects", this.props.projects)
+        this.setState({
+            [index]: {
+                arrowDownMP: !this.state[index].arrowDownMP,
+                arrowUpMP: !this.state[index].arrowUpMP,
+                arrowTechDownMP: this.state[index].arrowTechDownMP,
+                arrowTechUpMP: this.state[index].arrowTechUpMP
+            }
+        },
+        )
+
+    }
+
+    handleClickTechMP(event, index) {
+        event.preventDefault();
+        // console.log("this.props.porjects", this.props.projects)
+        this.setState({
+            [index]: {
+                arrowTechDownMP: !this.state[index].arrowTechDownMP,
+                arrowTechUpMP: !this.state[index].arrowTechUpMP,
+                arrowDownMP: this.state[index].arrowDownMP,
+                arrowUpMP: this.state[index].arrowUpMP,
+            }
+        },
+        )
+
+    }
 
 
-    // handleArrowTech() {
-    //     this.setState({
-    //         arrowTechDown: !this.state.arrowTechDown,
-    //         arrowTechUp: !this.state.arrowTechUp
-    //     })
-    // }
 
 
 
@@ -44,7 +78,7 @@ class MoreProjectsCard extends React.Component {
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
                     <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
-                        {this.props.moreProjects.map(moreProject => (
+                        {this.props.moreProjects.map((moreProject, index) => (
                             <Col className="d-flex justify-content-center px-5 py-5" key={moreProject.keyMP}>
                                 <Card className="bg-warning" border="light" >
                                     <Card.Img variant="top" src={moreProject.srcMP} className="overlay" />
@@ -54,14 +88,23 @@ class MoreProjectsCard extends React.Component {
                                             {t(moreProject.descriptionMP)}
                                         </Card.Text>
                                         <Accordion>
-                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP">
+                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP" onClick={(event) => { this.handleClickMP(event, index) }}>
                                                 <Card.Title className="text-warning" >
-                                                    Features 
-                                                    
-                                                    <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                        <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                    </svg>
+                                                    Features
+                                                                                                                                                        {this.state[index].arrowDownMP &&
+                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                            <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                        </svg>
+                                                    }
+
+                                                    {this.state[index].arrowUpMP &&
+
+                                                        <svg width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
+                                                            <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+                                                            <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                                                        </svg>
+                                                    }
                                                 </Card.Title>
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
@@ -74,11 +117,22 @@ class MoreProjectsCard extends React.Component {
                                         </Accordion>
                                         <Accordion>
                                             <Card.Text>
-                                                <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP">
-                                                    <Card.Title className="text-warning">Technologies <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                        <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                                    </svg></Card.Title>
+                                                <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP" onClick={(event) => { this.handleClickTechMP(event, index) }}>
+                                                    <Card.Title className="text-warning">
+                                                        Technologies
+                                                       {this.state[index].arrowTechDownMP &&
+                                                            <svg width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                                <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                                            </svg>
+                                                        }
+                                                        {this.state[index].arrowTechUpMP &&
+                                                            <svg width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
+                                                                <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+                                                                <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                                                            </svg>
+                                                        }
+                                                    </Card.Title>
 
                                                 </Accordion.Toggle>
                                                 <Accordion.Collapse eventKey="0">

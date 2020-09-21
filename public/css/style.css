@@ -184,9 +184,7 @@ li {
 }
 
 .down,
-.up,
-#downTech,
-#upTech {
+.up {
     margin-left: 1rem;
 }
 
