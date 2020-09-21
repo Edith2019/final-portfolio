@@ -17,7 +17,7 @@ class CarouselComponent extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid id="WTS" >
-                    <h1 className="display-3 py-4 text-center">{t("WTS")}</h1>
+                    <h1 className="display-3 py-5 text-center">{t("WTS")}</h1>
                     <Carousel className="w-75 mx-auto text-center" id="carousel">
                         {this.props.comments.map(comment =>
                             <Carousel.Item>
