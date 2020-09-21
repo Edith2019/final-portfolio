@@ -136,7 +136,7 @@ class ContactN extends React.Component {
                                 <Form.Group id="formCheck" className="px-5" name="checkbox">
                                     <Form.Check
                                         required
-                                        label={t("Agree to terms and conditions")}
+                                        label={t("terms")}
                                         feedback={t("You must agree before submitting.")}
                                         id="formCheck"
                                     />
