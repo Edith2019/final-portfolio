@@ -44,25 +44,19 @@ if (process.env.NODE_ENV !== "production") {
 
 // route to post data from contact //
 app.post("/message", (req, res) => {
-    console.log("something in messg")
-    // const { first, last, email, message } = req.body;
     const first = req.body.first;
     const last = req.body.last;
     const email = req.body.email;
     const message = req.body.message;
-    console.log("first in backend", req.body)
 
     db.addContactsData(first, last, email, message).then(result => {
-        console.log("result", result)
         if (result.rows[0].message) {
             const sender = JSON.stringify(result.rows[0]);
             ses.sendEmail("edith.chevallier3000@gmail.com", "Email from Edith's portfolio", sender)
                 .then(() => {
-
                     console.log("someting in res ses")
                 });
         }
-        console.log("soetinh afer submit to db")
         const data = result.rows[0];
         res.json({ data });
     }).catch(err => {
@@ -70,13 +64,6 @@ app.post("/message", (req, res) => {
         res.json({ error: true });
     });
 });
-
-
-// res.json({
-//     success: true,
-//     data
-// });
-
 
 app.use('/public', express.static(__dirname + '/public'));
 
