@@ -2,8 +2,6 @@ import React from 'react'
 import Form from 'react-bootstrap/Form'
 import { withTranslation } from 'react-i18next';
 
-
-
 class EnFr extends React.Component {
     constructor(props) {
         super(props);
@@ -42,9 +40,7 @@ class EnFr extends React.Component {
                     value={this.state.value}
                     onChange={e => this.handleChange(e)}
                     className="mt-2"
-
                 >
-
                     <div className=" input" key={`custom-inline-radio`} >
                         <Form.Check
                             bsCustomPrefix="custom-control"
@@ -58,9 +54,7 @@ class EnFr extends React.Component {
                             className="pt-3"
                             checked={this.state.checkedEN}
                             onChange={() => { this.handleCheckEN() }}
-
                         />
-
                         <Form.Check
                             custom
                             inline
@@ -71,17 +65,12 @@ class EnFr extends React.Component {
                             name="groupOptions"
                             checked={this.state.checkedFR}
                             onChange={() => { this.handleCheckFR() }}
-
                         />
-
                     </div>
-
-
                 </Form.Group>
             </React.Fragment>
         )
     }
-
 }
 
 export default (withTranslation()(EnFr));

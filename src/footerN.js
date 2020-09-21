@@ -1,51 +1,32 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-// import Button from 'react-bootstrap/Button';
-// import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
-// import ThankYouModal from './thankYouModal.js'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
-// import Container from 'react-bootstrap/Container'
-
 
 class FooterN extends React.Component {
     constructor() {
         super();
-        // this.toggleModal = this.toggleModal.bind(this)
         this.state = {
-            // modalVisible: false
             show: false
         }
     }
-    // toggleModal() {
-    //     console.log("toggle somthing")
-    //     const { modalVisible } = this.state;
-    //     this.setState({
-    //         modalVisible: !this.modalVisible
-    //     })
 
-    // }
     handleClose() {
         this.setState({
             show: false
         });
-
     }
-
 
     handleShow() {
         this.setState({
             show: !this.show
         });
-        // console.log("this.show in handleshow", this.state.show)
     }
 
     render() {
         const { t } = this.props;
-        // const { modalVisible } = this.state;
-        // console.log("modalvisible after render", modalVisible)
         const { show } = this.state;
         console.log("show in render", show);
         return (
@@ -79,9 +60,6 @@ class FooterN extends React.Component {
             </React.Fragment>
         )
     }
-
-
-
 }
 
 export default (withTranslation()(FooterN));

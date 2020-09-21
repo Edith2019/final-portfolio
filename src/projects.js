@@ -29,7 +29,6 @@ class Projects extends React.Component {
         })
     }
 
-
     render() {
         const { t } = this.props;
         var { title } = this.props;
@@ -56,7 +55,7 @@ class Projects extends React.Component {
                     </Accordion>
                     {isVisible && (
                         <Row className="d-flex justify-content-center">
-                            <Image src="./handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
+                            <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
                         </Row>
                     )}
                     <CarouselComponent comments={commentsData} />

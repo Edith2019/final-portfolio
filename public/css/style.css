@@ -245,4 +245,8 @@ img.img-fluid.rounded-circle {
         font-weight: 300;
         line-height: 1;
     }
+    #WTS {
+        visibility: hidden !important;
+        height: 0 !important;
+    }
 }

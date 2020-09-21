@@ -33,15 +33,12 @@ class ProjectCard extends React.Component {
                 arrowTechUp: false,
             },
         }
-
         this.handleClick = this.handleClick.bind(this);
         this.handleClickTech = this.handleClickTech.bind(this);
     }
 
-
     handleClick(event, index) {
         event.preventDefault();
-        console.log("this.props.porjects", this.props.projects)
         this.setState({
             [index]: {
                 arrowDown: !this.state[index].arrowDown,
@@ -51,7 +48,6 @@ class ProjectCard extends React.Component {
             }
         },
         )
-
     }
 
     handleClickTech(event, index) {
@@ -66,16 +62,10 @@ class ProjectCard extends React.Component {
             }
         },
         )
-
     }
-
-
-
-
 
     render() {
         const { t } = this.props;
-        // arrowHidden = {}
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
@@ -90,7 +80,6 @@ class ProjectCard extends React.Component {
                                             {t(project.descriptionP)}
                                         </Card.Text>
                                         <Accordion>
-
                                             <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP" onClick={(event) => { this.handleClick(event, index) }} >
                                                 <Card.Title className="text-warning" >
                                                     Features
@@ -102,9 +91,7 @@ class ProjectCard extends React.Component {
                                                             <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                         </svg>
                                                     }
-
                                                     {this.state[index].arrowUp &&
-
                                                         <svg id={project.idP3} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
                                                             <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
@@ -112,7 +99,6 @@ class ProjectCard extends React.Component {
                                                     }
                                                 </Card.Title>
                                             </Accordion.Toggle>
-
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Text className="mb-3">
                                                     {project.featuresP.map((element, index) => (
@@ -125,9 +111,7 @@ class ProjectCard extends React.Component {
                                             <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP" onClick={(event) => { this.handleClickTech(event, index) }} >
                                                 <Card.Title className="text-warning">
                                                     Technologies
-                                                {/* {this.state.arrowTechDown && */}
                                                     {this.state[index].arrowTechDown &&
-
                                                         <svg id={project.idP4} width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
                                                             <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                             <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -168,7 +152,6 @@ class ProjectCard extends React.Component {
                                                 </a>
                                         </Row>
                                         <Row>
-
                                             <a href={project.hrefHerokuP} target="_blank" className="text-dark" rel="noopener noreferrer">
                                                 <svg id="up" width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />

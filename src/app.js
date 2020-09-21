@@ -1,12 +1,4 @@
 import React from "react";
-// import { BrowserRouter } from "react-router-dom";
-// import Intro from "./intro";
-// import HeaderModal from "./headermodal";
-// import Description from "./description";
-// import ProjectOne from "./projectone";
-// import ProjectTwo from "./projecttwo";
-// import ProjectThree from "./projectthree";
-// import Footer from "./footer";
 import Header from "./navbar";
 import Home from "./home";
 import About from "./about";
@@ -15,11 +7,6 @@ import Volunteer from "./volunteering.js"
 import ContactN from "./contactN.js"
 import FooterN from "./footerN.js"
 import FadeIn from "./hooks/fadeIn.js"
-// import MouseHover from "./hooks/mouseHover.js"
-// import projectsData from './js/projectsData.js'
-// import moreProjectsData from './js/moreProjectsData.js'
-// import AccordionProjects from './accordionProject.js'
-
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -27,26 +14,8 @@ export default class App extends React.Component {
             menumodalvisible: false,
             windowsmodalvisible: false,
             shouldHide: false,
-            // cardProjects: this.cardProjects
-
         };
-        // console.log("props for data", this.cardProjects)
-        // console.log("this.props in app", this.props)
     }
-
-    // toggleMenuModal() {
-    //     this.setState({
-    //         menumodalvisible: !this.state.menumodalvisible
-    //     });
-    // }
-
-    // toggleWindowsModal() {
-    //     this.setState({
-    //         windowsmodalvisible: !this.state.windowsmodalvisible
-    //     });
-    // }
-
-
 
     render() {
         return (
@@ -66,7 +35,6 @@ export default class App extends React.Component {
                     <ContactN />
                 </FadeIn>
                 <FooterN />
-
             </React.Fragment >
         );
     }

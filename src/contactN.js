@@ -14,7 +14,6 @@ import Modal from 'react-bootstrap/Modal';
 
 
 class ContactN extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -24,21 +23,14 @@ class ContactN extends React.Component {
             message: "",
             show: false
         }
-
     }
 
-
     submit(event) {
-        console.log("document.getElementById()", document.getElementById('formCheck'))
-        console.log("this.state.checkbox", this.state.checkbox)
-        console.log("something submit")
-        console.log("first", this.state.first)
         axios.post("/message", {
             first: this.state.first,
             last: this.state.last,
             email: this.state.email,
             message: this.state.message,
-            // checkbox: this.state.checkbox
         }).then(
             ({ data }) => {
                 if (data.data) {
@@ -59,23 +51,18 @@ class ContactN extends React.Component {
                 }
             }
         );
-
-
     }
-
-
-
 
     handleChange({ target }) {
         this.setState({
             [target.name]: target.value
         });
     }
+
     handleShow() {
         this.setState({
             show: !this.show
         });
-        // console.log("this.show in handleshow", this.state.show)
     }
 
     handleClose() {
@@ -86,27 +73,19 @@ class ContactN extends React.Component {
     }
 
     render() {
-
         const { t } = this.props;
         return (
             <React.Fragment >
                 <Container fluid id="ContactN">
-
                     <h1 className="display-1  title pt-5">Contact</h1>
-
                     <Row xs={1} md={1} lg={2}>
-
-
                         <Col className="px-5">
                             <Card.Body >
                                 <Card.Text className="text-justify pb-3">
                                     {t("descriptionC")}
-
                                 </Card.Text>
                             </Card.Body>
-
                             <span className="px-5">
-
                                 <InputGroup className="mb-3 px-5">
                                     <FormControl
                                         placeholder={t("FirstName")}
@@ -160,18 +139,13 @@ class ContactN extends React.Component {
                                         label={t("Agree to terms and conditions")}
                                         feedback={t("You must agree before submitting.")}
                                         id="formCheck"
-                                    // className="px-5"
-
                                     />
-
                                 </Form.Group>
                                 <Row className="d-flex justify-content-center m-5" >
                                     <Button variant="outline-warning" size="lg" block onClick={(event) => this.submit(event)} > {t("Send")}</Button>
                                 </Row>
                             </span>
-
                         </Col>
-
                         <Col className="d-flex justify-content-center">
                             <Image fluid id="imgContact" src="./fcontact.png " alt="Responsive image" />
                         </Col>

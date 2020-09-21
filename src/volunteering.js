@@ -9,21 +9,12 @@ import { withTranslation } from 'react-i18next';
 
 class Volunteer extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
-
-
     render() {
         const { t } = this.props;
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Volunteering">
                     <h1 className="display-1 title pt-5">{t("Volunteering")}</h1>
-
                     <Row xs={1} md={1} lg={2}>
                         <Col className="d-flex justify-content-center">
                             <Card.Body>
@@ -34,10 +25,9 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src="./fish.png" fluid alt="Responsive image" />
+                            <Image src="./assets/fish.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
-
                     <Row>
                         <Col className="d-flex justify-content-center">
                             <Card.Body>
@@ -48,11 +38,9 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center">
-                            <Image src="./Leave.png" fluid alt="Responsive image" />
+                            <Image src="./assets/Leave.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
-
-
                     <Row xs={1} md={1} lg={2}>
                         <Col className="d-flex justify-content-center">
                             <Card.Body>
@@ -63,20 +51,13 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src="./leopard.png" fluid alt="Responsive image" />
+                            <Image src="./assets/leopard.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
-
                 </Container>
             </React.Fragment>
         )
-
     }
-
-
-
-
-
 }
 
 export default (withTranslation()(Volunteer));

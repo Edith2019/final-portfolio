@@ -1,4 +1,3 @@
-
 const projectsData = [
     {
         keyP: "p1",
@@ -8,7 +7,7 @@ const projectsData = [
         idP3: "idP13",
         idP4: "idP14",
         idP5: "idP15",
-        srcP: ".././VGG.png",
+        srcP: ".././assets/VGG.png",
         titleP: "titleP1",
         descriptionP: "descriptionP1",
         featuresP: ['Contact form', 'Facebook event', 'Translation'],
@@ -28,7 +27,7 @@ const projectsData = [
         idP3: "idP23",
         idP4: "idP24",
         idP5: "idP25",
-        srcP: ".././ReactKarsten.jpg",
+        srcP: ".././assets/ReactKarsten.jpg",
         titleP: "titleP2",
         descriptionP: "descriptionP2",
         featuresP: ['Contact form', 'Carousel', 'Translation'],
@@ -46,7 +45,7 @@ const projectsData = [
         idP3: "idP33",
         idP4: "idP34",
         idP5: "id35",
-        srcP: ".././Swork.png",
+        srcP: ".././assets/Swork.png",
         titleP: "titleP3",
         descriptionP: "descriptionP3",
         featuresP: ['Register', 'Login', 'Reset password', 'Upload image', 'Biography', 'Public/ private chat', 'Add/ pending/ remove friends', 'Search people', 'Online'],
@@ -58,7 +57,6 @@ const projectsData = [
     },
 ]
 
-// console.log("cardProject in data", cardProjects)
 export default projectsData;
 
 

@@ -1,10 +1,8 @@
 const moreProjectsData = [
-
-
     {
         keyMP: "mp1",
         idMP: "mp1",
-        srcMP: ".././ImageUpload.png",
+        srcMP: ".././assets/ImageUpload.png",
         titleMP: "titleMP1",
         descriptionMP: "descriptionMP1",
         featuresMP: ['Upload image/ title/ description', 'Add comments', 'Modal'],
@@ -14,11 +12,10 @@ const moreProjectsData = [
         herokuMP: "Heroku",
         hrefHerokuMP: "https://img-board.herokuapp.com/",
     },
-
     {
         keyMP: "mp2",
         idMP: "mp2",
-        srcMP: ".././petition2.png",
+        srcMP: ".././assets/petition2.png",
         titleMP: "titleMP2",
         descriptionMP: "descriptionMP2",
         featuresMP: ['Register/ login', 'Cookie session for authorization', 'User info/ hashed pw stored in database', "Canvas' signature after registration only", "List of total signers and list per city signers", "Update profile page"],
@@ -28,11 +25,10 @@ const moreProjectsData = [
         herokuMP: "Heroku",
         hrefHerokuMP: "https://petitiontempelhof.herokuapp.com/"
     },
-
     {
         keyMP: "mp3",
         idMP: "mp3",
-        srcMP: ".././connectfour.png",
+        srcMP: ".././assets/connectfour.png",
         titleMP: "titleMP3",
         descriptionMP: "descriptionMP3",
         featuresMP: ['Counting points', 'Victory Animation'],

@@ -39,7 +39,6 @@ class MoreProjectsCard extends React.Component {
 
     handleClickMP(event, index) {
         event.preventDefault();
-        // console.log("this.props.porjects", this.props.projects)
         this.setState({
             [index]: {
                 arrowDownMP: !this.state[index].arrowDownMP,
@@ -49,12 +48,10 @@ class MoreProjectsCard extends React.Component {
             }
         },
         )
-
     }
 
     handleClickTechMP(event, index) {
         event.preventDefault();
-        // console.log("this.props.porjects", this.props.projects)
         this.setState({
             [index]: {
                 arrowTechDownMP: !this.state[index].arrowTechDownMP,
@@ -64,13 +61,7 @@ class MoreProjectsCard extends React.Component {
             }
         },
         )
-
     }
-
-
-
-
-
 
     render() {
         const { t } = this.props;
@@ -90,16 +81,13 @@ class MoreProjectsCard extends React.Component {
                                         <Accordion>
                                             <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP" onClick={(event) => { this.handleClickMP(event, index) }}>
                                                 <Card.Title className="text-warning" >
-                                                    Features
-                                                                                                                                                        {this.state[index].arrowDownMP &&
+                                                    Features                                      {this.state[index].arrowDownMP &&
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path fillRule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                             <path fillRule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                                         </svg>
                                                     }
-
                                                     {this.state[index].arrowUpMP &&
-
                                                         <svg width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
                                                             <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
@@ -133,7 +121,6 @@ class MoreProjectsCard extends React.Component {
                                                             </svg>
                                                         }
                                                     </Card.Title>
-
                                                 </Accordion.Toggle>
                                                 <Accordion.Collapse eventKey="0">
                                                     <Row className="mb-3">
@@ -153,8 +140,6 @@ class MoreProjectsCard extends React.Component {
                                                 </Accordion.Collapse>
                                             </Card.Text>
                                         </Accordion>
-                                        {/* <Card.Text> */}
-                                        {/* <Card.Text className="mb-1"> */}
                                         <Row className="pl-3">
                                             <a href={moreProject.hrefGitHubMP} target="_blank" className="text-dark" rel="noopener noreferrer">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -164,16 +149,12 @@ class MoreProjectsCard extends React.Component {
                                                     Github
                                                 </a>
                                         </Row>
-                                        {/* </Card.Text> */}
-                                        {/* <Card.Text > */}
                                         <Row className="pl-3">
                                             <a href={moreProject.hrefHerokuMP} target="_blank" className="text-dark" rel="noopener noreferrer">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
                                                     <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
                                                 </svg>{moreProject.herokuMP}</a>
-                                            {/* </Card.Text> */}
-                                            {/* </Card.Text> */}
                                         </Row>
                                     </Card.Body>
                                 </Card>
@@ -181,7 +162,6 @@ class MoreProjectsCard extends React.Component {
                         ))}
                     </Row>
                 </Container >
-
             </React.Fragment >
         )
     }
