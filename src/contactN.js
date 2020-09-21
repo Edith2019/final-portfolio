@@ -156,7 +156,7 @@ class ContactN extends React.Component {
                         </Modal.Header>
                         <Modal.Body >
                             <Row className="d-flex justify-content-center">
-                                <Image fluid src="./giphy.gif" alt="Responsive image" />
+                                <Image fluid src=".././assets/giphy.gif" alt="Responsive image" />
                             </Row>
                             <Row className="d-flex justify-content-center mt-2">
                                 {t("contentTY")}

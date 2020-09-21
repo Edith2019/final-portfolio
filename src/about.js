@@ -21,7 +21,7 @@ class About extends React.Component {
                     </Row>
                     <Row xs={1} md={1} lg={2} >
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center " >
-                            <Image className="pt-5" src="./assets/Edith.png" fluid alt="Responsive image" />
+                            <Image className="pt-5" src=".././assets/Edith.png" fluid alt="Responsive image" />
                         </Col>
                         <Col sm={{ order: 'first' }} >
                             <Row>

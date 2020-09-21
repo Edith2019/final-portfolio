@@ -16,7 +16,7 @@ class Home extends React.Component {
         <Container fluid className="mt-5 pt-5" id="Home" >
           <Row className=" mx-5 pt-5 pb-2 bg-warning text-center">
             <Col className=" my-auto" >
-              <Image fluid src="./Tiger.png" />
+              <Image fluid src=".././assets/Tiger.png" />
             </Col>
           </Row>
           <Row className=" mx-5 bg-warning text-center">

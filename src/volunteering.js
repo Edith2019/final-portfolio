@@ -38,7 +38,7 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col lg={{ order: 'first' }} className="d-flex justify-content-center">
-                            <Image src="./assets/Leave.png" fluid alt="Responsive image" />
+                            <Image src=".././assets/Leave.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
                     <Row xs={1} md={1} lg={2}>
@@ -51,7 +51,7 @@ class Volunteer extends React.Component {
                             </Card.Body>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image src="./assets/leopard.png" fluid alt="Responsive image" />
+                            <Image src=".././assets/leopard.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
                 </Container>
