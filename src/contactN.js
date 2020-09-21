@@ -147,7 +147,7 @@ class ContactN extends React.Component {
                             </span>
                         </Col>
                         <Col className="d-flex justify-content-center">
-                            <Image fluid id="imgContact" src="./fcontact.png " alt="Responsive image" />
+                            <Image fluid id="imgContact" src=".././fcontact.png " alt="Responsive image" />
                         </Col>
                     </Row>
                     <Modal show={this.state.show} className="border border-0 border-dark">
