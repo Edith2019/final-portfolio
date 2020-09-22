@@ -12,7 +12,6 @@ const projectsData = [
         descriptionP: "descriptionP1",
         featuresP: ["Contact form", "Facebook event", "Translation"],
         technologiesFEP: ["JS", " CSS", "HTML", "Vue.js", "Bootstrap", "Smooth-scrolling", "Progressive-images", "i18n-next"],
-        // technologiesFEP: [{ FEP11: 'JS' }, { FEP12: ' CSS' }, { FEP13: 'HTML' }, { FEP14: 'Vue.js' }, { FEP15: 'Bootstrap' }, { FEP16: 'Smooth-scrolling' }, { FEP17: 'Progressive-images' }, { FEP18: 'i18n-next' }],
         technologiesBEP: ["Node.js", "Express", "PostgreSQL", "AWS (ses)", "HTTP request"],
         hrefGitHubP: "https://github.com/Edith2019/Garden-Vue-Cli",
         heroku: "Heroku",

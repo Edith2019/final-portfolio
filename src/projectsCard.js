@@ -67,9 +67,9 @@ class ProjectCard extends React.Component {
         const { t } = this.props;
         return (
             <React.Fragment>
-                <Container fluid className=" pb-5" id="Projects">
-                    <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
-                        {this.props.projects.map((project, index) => 
+                <Container fluid className="0" id="Projects">
+                    <Row className="d-flex justify-content-center pt-5" xs={1} md={1} lg={3}>
+                        {this.props.projects.map((project, index) =>
                             <Col className="d-flex justify-content-center px-5 py-5" key={project.keyP}>
                                 <Card className="bg-warning" border="light" >
                                     <Card.Img variant="top" src={project.srcP} className="overlay" />
@@ -100,7 +100,7 @@ class ProjectCard extends React.Component {
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Text className="mb-3">
-                                                    {project.featuresP.map((element, index) => 
+                                                    {project.featuresP.map((element, index) =>
                                                         <li key={project[index]}> {element}</li>
                                                     )}
                                                 </Card.Text>
@@ -129,13 +129,13 @@ class ProjectCard extends React.Component {
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Front-End
                                                         </Card.Text>
-                                                        {project.technologiesFEP.map((element, index) => 
+                                                        {project.technologiesFEP.map((element, index) =>
                                                             <li key={project[index + 1]}>{element}</li>
                                                         )}
                                                     </Col>
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Back-End</Card.Text>
-                                                        {project.technologiesBEP.map((element, index) => 
+                                                        {project.technologiesBEP.map((element, index) =>
                                                             <li key={project[index + 1]}>{element}</li>
                                                         )}
                                                     </Col>

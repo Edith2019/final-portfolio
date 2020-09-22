@@ -68,8 +68,8 @@ class MoreProjectsCard extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
-                    <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
-                        {this.props.moreProjects.map((moreProject, index) => 
+                    <Row className="d-flex justify-content-center pb-5" xs={1} md={1} lg={3}>
+                        {this.props.moreProjects.map((moreProject, index) =>
                             <Col className="d-flex justify-content-center px-5 py-5" key={moreProject.keyMP}>
                                 <Card className="bg-warning" border="light" >
                                     <Card.Img variant="top" src={moreProject.srcMP} className="overlay" />
@@ -98,7 +98,7 @@ class MoreProjectsCard extends React.Component {
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Text className="mb-3">
-                                                    {moreProject.featuresMP.map(element => 
+                                                    {moreProject.featuresMP.map(element =>
                                                         <li> {element}</li>
                                                     )}
                                                 </Card.Text>
@@ -126,13 +126,13 @@ class MoreProjectsCard extends React.Component {
                                                 <Row className="mb-3">
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Front-End</Card.Text >
-                                                        {moreProject.technologiesFEMP.map((element, index) => 
+                                                        {moreProject.technologiesFEMP.map((element, index) =>
                                                             <li key={moreProject[index + 1]}>{element}</li>
                                                         )}
                                                     </Col>
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Back-End</Card.Text >
-                                                        {moreProject.technologiesBEMP.map((element, index) => 
+                                                        {moreProject.technologiesBEMP.map((element, index) =>
                                                             <li key={moreProject[index + 1]} > {element}</li>
                                                         )}
                                                     </Col>

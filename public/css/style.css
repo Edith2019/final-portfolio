@@ -201,15 +201,6 @@ li {
     margin-left: 1rem;
 }
 
-/* .up {
-    margin-left: -1.2rem;
-} */
-
-/* .mobileNavBar {
-    min-height: 8%;
-    padding: 100px;
-} */
-
 .test {
     border: solid 5px blue;
 }
@@ -222,17 +213,6 @@ img.img-fluid.rounded-circle {
     width: 100px;
     height: 100px;
 }
-/* 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-image: none;
-} */
 
 .carousel-control-next-icon:after {
     content: ">";
@@ -263,6 +243,9 @@ img.img-fluid.rounded-circle {
         font-weight: 300;
         line-height: 1;
     }
+}
+
+@media only screen and (max-width: 850px) {
     #WTS {
         visibility: hidden !important;
         height: 0 !important;
