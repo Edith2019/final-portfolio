@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import PropTypes from "prop-types";
 
 i18n.use(LanguageDetector).init({
     resources: {
@@ -50,7 +51,7 @@ i18n.use(LanguageDetector).init({
                 ThankYou: "Thank you",
                 forMsg: "for your message!",
                 contentTY: "I will come back to you as soon as possible."
-            },
+            }
 
         },
         fr: {
@@ -119,7 +120,12 @@ i18n.use(LanguageDetector).init({
     react: {
         wait: true
     }
+
 });
 
 export default i18n;
 
+i18n.propTypes = {
+    i18n: PropTypes.object,
+    changeLanguage: PropTypes.func
+};

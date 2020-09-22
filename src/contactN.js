@@ -1,17 +1,17 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-import Form from 'react-bootstrap/Form'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import { withTranslation } from 'react-i18next';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { withTranslation } from "react-i18next";
 import axios from "./axios"; // need to put the slash to use the copy
-import Modal from 'react-bootstrap/Modal';
-
+import Modal from "react-bootstrap/Modal";
+import PropTypes from "prop-types";
 
 class ContactN extends React.Component {
     constructor(props) {
@@ -22,30 +22,29 @@ class ContactN extends React.Component {
             email: "",
             message: "",
             show: false
-        }
+        };
     }
 
-    submit(event) {
+    submit() {
         axios.post("/message", {
             first: this.state.first,
             last: this.state.last,
             email: this.state.email,
-            message: this.state.message,
+            message: this.state.message
         }).then(
             ({ data }) => {
                 if (data.data) {
-                    console.log("data.data", data.data)
                     this.setState({
                         userFirst: data.data.first,
                         userLast: data.data.last,
                         first: "",
                         last: "",
                         email: "",
-                        message: "",
+                        message: ""
                     });
                     this.setState({
                         show: true
-                    })
+                    });
                 } else {
                     this.setState({ error: true });
                 }
@@ -142,7 +141,7 @@ class ContactN extends React.Component {
                                     />
                                 </Form.Group>
                                 <Row className="d-flex justify-content-center m-5" >
-                                    <Button variant="outline-warning" size="lg" block onClick={(event) => this.submit(event)} > {t("Send")}</Button>
+                                    <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
                                 </Row>
                             </span>
                         </Col>
@@ -165,8 +164,12 @@ class ContactN extends React.Component {
                     </Modal>
                 </Container>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(ContactN));
+export default withTranslation()(ContactN);
+
+ContactN.propTypes = {
+    t: PropTypes.func
+};

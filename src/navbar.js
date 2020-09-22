@@ -1,11 +1,12 @@
 import React from "react";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-scroll";
-import EnFr from './enFr.js';
-import { withTranslation } from 'react-i18next';
+import EnFr from "./enFr.js";
+import { withTranslation } from "react-i18next";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image"
+import Image from "react-bootstrap/Image";
+import PropTypes from "prop-types";
 
 class Header extends React.Component {
     constructor(props) {
@@ -13,50 +14,50 @@ class Header extends React.Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.handleHover = this.handleHover.bind(this);
         this.state = {
-            visible: false,
+            visible: false
         };
     }
 
     componentDidMount() {
         if (window.screen.width > 450) {
             var hide = this;
-            window.addEventListener('scroll', this.handleScroll);
+            window.addEventListener("scroll", this.handleScroll);
             hide.handleScroll();
         } else {
-            var navElement = document.getElementById("appear")
-            navElement.classList.add("mobileNavBar")
+            var navElement = document.getElementById("appear");
+            navElement.classList.add("mobileNavBar");
         }
-    };
+    }
 
     handleScroll() {
         var element = document.getElementById("appear");
         if (window.pageYOffset <= 20) {
-            element.classList.add("isVisible")
-            element.classList.remove("notVisible")
+            element.classList.add("isVisible");
+            element.classList.remove("notVisible");
         } else {
-            element.classList.remove("isVisible")
-            element.classList.add("notVisible")
+            element.classList.remove("isVisible");
+            element.classList.add("notVisible");
         }
-    };
+    }
 
     handleHover() {
         var element = document.getElementById("appear");
         if (window.pageYOffset >= 20) {
-            element.classList.add("isVisible")
-            element.classList.remove("notVisible")
+            element.classList.add("isVisible");
+            element.classList.remove("notVisible");
         }
     }
 
     handleLeave() {
         var element = document.getElementById("appear");
         if (window.pageYOffset >= 20) {
-            element.classList.remove("isVisible")
-            element.classList.add("notVisible")
+            element.classList.remove("isVisible");
+            element.classList.add("notVisible");
         }
     }
 
     render() {
-        const visible = this.state.visible;
+        // const visible = this.state.visible;
         const { t } = this.props;
         return (
             <React.Fragment>
@@ -106,8 +107,12 @@ class Header extends React.Component {
                     </div>
                 </Container>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(Header));
+export default withTranslation()(Header);
+
+Header.propTypes = {
+    t: PropTypes.func
+};

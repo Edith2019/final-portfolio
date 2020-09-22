@@ -1,12 +1,12 @@
-
-import React from 'react';
-import Container from 'react-bootstrap/Container'
-import Card from 'react-bootstrap/Card'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { withTranslation } from 'react-i18next';
-import Accordion from 'react-bootstrap/Accordion'
-import Button from 'react-bootstrap/Button'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { withTranslation } from "react-i18next";
+import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 class ProjectCard extends React.Component {
 
@@ -17,22 +17,22 @@ class ProjectCard extends React.Component {
                 arrowDown: true,
                 arrowUp: false,
                 arrowTechDown: true,
-                arrowTechUp: false,
+                arrowTechUp: false
             },
 
             [1]: {
                 arrowDown: true,
                 arrowUp: false,
                 arrowTechDown: true,
-                arrowTechUp: false,
+                arrowTechUp: false
             },
             [2]: {
                 arrowDown: true,
                 arrowUp: false,
                 arrowTechDown: true,
-                arrowTechUp: false,
-            },
-        }
+                arrowTechUp: false
+            }
+        };
         this.handleClick = this.handleClick.bind(this);
         this.handleClickTech = this.handleClickTech.bind(this);
     }
@@ -46,8 +46,8 @@ class ProjectCard extends React.Component {
                 arrowTechDown: this.state[index].arrowTechDown,
                 arrowTechUp: this.state[index].arrowTechUp
             }
-        },
-        )
+        }
+        );
     }
 
     handleClickTech(event, index) {
@@ -57,10 +57,10 @@ class ProjectCard extends React.Component {
                 arrowTechDown: !this.state[index].arrowTechDown,
                 arrowTechUp: !this.state[index].arrowTechUp,
                 arrowDown: this.state[index].arrowDown,
-                arrowUp: this.state[index].arrowUp,
+                arrowUp: this.state[index].arrowUp
             }
-        },
-        )
+        }
+        );
     }
 
     render() {
@@ -69,7 +69,7 @@ class ProjectCard extends React.Component {
             <React.Fragment>
                 <Container fluid className=" pb-5" id="Projects">
                     <Row className="d-flex justify-content-center py-5" xs={1} md={1} lg={3}>
-                        {this.props.projects.map((project, index) => (
+                        {this.props.projects.map((project, index) => 
                             <Col className="d-flex justify-content-center px-5 py-5" key={project.keyP}>
                                 <Card className="bg-warning" border="light" >
                                     <Card.Img variant="top" src={project.srcP} className="overlay" />
@@ -79,10 +79,10 @@ class ProjectCard extends React.Component {
                                             {t(project.descriptionP)}
                                         </Card.Text>
                                         <Accordion>
-                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP" onClick={(event) => { this.handleClick(event, index) }} >
+                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="featureP" onClick={(event) => { this.handleClick(event, index); }} >
                                                 <Card.Title className="text-warning" >
                                                     Features
-                                                  {this.state[index].arrowDown &&
+                                                    {this.state[index].arrowDown &&
 
                                                         <svg id={project.idP2}
                                                             width="1em" height="1em" viewBox="0 0 16 16" className=" down bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
@@ -91,7 +91,7 @@ class ProjectCard extends React.Component {
                                                         </svg>
                                                     }
                                                     {this.state[index].arrowUp &&
-                                                        <svg id={project.idP3} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
+                                                        <svg id={project.idP3} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
                                                             <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
                                                         </svg>
@@ -100,14 +100,14 @@ class ProjectCard extends React.Component {
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Text className="mb-3">
-                                                    {project.featuresP.map((element, index) => (
+                                                    {project.featuresP.map((element, index) => 
                                                         <li key={project[index]}> {element}</li>
-                                                    ))}
+                                                    )}
                                                 </Card.Text>
                                             </Accordion.Collapse>
                                         </Accordion>
                                         <Accordion>
-                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP" onClick={(event) => { this.handleClickTech(event, index) }} >
+                                            <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0" id="technologiesP" onClick={(event) => { this.handleClickTech(event, index); }} >
                                                 <Card.Title className="text-warning">
                                                     Technologies
                                                     {this.state[index].arrowTechDown &&
@@ -117,7 +117,7 @@ class ProjectCard extends React.Component {
                                                         </svg>
                                                     }
                                                     {this.state[index].arrowTechUp &&
-                                                        <svg id={project.idP5} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  >
+                                                        <svg id={project.idP5} width="1em" height="1em" viewBox="0 0 16 16" className=" up bi bi-chevron-double-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
                                                             <path fillRule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
                                                             <path fillRule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
                                                         </svg>
@@ -129,15 +129,15 @@ class ProjectCard extends React.Component {
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Front-End
                                                         </Card.Text>
-                                                        {project.technologiesFEP.map((element, index) => (
+                                                        {project.technologiesFEP.map((element, index) => 
                                                             <li key={project[index + 1]}>{element}</li>
-                                                        ))}
+                                                        )}
                                                     </Col>
                                                     <Col>
                                                         <Card.Text className="font-weight-bold">Back-End</Card.Text>
-                                                        {project.technologiesBEP.map((element, index) => (
+                                                        {project.technologiesBEP.map((element, index) => 
                                                             <li key={project[index + 1]}>{element}</li>
-                                                        ))}
+                                                        )}
                                                     </Col>
                                                 </Row>
                                             </Accordion.Collapse>
@@ -149,7 +149,7 @@ class ProjectCard extends React.Component {
                                                     <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
                                                 </svg>
                                                     Github
-                                                </a>
+                                            </a>
                                         </Row>
                                         <Row className="pl-3">
                                             <a href={project.hrefHerokuP} target="_blank" className="text-dark" rel="noopener noreferrer">
@@ -161,12 +161,20 @@ class ProjectCard extends React.Component {
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        ))}
+                        )}
                     </Row>
                 </Container >
             </React.Fragment >
-        )
+        );
     }
 }
 
-export default (withTranslation()(ProjectCard));
+export default withTranslation()(ProjectCard);
+
+ProjectCard.propTypes = {
+    t: PropTypes.func,
+    projects: PropTypes.array,
+    project: PropTypes.object
+};
+
+// find project.map proptypes

@@ -1,19 +1,16 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Carousel from 'react-bootstrap/Carousel'
-import Image from 'react-bootstrap/Image'
-import Card from 'react-bootstrap/Card'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { withTranslation } from 'react-i18next';
-
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { withTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 class CarouselComponent extends React.Component {
 
-
-
     render() {
-        const { t } = this.props
+        const { t } = this.props;
         return (
             <React.Fragment>
                 <Container fluid id="WTS" >
@@ -54,8 +51,14 @@ class CarouselComponent extends React.Component {
                     </Carousel>
                 </Container>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(CarouselComponent));
+export default withTranslation()(CarouselComponent);
+
+CarouselComponent.propTypes = {
+    t: PropTypes.func,
+    comments: PropTypes.array,
+    comment: PropTypes.object
+};

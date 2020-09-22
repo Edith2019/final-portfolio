@@ -1,17 +1,15 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import Image from 'react-bootstrap/Image'
-import Accordion from 'react-bootstrap/Accordion'
-import Button from 'react-bootstrap/Button'
-import FileSaver from 'file-saver';
-// import saveAs from 'file-saver'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Image from "react-bootstrap/Image";
+import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
+import FileSaver from "file-saver";
 import { Link } from "react-scroll";
-import { withTranslation } from 'react-i18next';
-// import PropTypes from 'prop-types';
-
+import { withTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 class About extends React.Component {
 
@@ -34,10 +32,10 @@ class About extends React.Component {
                         <h1 className="display-1 title pt-5">{t("About")}</h1>
                     </Row>
                     <Row xs={1} md={1} lg={2} >
-                        <Col lg={{ order: 'first' }} className="d-flex justify-content-center " >
+                        <Col lg={{ order: "first" }} className="d-flex justify-content-center " >
                             <Image className="pt-5" src=".././assets/Edith.png" fluid alt="Responsive image" />
                         </Col>
-                        <Col sm={{ order: 'first' }} >
+                        <Col sm={{ order: "first" }} >
                             <Row>
                                 <Card.Body >
                                     <Card.Title className="display-3 pt-5 pl-5">{t("Hi")}</Card.Title>
@@ -56,9 +54,8 @@ class About extends React.Component {
                             </Row>
                         </Col>
 
-
                         <Col className="d-flex justify-content-center">
-                            <Card className="border-0 text-center pb-4" style={{ width: '25rem' }} >
+                            <Card className="border-0 text-center pb-4" style={{ width: "25rem" }} >
                                 <Card.Title className="display-3 pt-5">{t("Languages")}</Card.Title>
                                 <Row className=" pt-5">
                                     <Col >
@@ -79,7 +76,6 @@ class About extends React.Component {
                                                     <Card.Text>React.js (Redux)</Card.Text>
                                                     <Card.Text>Vue.js </Card.Text>
                                                     <Card.Text>Boostrap</Card.Text>
-
 
                                                 </Card.Body>
                                             </Accordion.Collapse>
@@ -126,11 +122,7 @@ class About extends React.Component {
 
                         </Col>
 
-
                     </Row>
-
-
-
 
                 </Container >
 
@@ -139,9 +131,10 @@ class About extends React.Component {
         );
     }
 
-
-
 }
 
-export default (withTranslation()(About));
+export default withTranslation()(About);
 
+About.propTypes = {
+    t: PropTypes.func
+};

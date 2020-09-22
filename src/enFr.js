@@ -1,6 +1,7 @@
-import React from 'react'
-import Form from 'react-bootstrap/Form'
-import { withTranslation } from 'react-i18next';
+import React from "react";
+import Form from "react-bootstrap/Form";
+import { withTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 class EnFr extends React.Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class EnFr extends React.Component {
         this.state = {
             value: "en",
             checkedEN: true,
-            checkedFR: false,
+            checkedFR: false
         };
     }
 
@@ -16,14 +17,14 @@ class EnFr extends React.Component {
         this.setState({
             checkedEN: true,
             checkedFR: false
-        })
+        });
     }
 
     handleCheckFR() {
         this.setState({
             checkedEN: false,
             checkedFR: true
-        })
+        });
     }
 
     handleChange(event) {
@@ -40,36 +41,41 @@ class EnFr extends React.Component {
                     onChange={e => this.handleChange(e)}
                     className="mt-2"
                 >
-                    <div className="input" key={`custom-inline-radio`} >
+                    <div className="input" key={"custom-inline-radio"} >
                         <Form.Check
                             bsCustomPrefix="custom-control"
                             custom
                             inline
-                            type='checkbox'
-                            id={`custom-inline-radio-1`}
+                            type="checkbox"
+                            id={"custom-inline-radio-1"}
                             label={"EN"}
                             value="en"
                             name="groupOptions"
                             className="pt-3"
                             checked={this.state.checkedEN}
-                            onChange={() => { this.handleCheckEN() }}
+                            onChange={() => { this.handleCheckEN(); }}
                         />
                         <Form.Check
                             custom
                             inline
-                            type='checkbox'
-                            id={`custom-inline-radio-2`}
+                            type="checkbox"
+                            id={"custom-inline-radio-2"}
                             label={"FR"}
                             value="fr"
                             name="groupOptions"
                             checked={this.state.checkedFR}
-                            onChange={() => { this.handleCheckFR() }}
+                            onChange={() => { this.handleCheckFR(); }}
                         />
                     </div>
                 </Form.Group>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(EnFr));
+export default withTranslation()(EnFr);
+
+EnFr.propTypes = {
+    i18n: PropTypes.object,
+    changeLanguage: PropTypes.func
+};

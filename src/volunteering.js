@@ -1,11 +1,11 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import Image from 'react-bootstrap/Image'
-// import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Image from "react-bootstrap/Image";
+import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 
 class Volunteer extends React.Component {
 
@@ -37,7 +37,7 @@ class Volunteer extends React.Component {
                                 </Card.Text>
                             </Card.Body>
                         </Col>
-                        <Col lg={{ order: 'first' }} className="d-flex justify-content-center">
+                        <Col lg={{ order: "first" }} className="d-flex justify-content-center">
                             <Image src=".././assets/Leave.png" fluid alt="Responsive image" />
                         </Col>
                     </Row>
@@ -56,8 +56,12 @@ class Volunteer extends React.Component {
                     </Row>
                 </Container>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(Volunteer));
+export default withTranslation()(Volunteer);
+
+Volunteer.propTypes = {
+    t: PropTypes.func
+};

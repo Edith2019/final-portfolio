@@ -1,22 +1,23 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
-import Row from 'react-bootstrap/Row'
-import Accordion from 'react-bootstrap/Accordion'
-import Button from 'react-bootstrap/Button'
-import MoreProjectsCard from './moreProjectsCard';
-import moreProjectsData from './js/moreProjectsData';
-import ProjectCard from './projectsCard.js'
-import projectsData from './js/projectsData.js'
-import { withTranslation } from 'react-i18next';
-import CarouselComponent from './carousel.js'
-import commentsData from './js/commentsData.js'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
+import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
+import MoreProjectsCard from "./moreProjectsCard";
+import moreProjectsData from "./js/moreProjectsData";
+import ProjectCard from "./projectsCard.js";
+import projectsData from "./js/projectsData.js";
+import { withTranslation } from "react-i18next";
+import CarouselComponent from "./carousel.js";
+import commentsData from "./js/commentsData.js";
+import PropTypes from "prop-types";
 
 class Projects extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVisible: true,
+            isVisible: true
         };
         this.toggleHand = this.toggleHand.bind(this);
     }
@@ -24,8 +25,8 @@ class Projects extends React.Component {
     toggleHand() {
         const { isVisible } = this.state;
         this.setState({
-            isVisible: !isVisible,
-        })
+            isVisible: !isVisible
+        });
     }
 
     render() {
@@ -33,9 +34,9 @@ class Projects extends React.Component {
         var { title } = this.props;
         const { isVisible } = this.state;
         if (isVisible) {
-            title = "bmp"
+            title = "bmp";
         } else {
-            title = "close"
+            title = "close";
         }
         return (
             <React.Fragment>
@@ -52,16 +53,22 @@ class Projects extends React.Component {
                             </Accordion.Toggle>
                         </Row >
                     </Accordion>
-                    {isVisible && (
+                    {isVisible && 
                         <Row className="d-flex justify-content-center">
                             <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
                         </Row>
-                    )}
+                    }
                     <CarouselComponent comments={commentsData} />
                 </Container >
             </React.Fragment >
-        )
+        );
     }
 }
 
-export default (withTranslation()(Projects));
+export default withTranslation()(Projects);
+
+Projects.propTypes = {
+    t: PropTypes.func,
+    projects: PropTypes.array,
+    title: PropTypes.string
+};

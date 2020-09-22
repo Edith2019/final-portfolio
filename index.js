@@ -44,17 +44,13 @@ if (process.env.NODE_ENV !== "production") {
 
 // route to post data from contact //
 app.post("/message", (req, res) => {
-    const first = req.body.first;
-    const last = req.body.last;
-    const email = req.body.email;
-    const message = req.body.message;
-
+    const { first, last, email, message } = req.body;
     db.addContactsData(first, last, email, message).then(result => {
         if (result.rows[0].message) {
             const sender = JSON.stringify(result.rows[0]);
             ses.sendEmail("edith.chevallier3000@gmail.com", "Email from Edith's portfolio", sender)
                 .then(() => {
-                    console.log("someting in res ses")
+                    console.log("someting in res ses");
                 });
         }
         const data = result.rows[0];
@@ -65,7 +61,7 @@ app.post("/message", (req, res) => {
     });
 });
 
-app.use('/public', express.static(__dirname + '/public'));
+app.use("/public", express.static(__dirname + "/public"));
 
 // needs to be the last route //
 app.get("*", function (req, res) {

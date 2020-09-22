@@ -1,16 +1,17 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import { withTranslation } from 'react-i18next';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import { withTranslation } from "react-i18next";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 class FooterN extends React.Component {
     constructor() {
         super();
         this.state = {
             show: false
-        }
+        };
     }
 
     handleClose() {
@@ -27,15 +28,13 @@ class FooterN extends React.Component {
 
     render() {
         const { t } = this.props;
-        const { show } = this.state;
-        console.log("show in render", show);
         return (
             <React.Fragment>
                 <Container fluid className="p-0" id="footerN">
                     <Nav className="justify-content-around bg-warning pb-2 pt-4" id="footerN">
                         <Nav.Item className="">
                             © 2020 EdithChevallier
-                    </Nav.Item>
+                        </Nav.Item>
                         <Nav.Item className="">
                             <Button className="pt-0 tandc" variant="link" eventey="link-1" color="black" onClick={e => this.handleShow(e)}> {t("TandC")}</Button>
                         </Nav.Item>
@@ -58,8 +57,12 @@ class FooterN extends React.Component {
                     </Modal>
                 </Container>
             </React.Fragment>
-        )
+        );
     }
 }
 
-export default (withTranslation()(FooterN));
+export default withTranslation()(FooterN);
+
+FooterN.propTypes = {
+    t: PropTypes.func
+};
