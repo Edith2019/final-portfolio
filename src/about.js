@@ -120,7 +120,7 @@ class About extends React.Component {
 
                                 <Button variant="warning" size="lg" block>Contact</Button>
                             </Link>
-                            <a href="public/assets/Edith_Chevallier-Resume.pdf" download id="downloadA" rel="noopener noreferrer">
+                            <a href="public/assets/Edith_Chevallier_Resume.pdf" download id="downloadA" rel="noopener noreferrer">
                                 <Button variant="outline-warning" size="lg" className="mt-2 download" block >{t("DR")}</Button>
                             </a>
 
