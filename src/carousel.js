@@ -20,7 +20,7 @@ class CarouselComponent extends React.Component {
                     <h1 className="display-3 py-5 text-center">{t("WTS")}</h1>
                     <Carousel className="w-75 mx-auto text-center" id="carousel">
                         {this.props.comments.map(comment =>
-                            <Carousel.Item>
+                            <Carousel.Item key={comment.keyCD}>
                                 <Row>
                                     <Col>
                                     </Col>

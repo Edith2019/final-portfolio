@@ -52,7 +52,6 @@ class ProjectCard extends React.Component {
 
     handleClickTech(event, index) {
         event.preventDefault();
-        console.log("this.props.porjects", this.props.projects)
         this.setState({
             [index]: {
                 arrowTechDown: !this.state[index].arrowTechDown,

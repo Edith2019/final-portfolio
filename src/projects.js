@@ -23,7 +23,6 @@ class Projects extends React.Component {
 
     toggleHand() {
         const { isVisible } = this.state;
-        console.log("hand function")
         this.setState({
             isVisible: !isVisible,
         })

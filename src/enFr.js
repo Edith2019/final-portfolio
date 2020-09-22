@@ -30,7 +30,6 @@ class EnFr extends React.Component {
         let newlang = event.target.value;
         this.setState(() => ({ value: newlang }));
         this.props.i18n.changeLanguage(newlang);
-
     }
 
     render() {
@@ -41,7 +40,7 @@ class EnFr extends React.Component {
                     onChange={e => this.handleChange(e)}
                     className="mt-2"
                 >
-                    <div className=" input" key={`custom-inline-radio`} >
+                    <div className="input" key={`custom-inline-radio`} >
                         <Form.Check
                             bsCustomPrefix="custom-control"
                             custom
