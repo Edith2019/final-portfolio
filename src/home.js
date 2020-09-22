@@ -9,21 +9,29 @@ import Image from 'react-bootstrap/Image';
 
 class Home extends React.Component {
 
+
   render() {
     const { t } = this.props;
     return (
-      <React.Fragment>
+      <React.Fragment >
         <Container fluid className="mt-5 pt-5" id="Home" >
           <Row className=" mx-5 pt-5 pb-2 bg-warning text-center">
             <Col className=" my-auto" >
-              <Image fluid src=".././assets/Tiger.png" />
+              <Image fluid id="tiger" src=".././assets/Tiger.png" className="fadeInAbout" />
             </Col>
           </Row>
           <Row className=" mx-5 bg-warning text-center">
             <Col classNAme=" my-auto" >
-              <h1 id="animate" className="my-5 pr-3 display-1 text-white" >
+              <h1 id="animate" className="fadeInAbout  mt-5 pr-3 display-1 text-white" >
                 {t("Welcome")}
               </h1>
+            </Col>
+          </Row>
+          <Row className="mx-5 pt-2 pb-5 bg-warning text-center">
+            <Col>
+              <svg id="further" width="6em" height="6em" viewBox="0 0 16 16" className=" fadeInAbout  mr-5 bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+              </svg>
             </Col>
           </Row>
         </Container>
