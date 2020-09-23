@@ -13,6 +13,7 @@ import CarouselComponent from "./carousel.js";
 import commentsData from "./js/commentsData.js";
 import PropTypes from 'prop-types';
 import FadeIn from "./hooks/fadeIn.js";
+import Col from "react-bootstrap/Col";
 
 class Projects extends React.Component {
     constructor(props) {
@@ -43,7 +44,6 @@ class Projects extends React.Component {
             <React.Fragment>
                 <Container fluid id="Projects">
                     <FadeIn>
-
                         <h1 className="display-1 title" > {t("Projects")}</h1>
                         <ProjectCard projects={projectsData} />
                         <Accordion>
@@ -58,7 +58,9 @@ class Projects extends React.Component {
                         </Accordion>
                         {isVisible && (
                             <Row className="d-flex justify-content-center">
-                                <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
+                                <Col>
+                                    <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
+                                </Col>
                             </Row>
                         )}
                         <CarouselComponent comments={commentsData} />

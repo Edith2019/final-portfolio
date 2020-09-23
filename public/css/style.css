@@ -256,12 +256,11 @@ img.img-fluid.rounded-circle {
         position: fixed;
         z-index: 999;
     }
-
     #Projects,
     #About,
     #Volunteering,
     #ContactN {
-        margin-top: 22vh;
+        margin-top: 23vh;
     }
 
     .fadeInHook {
@@ -280,5 +279,19 @@ img.img-fluid.rounded-circle {
     #WTS {
         visibility: hidden !important;
         height: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 451px) {
+    #WTS {
+        visibility: hidden !important;
+        height: 0 !important;
+    }
+
+    #Projects,
+    #About,
+    #Volunteering,
+    #ContactN {
+        margin-top: 40vh;
     }
 }

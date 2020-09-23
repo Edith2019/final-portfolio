@@ -67,7 +67,7 @@ class ProjectCard extends React.Component {
         const { t } = this.props;
         return (
             <React.Fragment>
-                <Container fluid className="0" id="Projects">
+                <Container fluid className="0">
                     <Row className="d-flex justify-content-center pt-5" xs={1} md={1} lg={3}>
                         {this.props.projects.map((project, index) =>
                             <Col className="d-flex justify-content-center px-5 py-5" key={project.keyP}>
