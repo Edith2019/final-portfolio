@@ -5,6 +5,9 @@
     text-decoration-line: none;
 }
 
+#Home {
+    margin-bottom: 20vh;
+}
 .title:hover {
     text-decoration-line: underline;
     text-decoration-color: #ffc108;
@@ -137,10 +140,12 @@ label.custom-control-label::after {
 
 #hooks.fadeInHook {
     z-index: 1;
+    border: green solid 4px;
 }
 
 #hooks.fadeInHook.fadeInHook.is-visibleHook {
-    z-index: 2;
+    z-index: 1;
+    border: blue solid 4px;
 }
 #footerN {
     z-index: 999;
@@ -252,15 +257,16 @@ img.img-fluid.rounded-circle {
         z-index: 999;
     }
 
-    /* #Projects,
+    #Projects,
     #About,
-    #Volunteering {
-        margin-top: 200px
-    } */
+    #Volunteering,
+    #ContactN {
+        margin-top: 22vh;
+    }
 
     .fadeInHook {
         /* padding-top: 100px; */
-        /* border: solid 4px red; */
+        border: solid 4px red;
         opacity: 0;
         transform: translateY(8vh);
         visibility: hidden;

@@ -12,6 +12,7 @@ import { withTranslation } from "react-i18next";
 import axios from "./axios"; // need to put the slash to use the copy
 import Modal from "react-bootstrap/Modal";
 import PropTypes from "prop-types";
+import FadeIn from "./hooks/fadeIn.js";
 
 class ContactN extends React.Component {
     constructor(props) {
@@ -76,92 +77,95 @@ class ContactN extends React.Component {
         return (
             <React.Fragment >
                 <Container fluid id="ContactN">
-                    <h1 className="display-1  title pt-5">Contact</h1>
-                    <Row xs={1} md={1} lg={2}>
-                        <Col className="px-5">
-                            <Card.Body >
-                                <Card.Text className="text-justify pb-3">
-                                    {t("descriptionC")}
-                                </Card.Text>
-                            </Card.Body>
-                            <span className="px-5">
-                                <InputGroup className="mb-3 px-5">
-                                    <FormControl
-                                        placeholder={t("FirstName")}
-                                        aria-label="Username"
-                                        aria-describedby="basic-addon1"
-                                        className="border-0 border-contact rounded-0"
-                                        name="first"
-                                        value={this.state.first}
-                                        onChange={e => this.handleChange(e)}
-                                        type="text"
-                                    />
-                                </InputGroup>
-                                <InputGroup className="mb-3 px-5">
-                                    <FormControl
-                                        placeholder={t("LastName")}
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                        className="border-0 border-contact rounded-0"
-                                        name="last"
-                                        value={this.state.last}
-                                        onChange={e => this.handleChange(e)}
-                                        type="text"
-                                    />
-                                </InputGroup>
-                                <InputGroup className="mb-3 px-5">
-                                    <FormControl
-                                        placeholder="Email"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                        className="border-0 border-contact rounded-0"
-                                        name="email"
-                                        value={this.state.email}
-                                        onChange={e => this.handleChange(e)}
-                                        type="text"
-                                    />
-                                </InputGroup>
+                    <FadeIn>
 
-                                <InputGroup className="mb-3 px-5">
-                                    <FormControl as="textarea"
-                                        placeholder="Message"
-                                        className="border-0 border-contact rounded-0"
-                                        name="message"
-                                        value={this.state.message}
-                                        onChange={e => this.handleChange(e)}
-                                        type="text"
-                                    />
-                                </InputGroup>
-                                <Form.Group id="formCheck" className="px-5" name="checkbox">
-                                    <Form.Check
-                                        required
-                                        label={t("terms")}
-                                        feedback={t("You must agree before submitting.")}
-                                        id="formCheck"
-                                    />
-                                </Form.Group>
-                                <Row className="d-flex justify-content-center m-5" >
-                                    <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
+                        <h1 className="display-1  title">Contact</h1>
+                        <Row xs={1} md={1} lg={2}>
+                            <Col className="px-5">
+                                <Card.Body >
+                                    <Card.Text className="text-justify pb-3">
+                                        {t("descriptionC")}
+                                    </Card.Text>
+                                </Card.Body>
+                                <span className="px-5">
+                                    <InputGroup className="mb-3 px-5">
+                                        <FormControl
+                                            placeholder={t("FirstName")}
+                                            aria-label="Username"
+                                            aria-describedby="basic-addon1"
+                                            className="border-0 border-contact rounded-0"
+                                            name="first"
+                                            value={this.state.first}
+                                            onChange={e => this.handleChange(e)}
+                                            type="text"
+                                        />
+                                    </InputGroup>
+                                    <InputGroup className="mb-3 px-5">
+                                        <FormControl
+                                            placeholder={t("LastName")}
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                            className="border-0 border-contact rounded-0"
+                                            name="last"
+                                            value={this.state.last}
+                                            onChange={e => this.handleChange(e)}
+                                            type="text"
+                                        />
+                                    </InputGroup>
+                                    <InputGroup className="mb-3 px-5">
+                                        <FormControl
+                                            placeholder="Email"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                            className="border-0 border-contact rounded-0"
+                                            name="email"
+                                            value={this.state.email}
+                                            onChange={e => this.handleChange(e)}
+                                            type="text"
+                                        />
+                                    </InputGroup>
+
+                                    <InputGroup className="mb-3 px-5">
+                                        <FormControl as="textarea"
+                                            placeholder="Message"
+                                            className="border-0 border-contact rounded-0"
+                                            name="message"
+                                            value={this.state.message}
+                                            onChange={e => this.handleChange(e)}
+                                            type="text"
+                                        />
+                                    </InputGroup>
+                                    <Form.Group id="formCheck" className="px-5" name="checkbox">
+                                        <Form.Check
+                                            required
+                                            label={t("terms")}
+                                            feedback={t("You must agree before submitting.")}
+                                            id="formCheck"
+                                        />
+                                    </Form.Group>
+                                    <Row className="d-flex justify-content-center m-5" >
+                                        <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
+                                    </Row>
+                                </span>
+                            </Col>
+                            <Col className="d-flex justify-content-center">
+                                <Image fluid id="imgContact" src=".././assets/fcontact.png " alt="Responsive image" />
+                            </Col>
+                        </Row>
+                        <Modal show={this.state.show} className="border border-0 border-dark">
+                            <Modal.Header closeButton onClick={e => this.handleClose(e)}>
+                                <Modal.Title>{t("ThankYou")} {this.state.userFirst} {t("forMsg")}</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body >
+                                <Row className="d-flex justify-content-center">
+                                    <Image fluid src=".././assets/giphy.gif" alt="Responsive image" />
                                 </Row>
-                            </span>
-                        </Col>
-                        <Col className="d-flex justify-content-center">
-                            <Image fluid id="imgContact" src=".././assets/fcontact.png " alt="Responsive image" />
-                        </Col>
-                    </Row>
-                    <Modal show={this.state.show} className="border border-0 border-dark">
-                        <Modal.Header closeButton onClick={e => this.handleClose(e)}>
-                            <Modal.Title>{t("ThankYou")} {this.state.userFirst} {t("forMsg")}</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body >
-                            <Row className="d-flex justify-content-center">
-                                <Image fluid src=".././assets/giphy.gif" alt="Responsive image" />
-                            </Row>
-                            <Row className="d-flex justify-content-center mt-2">
-                                {t("contentTY")}
-                            </Row>
-                        </Modal.Body>
-                    </Modal>
+                                <Row className="d-flex justify-content-center mt-2">
+                                    {t("contentTY")}
+                                </Row>
+                            </Modal.Body>
+                        </Modal>
+                    </FadeIn>
                 </Container>
             </React.Fragment>
         );

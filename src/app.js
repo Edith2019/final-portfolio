@@ -22,18 +22,10 @@ export default class App extends React.Component {
             <React.Fragment>
                 <Header />
                 <Home />
-                <FadeIn>
-                    <About />
-                </FadeIn>
-                <FadeIn>
-                    <Projects />
-                </FadeIn>
-                <FadeIn>
-                    <Volunteer />
-                </FadeIn>
-                <FadeIn>
-                    <ContactN />
-                </FadeIn>
+                <About />
+                <Projects />
+                <Volunteer />
+                <ContactN />
                 <FooterN />
             </React.Fragment >
         );

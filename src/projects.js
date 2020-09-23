@@ -12,6 +12,7 @@ import { withTranslation } from "react-i18next";
 import CarouselComponent from "./carousel.js";
 import commentsData from "./js/commentsData.js";
 import PropTypes from 'prop-types';
+import FadeIn from "./hooks/fadeIn.js";
 
 class Projects extends React.Component {
     constructor(props) {
@@ -40,25 +41,29 @@ class Projects extends React.Component {
         }
         return (
             <React.Fragment>
-                <Container fluid className="pb-5" id="Projects">
-                    <h1 className="display-1 title pt-5" > {t("Projects")}</h1>
-                    <ProjectCard projects={projectsData} />
-                    <Accordion>
-                        <Accordion.Collapse eventKey="0">
-                            <MoreProjectsCard moreProjects={moreProjectsData} />
-                        </Accordion.Collapse>
-                        <Row className="d-flex justify-content-center">
-                            <Accordion.Toggle as={Button} variant="warning" eventKey="0" onClick={this.toggleHand} >
-                                {t(title)}
-                            </Accordion.Toggle>
-                        </Row >
-                    </Accordion>
-                    {isVisible && (
-                        <Row className="d-flex justify-content-center">
-                            <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
-                        </Row>
-                    )}
-                    <CarouselComponent comments={commentsData} />
+                <Container fluid id="Projects">
+                    <FadeIn>
+
+                        <h1 className="display-1 title" > {t("Projects")}</h1>
+                        <ProjectCard projects={projectsData} />
+                        <Accordion>
+                            <Accordion.Collapse eventKey="0">
+                                <MoreProjectsCard moreProjects={moreProjectsData} />
+                            </Accordion.Collapse>
+                            <Row className="d-flex justify-content-center">
+                                <Accordion.Toggle as={Button} variant="warning" eventKey="0" onClick={this.toggleHand} >
+                                    {t(title)}
+                                </Accordion.Toggle>
+                            </Row >
+                        </Accordion>
+                        {isVisible && (
+                            <Row className="d-flex justify-content-center">
+                                <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
+                            </Row>
+                        )}
+                        <CarouselComponent comments={commentsData} />
+                    </FadeIn>
+
                 </Container >
             </React.Fragment >
         );

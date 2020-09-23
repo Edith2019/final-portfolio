@@ -90,7 +90,20 @@ class Header extends React.Component {
                     <div id="appear" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
                         <Navbar collapseOnSelect id="mobileNav" expand="lg" bg="white" color="black" fixed="top" className="navbar" >
                             <Navbar.Brand href="#Home" className="pl-2 pt-0">
-                                <Image src="./assets/BlackTiger.png" width="50" height="50" />
+                                <Link to="Home"
+                                    activeClass="active"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={500}
+                                    className="pr-3 pt-3"
+                                    // onClick={this.closeNav}
+                                    data-toggle="collapse"
+                                    data-target=".navbarCollapse"
+
+                                >
+                                    <Image src="./assets/BlackTiger.png" width="50" height="50" />
+                                </Link>
                             </Navbar.Brand>
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav" className="navbarCollapse">
