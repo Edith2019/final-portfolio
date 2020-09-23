@@ -140,7 +140,7 @@ label.custom-control-label::after {
 }
 
 #hooks.fadeInHook.fadeInHook.is-visibleHook {
-    z-index: 1;
+    z-index: 2;
 }
 #footerN {
     z-index: 999;
@@ -231,6 +231,9 @@ img.img-fluid.rounded-circle {
 }
 
 @media only screen and (max-width: 450px) {
+    /* .main {
+        padding-top: 150px;
+    } */
     .display-1 {
         font-size: 3rem !important;
         font-weight: 300;
@@ -242,6 +245,28 @@ img.img-fluid.rounded-circle {
         font-size: 2.5rem !important;
         font-weight: 300;
         line-height: 1;
+    }
+
+    #navContainer {
+        position: fixed;
+        z-index: 999;
+    }
+
+    /* #Projects,
+    #About,
+    #Volunteering {
+        margin-top: 200px
+    } */
+
+    .fadeInHook {
+        /* padding-top: 100px; */
+        /* border: solid 4px red; */
+        opacity: 0;
+        transform: translateY(8vh);
+        visibility: hidden;
+        transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+        will-change: opacity, visibility;
+        z-index: 1;
     }
 }
 
