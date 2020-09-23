@@ -265,7 +265,7 @@ img.img-fluid.rounded-circle {
 
     .fadeInHook {
         /* padding-top: 100px; */
-        border: solid 4px red;
+        /* border: solid 4px red; */
         opacity: 0;
         transform: translateY(8vh);
         visibility: hidden;
