@@ -15,7 +15,6 @@ class Header extends React.Component {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleHover = this.handleHover.bind(this);
-        this.navBarCollapse = this.navBarCollapse.bind(this);
         this.closeNav = this.closeNav.bind(this);
         this.state = {
             visible: false
@@ -71,7 +70,6 @@ class Header extends React.Component {
 
 
     render() {
-        // const visible = this.state.visible;
         const { t } = this.props;
         return (
             <React.Fragment>
