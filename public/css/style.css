@@ -24,10 +24,6 @@
     text-decoration-color: #ffc108;
 }
 
-#aboutcont {
-    border: solid green 4px;
-}
-
 .card-img-top {
     filter: grey; /* IE6-9 */
     -webkit-filter: grayscale(80%);
@@ -295,11 +291,6 @@ img.img-fluid.rounded-circle {
 }
 
 @media only screen and (min-width: 451px) {
-    #WTS {
-        visibility: hidden !important;
-        height: 0 !important;
-    }
-
     #Projects,
     #About,
     #Volunteering,
