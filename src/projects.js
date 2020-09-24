@@ -58,7 +58,7 @@ class Projects extends React.Component {
                         </Accordion>
                         {isVisible && (
                             <Row className="d-flex justify-content-center">
-                                <Col>
+                                <Col className="d-flex justify-content-center">
                                     <Image src="./assets/handUp.png" className="pt-5 pl-5" fluid alt="Responsive image" />
                                 </Col>
                             </Row>
