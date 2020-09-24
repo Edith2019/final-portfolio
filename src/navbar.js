@@ -15,7 +15,7 @@ class Header extends React.Component {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleHover = this.handleHover.bind(this);
-        this.openNav = this.openNav.bind(this);
+        this.navBarCollapse = this.navBarCollapse.bind(this);
         this.closeNav = this.closeNav.bind(this);
         this.state = {
             visible: false
@@ -61,22 +61,13 @@ class Header extends React.Component {
     }
     closeNav() {
         document.getElementsByClassName("navbarCollapse")[0];
-
         this.setState({
-
             visible: !this.state.visible
-
         })
 
     }
 
-    openNav() {
-        this.setState({
 
-            visible: !this.state.visible
-
-        })
-    }
 
 
     render() {
@@ -102,7 +93,7 @@ class Header extends React.Component {
                                     <Image src="./assets/BlackTiger.png" width="50" height="50" />
                                 </Link>
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav" className="navbarCollapse">
                                 <Nav className="mr-auto pt-1 " id="navCur">
                                     <Link to="About"
@@ -114,6 +105,7 @@ class Header extends React.Component {
                                         className="pr-3 pt-3"
                                         data-toggle="collapse"
                                         data-target=".navbarCollapse"
+
                                     >
                                         {t("About")}
                                     </Link>
