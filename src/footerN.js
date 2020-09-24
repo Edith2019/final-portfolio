@@ -30,8 +30,8 @@ class FooterN extends React.Component {
         const { t } = this.props;
         return (
             <React.Fragment>
-                <Container fluid className="p-0" id="footerN">
-                    <Nav className="justify-content-around bg-warning pb-2 pt-4" id="footerN">
+                <Container fluid className="p-0" id="FooterN">
+                    <Nav className="justify-content-around bg-warning pb-2 pt-4" id="FooterNposition">
                         <Nav.Item className="">
                             © 2020 EdithChevallier
                         </Nav.Item>

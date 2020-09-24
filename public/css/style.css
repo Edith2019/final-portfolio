@@ -13,6 +13,7 @@
     height: 100%;
     z-index: 9999;
     background: url(".././assets/loader.gif") 50% 50% no-repeat white;
+    visibility: visible;
 }
 
 #Home {
@@ -158,7 +159,7 @@ label.custom-control-label::after {
     z-index: 1;
     border: blue solid 4px;
 }
-#footerN {
+#FooterNposition {
     z-index: 999;
     position: absolute;
     width: 100%;

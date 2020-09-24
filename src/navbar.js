@@ -17,7 +17,6 @@ class Header extends React.Component {
         this.handleHover = this.handleHover.bind(this);
         this.openNav = this.openNav.bind(this);
         this.closeNav = this.closeNav.bind(this);
-        // this.offset = this.offset.bind(this)
         this.state = {
             visible: false
         };
@@ -61,8 +60,7 @@ class Header extends React.Component {
         }
     }
     closeNav() {
-        var collapse = document.getElementsByClassName("navbarCollapse")[0];
-        // document.getElementById("navCur").style.display = "none";
+        document.getElementsByClassName("navbarCollapse")[0];
 
         this.setState({
 
@@ -97,7 +95,6 @@ class Header extends React.Component {
                                     offset={-80}
                                     duration={500}
                                     className="pr-3 pt-3"
-                                    // onClick={this.closeNav}
                                     data-toggle="collapse"
                                     data-target=".navbarCollapse"
 
@@ -105,7 +102,7 @@ class Header extends React.Component {
                                     <Image src="./assets/BlackTiger.png" width="50" height="50" />
                                 </Link>
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav " />
                             <Navbar.Collapse id="responsive-navbar-nav" className="navbarCollapse">
                                 <Nav className="mr-auto pt-1 " id="navCur">
                                     <Link to="About"
@@ -115,10 +112,8 @@ class Header extends React.Component {
                                         offset={-80}
                                         duration={500}
                                         className="pr-3 pt-3"
-                                        // onClick={this.closeNav}
                                         data-toggle="collapse"
                                         data-target=".navbarCollapse"
-
                                     >
                                         {t("About")}
                                     </Link>
