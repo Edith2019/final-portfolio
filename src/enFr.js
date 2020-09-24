@@ -13,6 +13,15 @@ class EnFr extends React.Component {
         };
     }
 
+    componentDidMount() {
+        if (this.props.i18n.language == "fr") {
+            this.setState({
+                checkedEN: false,
+                checkedFR: true
+            });
+        }
+    }
+
     handleCheckEN() {
         this.setState({
             checkedEN: true,
@@ -29,6 +38,7 @@ class EnFr extends React.Component {
 
     handleChange(event) {
         let newlang = event.target.value;
+        console.log("newLang", newlang)
         this.setState(() => ({ value: newlang }));
         this.props.i18n.changeLanguage(newlang);
     }
@@ -39,7 +49,9 @@ class EnFr extends React.Component {
                 <Form.Group
                     value={this.state.value}
                     onChange={e => this.handleChange(e)}
+                    // onLoad={(event) => this.componentDidMount(event)}
                     className="mt-2"
+
                 >
                     <div className="input" key={"custom-inline-radio"} >
                         <Form.Check
@@ -53,7 +65,7 @@ class EnFr extends React.Component {
                             name="groupOptions"
                             className="pt-3"
                             checked={this.state.checkedEN}
-                            onChange={() => { this.handleCheckEN(); }}
+                            onChange={() => { this.handleCheckEN() }}
                         />
                         <Form.Check
                             custom
@@ -64,7 +76,8 @@ class EnFr extends React.Component {
                             value="fr"
                             name="groupOptions"
                             checked={this.state.checkedFR}
-                            onChange={() => { this.handleCheckFR(); }}
+                            onChange={() => { this.handleCheckFR() }}
+
                         />
                     </div>
                 </Form.Group>

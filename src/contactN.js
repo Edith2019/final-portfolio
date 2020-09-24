@@ -139,7 +139,7 @@ class ContactN extends React.Component {
                                         <Form.Check
                                             required
                                             label={t("terms")}
-                                            feedback={t("You must agree before submitting.")}
+                                            feedback={t("agree")}
                                             id="formCheck"
                                         />
                                     </Form.Group>
