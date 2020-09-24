@@ -26,11 +26,20 @@
         crossorigin="anonymous"
     />
 </head>
-<main></main>
+<main>
+    <div class="loader"></div>
+</main>
+<!-- <script type="text/javascript" src="jquery.js"> -->
+
 <script type="text/javascript">
-    $(window).load(function () {
-        $(".loader").fadeOut("slow");
-    });
+    // window.addEventListener("load", (event) => {
+    //     // $(".loader").fadeOut("slow");
+    //     document.getElementsByClassName("loader");
+    //     console.log("page is loading");
+    // });
+    window.onload = function (event) {
+        document.getElementsByClassName("loader");
+    };
 </script>
 <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

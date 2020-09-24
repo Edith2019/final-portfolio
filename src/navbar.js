@@ -89,7 +89,7 @@ class Header extends React.Component {
                 <Container fluid className="pb-0 pt-4" id="navContainer">
                     <div id="appear" onScroll={() => this.handleScroll()} onMouseEnter={() => this.handleHover()} onMouseLeave={() => this.handleLeave()}>
                         <Navbar collapseOnSelect id="mobileNav" expand="lg" bg="white" color="black" fixed="top" className="navbar" >
-                            <Navbar.Brand href="#Home" className="pl-2 pt-0">
+                            <Navbar.Brand className="pl-2 pt-0">
                                 <Link to="Home"
                                     activeClass="active"
                                     spy={true}

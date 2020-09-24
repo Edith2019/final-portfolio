@@ -24,6 +24,6 @@ export default function FadeIn(props) {
 }
 
 FadeIn.propTypes = {
-    children: PropTypes.object
+    children: PropTypes.array
 };
 
