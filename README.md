@@ -10,6 +10,8 @@ Javascript //react.js// Redux// postgreSQL// axios// ses // HTML// CSS
 -   translation i18n
 -   header hide/ visible on mouseHover
 -   projects description and links
+-   contact 
+-   download resume
 
 # Description
 
