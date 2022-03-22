@@ -33,7 +33,7 @@ const projectsData = [
         technologiesFEP: ["JS", " CSS", "HTML", "React.js", "Bootstrap", "Smooth-scrolling", "Progressive-images", "i18n-next"],
         technologiesBEP: ["Node.js", "Express", "PostgreSQL", "AWS (ses)", "HTTP request"],
         hrefGitHubP: "https://github.com/Edith2019/React-portfolio",
-        heroku: "In production",
+        heroku: "In dev",
         hrefHerokuP: "https://media0.giphy.com/media/8HHVyTnnFHDAk/giphy.gif?cid=ecf05e47d5oeuln1u2c55soal3vegagx6is293i2c144uoey&rid=giphy.gif"
     },
     {

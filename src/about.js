@@ -22,8 +22,14 @@ class About extends React.Component {
             { autoBom: true });
     }
 
+    languageList() {
+        return {
+            frontEnd: ['Javascript', 'CSS/ PostCSS/ SCSS', 'HTML 5', 'React.js', 'Vue.js / Nuxt.js/ VSF', 'Boostrap', 'Buefy', 'vue formulate'],
+            backEnd: ['Node.js', 'Express', 'PostgreSQL', 'AWS (S3 and SES)']
+        }
+    }
     render() {
-
+        const languageList = this.languageList()
         const { t } = this.props;
         return (
 
@@ -59,49 +65,27 @@ class About extends React.Component {
                                 <Card className="border-0 text-center pb-4" style={{ width: "25rem" }} >
                                     <Card.Title className="display-3 pt-5">{t("Languages")}</Card.Title>
                                     <Row className=" pt-5">
-                                        <Col >
-                                            <Accordion>
-                                                <Card.Title >Front-End</Card.Title>
+                                        {Object.entries(languageList).map((items, index) =>
+                                            <Col key={index}>
+                                                <Accordion>
+                                                    <Card.Title >{t(items[0])}</Card.Title>
 
-                                                <Accordion.Toggle as={Card.Title} eventKey="0" >
+                                                    <Accordion.Toggle as={Card.Title} eventKey="0" >
 
-                                                    <svg width="3em" height="3em" viewBox="0 0 16 16" className="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                                                    </svg>
-                                                </Accordion.Toggle>
-                                                <Accordion.Collapse eventKey="0">
-                                                    <Card.Body >
-                                                        <Card.Text>Javascript</Card.Text>
-                                                        <Card.Text>CSS</Card.Text>
-                                                        <Card.Text>HTML</Card.Text>
-                                                        <Card.Text>React.js (Redux)</Card.Text>
-                                                        <Card.Text>Vue.js </Card.Text>
-                                                        <Card.Text>Boostrap</Card.Text>
-
-                                                    </Card.Body>
-                                                </Accordion.Collapse>
-                                            </Accordion>
-                                        </Col>
-
-                                        <Col >
-                                            <Accordion >
-                                                <Card.Title >Back-End</Card.Title>
-                                                <Accordion.Toggle as={Card.Title} eventKey="0" >
-
-                                                    <svg width="3em" height="3em" viewBox="0 0 16 16" className="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                                                    </svg>
-                                                </Accordion.Toggle>
-                                                <Accordion.Collapse eventKey="0">
-                                                    <Card.Body >
-                                                        <Card.Text>Node.js</Card.Text>
-                                                        <Card.Text>Express</Card.Text>
-                                                        <Card.Text>PostgreSQL</Card.Text>
-                                                        <Card.Text>AWS (S3 and SES)</Card.Text>
-                                                    </Card.Body>
-                                                </Accordion.Collapse>
-                                            </Accordion>
-                                        </Col>
+                                                        <svg width="3em" height="3em" viewBox="0 0 16 16" className="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                                                        </svg>
+                                                    </Accordion.Toggle>
+                                                    <Accordion.Collapse eventKey="0">
+                                                        <Card.Body >
+                                                            {items[1].map((item, index) =>
+                                                                <Card.Text key={index + 1}>{item}</Card.Text>
+                                                            )}
+                                                        </Card.Body>
+                                                    </Accordion.Collapse>
+                                                </Accordion>
+                                            </Col>
+                                        )}
                                     </Row>
                                 </Card>
 

@@ -35,10 +35,14 @@ if (process.env.NODE_ENV !== "production") {
     app.use(
         "/bundle.js",
         require("http-proxy-middleware")({
-            target: "http://localhost:8081/"
+            target: "http://localhost:8081/",
+            secure: false,
+            changeOrigin: true
         })
     );
 } else {
+    console.log('bundle below')
+
     app.use("/bundle.js", (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
 
