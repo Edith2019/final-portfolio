@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
@@ -13,7 +13,7 @@ import axios from "./axios"; // need to put the slash to use the copy
 import Modal from "react-bootstrap/Modal";
 import PropTypes from "prop-types";
 import FadeIn from "./hooks/fadeIn.js";
-
+import Feedback from 'react-bootstrap/Feedback'
 class ContactN extends React.Component {
     constructor(props) {
         super(props);
@@ -22,35 +22,49 @@ class ContactN extends React.Component {
             last: "",
             email: "",
             message: "",
-            show: false
+            show: false,
+            validated: false,
         };
     }
+    // const[validated, setValidated] = useState(false);
 
-    submit() {
-        axios.post("/message", {
-            first: this.state.first,
-            last: this.state.last,
-            email: this.state.email,
-            message: this.state.message
-        }).then(
-            ({ data }) => {
-                if (data.data) {
-                    this.setState({
-                        userFirst: data.data.first,
-                        userLast: data.data.last,
-                        first: "",
-                        last: "",
-                        email: "",
-                        message: ""
-                    });
-                    this.setState({
-                        show: true
-                    });
-                } else {
-                    this.setState({ error: true });
+    submit(event) {
+        const form = event.currentTarget;
+
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+
+        } else {
+            axios.post("/message", {
+                first: this.state.first,
+                last: this.state.last,
+                email: this.state.email,
+                message: this.state.message
+            }).then(
+                ({ data }) => {
+                    if (data.data) {
+                        this.setState({
+                            userFirst: data.data.first,
+                            userLast: data.data.last,
+                            first: "",
+                            last: "",
+                            email: "",
+                            message: ""
+                        });
+                        this.setState({
+                            show: true
+                        });
+                    } else {
+                        this.setState({ error: true });
+                    }
                 }
-            }
-        );
+            );
+
+        }
+        this.setState({
+            validated: true
+        });
     }
 
     handleChange({ target }) {
@@ -88,64 +102,80 @@ class ContactN extends React.Component {
                                     </Card.Text>
                                 </Card.Body>
                                 <span className="px-5">
-                                    <InputGroup className="mb-3 px-5">
-                                        <FormControl
-                                            placeholder={t("FirstName")}
-                                            aria-label="Username"
-                                            aria-describedby="basic-addon1"
-                                            className="border-0 border-contact rounded-0"
-                                            name="first"
-                                            value={this.state.first}
-                                            onChange={e => this.handleChange(e)}
-                                            type="text"
-                                        />
-                                    </InputGroup>
-                                    <InputGroup className="mb-3 px-5">
-                                        <FormControl
-                                            placeholder={t("LastName")}
-                                            aria-label="Recipient's username"
-                                            aria-describedby="basic-addon2"
-                                            className="border-0 border-contact rounded-0"
-                                            name="last"
-                                            value={this.state.last}
-                                            onChange={e => this.handleChange(e)}
-                                            type="text"
-                                        />
-                                    </InputGroup>
-                                    <InputGroup className="mb-3 px-5">
-                                        <FormControl
-                                            placeholder="Email"
-                                            aria-label="Recipient's username"
-                                            aria-describedby="basic-addon2"
-                                            className="border-0 border-contact rounded-0"
-                                            name="email"
-                                            value={this.state.email}
-                                            onChange={e => this.handleChange(e)}
-                                            type="text"
-                                        />
-                                    </InputGroup>
+                                    <Form noValidate validated={this.state.validated} onSubmit={e => this.submit(e)}>
+                                        <InputGroup className="mb-3 px-5" hasValidation>
+                                            <FormControl
+                                                placeholder={t("FirstName")}
+                                                aria-label="Username"
+                                                aria-describedby="basic-addon1"
+                                                className="border-0 border-contact rounded-0"
+                                                name="first"
+                                                value={this.state.first}
+                                                onChange={e => this.handleChange(e)}
+                                                type="text"
+                                                required
+                                            />
+                                            <Feedback type="invalid">
+                                                {t("firstNameValidation")}                                              </Feedback>
+                                        </InputGroup>
+                                        <InputGroup className="mb-3 px-5">
+                                            <FormControl
+                                                placeholder={t("LastName")}
+                                                aria-label="Recipient's username"
+                                                aria-describedby="basic-addon2"
+                                                className="border-0 border-contact rounded-0"
+                                                name="last"
+                                                value={this.state.last}
+                                                onChange={e => this.handleChange(e)}
+                                                type="text"
+                                                required
+                                            />
+                                            <Feedback type="invalid">
+                                                {t("lastNameValidation")}                                            </Feedback>
+                                        </InputGroup>
+                                        <InputGroup className="mb-3 px-5">
+                                            <FormControl
+                                                placeholder="Email"
+                                                aria-label="Recipient's username"
+                                                aria-describedby="basic-addon2"
+                                                className="border-0 border-contact rounded-0"
+                                                name="email"
+                                                value={this.state.email}
+                                                onChange={e => this.handleChange(e)}
+                                                type="text"
+                                                required
+                                            />
+                                            <Feedback type="invalid">
+                                                {t("emailValidation")}
+                                            </Feedback>
+                                        </InputGroup>
 
-                                    <InputGroup className="mb-3 px-5">
-                                        <FormControl as="textarea"
-                                            placeholder="Message"
-                                            className="border-0 border-contact rounded-0"
-                                            name="message"
-                                            value={this.state.message}
-                                            onChange={e => this.handleChange(e)}
-                                            type="text"
-                                        />
-                                    </InputGroup>
-                                    <Form.Group id="formCheck" className="px-5" name="checkbox">
-                                        <Form.Check
-                                            required
-                                            label={t("terms")}
-                                            feedback={t("agree")}
-                                            id="formCheck"
-                                        />
-                                    </Form.Group>
-                                    <Row className="d-flex justify-content-center m-5" >
-                                        <Button variant="outline-warning" size="lg" block onClick={() => this.submit()} > {t("Send")}</Button>
-                                    </Row>
+                                        <InputGroup className="mb-3 px-5">
+                                            <FormControl as="textarea"
+                                                placeholder="Message"
+                                                className="border-0 border-contact rounded-0"
+                                                name="message"
+                                                value={this.state.message}
+                                                onChange={e => this.handleChange(e)}
+                                                type="text"
+                                                required
+                                            />
+                                            <Feedback type="invalid">
+                                                {t("messageValidation")}
+                                            </Feedback>
+                                        </InputGroup>
+                                        <Form.Group id="formCheck" className="px-5" name="checkbox">
+                                            <Form.Check
+                                                required
+                                                label={t("terms")}
+                                                feedback={t("agree")}
+                                                id="formCheck"
+                                            />
+                                        </Form.Group>
+                                        <Row className="d-flex justify-content-center m-5" >
+                                            <Button variant="outline-warning" size="lg" block type="submit"> {t("Send")}</Button>
+                                        </Row>
+                                    </Form>
                                 </span>
                             </Col>
                             <Col className="d-flex justify-content-center">
@@ -167,7 +197,7 @@ class ContactN extends React.Component {
                         </Modal>
                     </FadeIn>
                 </Container>
-            </React.Fragment>
+            </React.Fragment >
         );
     }
 }

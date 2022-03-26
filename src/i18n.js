@@ -53,7 +53,11 @@ i18n.use(LanguageDetector).init({
                 TandC: "TandC",
                 ThankYou: "Thank you",
                 forMsg: "for your message!",
-                contentTY: "I will come back to you as soon as possible."
+                contentTY: "I will come back to you as soon as possible.",
+                firstNameValidation: "Please add your first name",
+                lastNameValidation: "Please add your last name",
+                emailValidation: "Please add your email",
+                messageValidation: "Please add your message",
             }
 
         },
@@ -106,7 +110,11 @@ i18n.use(LanguageDetector).init({
                 descriptionC: "Ne soyez pas timide, contactez-moi ! Je suis heureuse de recevoir vos commentaires et de répondre à toutes vos questions.",
                 ThankYou: "Merci",
                 forMsg: "pour votre message!",
-                contentTY: "Je reviendrai vers vous dès que possible."
+                contentTY: "Je reviendrai vers vous dès que possible.",
+                firstNameValidation: "Veuillez ajouter votre prénom",
+                lastNameValidation: "Veuillez ajouter votre nom de famille",
+                emailValidation: "Veuillez ajouter votre email",
+                messageValidation: "Veuillez ajouter votre message",
             }
         }
     },
