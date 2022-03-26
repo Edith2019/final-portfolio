@@ -6,15 +6,15 @@ Javascript //react.js// Redux// postgreSQL// axios// ses // HTML// CSS
 
 # Features
 
--   menu modul open on click
--   routing
--   get in touch and send an email via contact form
+-   smooth scroll
+-   translation i18n
+-   header hide/ visible on mouseHover
 -   projects description and links
+-   contact 
+-   download resume
 
 # Description
 
-As the final project of three months course, I wanted to build an app that would be a playful window of my work and myself.
+re-worked on my final project from the bootcamp with a lot of fun using bootstrap
 
-# Demo
 
-<img src="https://github.com/Edith2019/final-portfolio/blob/master/portfoliodemo.gif" style="max-width:100%;">
